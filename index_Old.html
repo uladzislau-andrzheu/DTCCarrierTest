@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <title>
+        Carrier ABC - Direct to Consumer
+    </title>
+</head>
+
+<body>
+    <h1>Top of carrier site!</h1>
+
+
+
+<!--<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>-->
+<!--<script src="http://localhost:55852/api/screen/1"></script>-->
+<script>
+    document.cookie = "name=oeschger";
+</script>
+<script src="http://127.0.0.1/CesPlatformDeliveryService/api/Platform/IPIPELINE/IPIPELINE/6641/8244/1011"></script>
+<!--<script src="my.js"></script>-->
+<div id="runtime-entry"></div>
+<script>
+
+
+
+
+/*
+
+        debugger;
+        $("#runtime-entry").load("http://localhost:55852/api/screen/1", () => {
+           console.info('Loaded the external generated NGSD screens from the ScreenDeliveryService');
+        });
+*/
+
+
+/////////*
+/*
+window.onload = function() {
+var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                // Typical action to be performed when the document is ready:
+                debugger;
+                var ele = document.createElement('div');
+                ele.innerHTML = xhttp.response;
+                document.getElementById('runtime-entry').appendChild(ele);
+                
+
+
+
+
+               //document.querySelector('#runtime-entry').innerHTML = xhttp.response;
+            }
+        };        
+        xhttp.open("GET", "http://localhost:55852/api/screen/1", true);
+        //xhttp.responseType = 'document';
+        xhttp.setRequestHeader('Accept', 'text/html, *\/*; q=0.01');
+        //xhttp.responseType = ""
+        xhttp.send();
+    
+};
+*/
+
+  /*      
+        fetch('http://localhost:55852/api/screen/1', {mode: 'no-cors'})
+            .then(resp => resp.text())
+            .then(text => new DOMParser().parseFromString(text, 'text/html'))
+            .then(doc => {
+                debugger;
+                var ele = document.createElement('div');
+                ele.appendChild(doc);
+                document.querySelector('#runtime-entry').appendChild = ele;
+            });
+            */
+        
+
+  /*      
+        debugger;
+        fetch('http://localhost:55852/api/screen/1', {headers: { 'Content-Type': 'text/html}'}, mode: 'no-cors'})
+            .then(resp => resp.text())
+            .then(data => {
+                debugger;
+                document.getElementById('runtime-entry').innerHTML = data;
+            });
+            */
+
+
+/*
+            debugger;
+        fetch('http://localhost:55852/api/screen/1', {headers: { 'Content-Type': 'text/html', 'Accept': 'text/html, *\/*; q=0.01'}, mode: 'no-cors'})
+            .then(resp => resp.text())
+            .then(text => {
+                debugger;
+            });
+            */
+   
+        
+    </script>
+    <h1>Bottom of carrier site</h1>
+</body>
+
+</html>

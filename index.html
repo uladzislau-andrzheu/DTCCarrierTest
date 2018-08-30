@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Example Insurance Carrier</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Example Insurance Carrier</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- TEST MOO LOCAL -->
+
+      
+       <!-- MODERN EXAMPLE (LOCAL) -->
+        <!--
+        <script data-name="CesLib" src="http://127.0.0.1/CesPlatformDeliveryService/dist/CesLib.Modern.js"></script>
+        <script>
+          var CesPlatform = getCesPlatform({
+            OrganizationId: "IPIPELINE",
+            CompanyId: "IPIPELINE",
+            SubCompanyId: "1919",
+            State: "AL",
+            ProductId: "8519",
+            ScreenPackage: "Childrens WL DTC",
+            Name: "MikeCarrier",
+            ElementId: "dtc",
+            Env: ""
+          }).then(function(result) {
+            console.info('Loaded: ' + result.toString());
+          });
+        </script>
+      -->
+
+        <!-- CLASSIC EXAMPLE (LOCAL) -->
+        
+        <script data-name="CesLib" src="http://127.0.0.1:53853/dist/CesLib.Classic.js"></script>
+        <script>
+          var CesPlatform = getCesPlatform({
+            OrganizationId: "IPIPELINE",
+            CompanyId: "IPIPELINE",
+            SubCompanyId: "1919",
+            State: "AL",
+            ProductId: "8519",
+            ScreenPackage: "Childrens WL DTC",
+            Name: "MutualOfOmaha2",
+            ElementId: "dtc",
+            Env: "",
+            Nav: true
+          }, function(result) {
+            console.info('Loaded: ' + result.toString());
+          })
+        </script>
+      
+      
+
+      <!-- CLASSIC EXAMPLE (QA / QD1) -->
+      <!--
+      <script data-name="CesLib" src="https://ngsd-dtc-qa.ipipeline.com/dist/CesLib.Classic.js"></script>
+      <script>
+        var CesPlatform = getCesPlatform({
+          OrganizationId: "IPIPELINE",
+          CompanyId: "IPIPELINE",
+          SubCompanyId: "1919",
+          State: "AL",
+          ProductId: "8519",
+          ScreenPackage: "Childrens WL DTC",
+          Name: "MikeCarrier",
+          ElementId: "dtc",
+          Env: "qd1"
+        }, function(result) {
+          console.info('Loaded: ' + result.toString());
+        })
+      </script>
+    -->
+
+
+
+      <!-- BELOW HERE IS ALL OLD VERSIONS THAT WILL NO LONGER WORK -->
+
+      <!-- <script src="http://127.0.0.1/CesPlatformDeliveryService/api/Platform/loadContent/IPIPELINE/IPIPELINE/1919/8519/Childrens WL DTC/MikeCarrier"></script> -->
+
+
+        <!--
+      <script src="http://127.0.0.1/CesPlatformDeliveryService/api/Platform/context/IPIPELINE/IPIPELINE/1919/AL/8519/Childrens WL DTC/MikeCarrier/dtc"></script>
+      <script src="http://127.0.0.1/CesPlatformDeliveryService/api/Platform/loadContent/IPIPELINE/IPIPELINE/1919/8519/Childrens WL DTC/MikeCarrier"></script>
+      -->
+
+        <!-- TEST MOO QA w/host file changes -->
+        <!--
+        <script src="http://dtc.ipipeline.com:51101/api/Platform/context/IPIPELINE/IPIPELINE/1919/AL/8519/Childrens WL DTC/MikeCarrier/dtc/qd1"></script>
+        <script src="http://dtc.ipipeline.com:51101/api/Platform/loadContent/IPIPELINE/IPIPELINE/1919/8519/Childrens WL DTC/MikeCarrier/qd1"></script>
+        -->
+
+
+        <!--
+          <script src="http://qd0ngdweb01.dv.ipipenet.com:51101/api/Platform/context/IPIPELINE/IPIPELINE/1919/AL/8519/Childrens WL DTC/MikeCarrier/dtc/qd1"></script>
+          <script src="http://qd0ngdweb01.dv.ipipenet.com:51101/api/Platform/loadContent/IPIPELINE/IPIPELINE/1919/8519/Childrens WL DTC/MikeCarrier/qd1"></script>
+        -->
+
+        <!-- TEST GUARDIAN LOCAL -->
+        <!--
+        <script src="http://127.0.0.1/CesPlatformDeliveryService/api/Platform/context/IPIPELINE/IPIPELINE/6641/7880/7880/MikeCarrier/dtc"></script>
+        <script src="http://127.0.0.1/CesPlatformDeliveryService/api/Platform/loadContent/IPIPELINE/IPIPELINE/6641/7880/7880/MikeCarrier"></script>
+        -->
+
+        <!-- TEST GUARDIAN QA -->
+        <!--   
+        <script src="http://qd0ngdweb01.dv.ipipenet.com:51101/api/Platform/context/IPIPELINE/IPIPELINE/6641/7880/7880/MikeCarrier/dtc/qd1"></script>
+        <script src="http://qd0ngdweb01.dv.ipipenet.com:51101/api/Platform/loadContent/IPIPELINE/IPIPELINE/6641/7880/7880/MikeCarrier/qd1"></script>
+        -->
+        <div id="dtc"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+      </div>
+      Here is the footer with some information...
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
