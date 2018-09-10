@@ -1,0 +1,170 @@
+/*Copyright 2018 iPipeline */
+		
+		.__ .field-label, 
+		.__ .field-label p		{
+			box-sizing: border-box;
+			color: rgb(93, 93, 93);
+			cursor: default;
+			display: block;
+			font-family: ff-meta-web-n3, ff-meta-web, Helvetica, Arial, sans-serif;
+			font-feature-settings: 'lnum' 1, 'lnum' 1;
+			font-size: 15px;
+			font-variant-numeric: lining-nums;
+			height: 30px;
+			line-height: 22px;
+			padding-bottom: 8px;
+			position: relative;
+			text-align: left;
+			text-size-adjust: 100%;
+			/*width: 155.656px;*/
+			-webkit-font-smoothing: subpixel-antialiased;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+				rgba(0,0,0,0)
+			 font-family: "YourFontName_light", Helvetica, Arial, sans-serif;
+			 font-weight: 400;
+			 font-size: 18px;
+		}
+		
+		.__ .field-label.rich-editor-content *,
+		.__ .rich-editor-content.dangerous-html{
+			font-weight: 400 !important;
+			font-family: "YourFontName_light", Helvetica, Arial, sans-serif !important;
+		}
+
+		.__ .select-placeholder {
+			height: 44px;
+			padding: 10px 12px;
+		}
+		
+		.__ .select-icon {
+			top: 8px;
+		}
+/*         .__{*/
+/*            background-color: silver;*/
+/*        }*/
+		.__ .runtime-item .form-group input.form-control,
+		.__ .has-warning .form-control {
+			background-color: rgb(255, 255, 255);
+			border-bottom-color: rgb(38, 142, 238);
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+			border-bottom-style: solid;
+			border-bottom-width: 1px;
+			border-image-outset: 0px;
+			border-image-repeat: stretch;
+			border-image-slice: 100%;
+			border-image-source: none;
+			border-image-width: 1;
+			border-left-color: rgb(38, 142, 238);
+			border-left-style: solid;
+			border-left-width: 1px;
+			border-right-color: rgb(38, 142, 238);
+			border-right-style: solid;
+			border-right-width: 1px;
+			border-top-color: rgb(38, 142, 238);
+			border-top-left-radius: 3px;
+			border-top-right-radius: 3px;
+			border-top-style: solid;
+			border-top-width: 1px;
+			border: 1px solid #d5d5d5;
+			box-sizing: border-box;
+			color: rgb(34, 34, 34);
+			cursor: auto;
+			display: inline-block;
+			font-family: ff-meta-web-n4, ff-meta-web, Helvetica, Arial, sans-serif;
+			font-feature-settings: 'lnum' 1, 'lnum' 1;
+			font-size: 16px;
+			font-stretch: normal;
+			font-style: normal;
+			font-variant-caps: normal;
+			font-variant-ligatures: normal;
+			font-variant-numeric: lining-nums;
+			font-weight: normal;
+			height: 44px;
+			letter-spacing: normal;
+			line-height: normal;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			margin-right: 0px;
+			margin-top: 0px;
+			outline-color: rgb(34, 34, 34);
+			outline-style: none;
+			outline-width: 0px;
+			padding-bottom: 0px;
+			padding-left: 8px;
+			padding-right: 8px;
+			padding-top: 0px;
+			text-align: start;
+			text-indent: 0px;
+			text-rendering: auto;
+			text-shadow: none;
+			text-size-adjust: 100%;
+			text-transform: none;
+			transition-delay: 0s, 0s, 0s;
+			transition-duration: 0.25s, 0.25s, 0.25s;
+			transition-property: border-color, background-color, color;
+			transition-timing-function: ease, ease, ease;
+			user-select: text;
+			word-spacing: 0px;
+			writing-mode: horizontal-tb;
+			-webkit-appearance: none;
+			-webkit-font-smoothing: subpixel-antialiased;
+			-webkit-rtl-ordering: logical;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			-webkit-border-image: none;
+			 font-family: "YourFontName_light", Helvetica, Arial, sans-serif;
+			 font-weight: bold;
+			 box-shadow: none;
+		}
+		
+		.__ .runtime-item .form-group input.form-control:focus {
+			box-shadow: none;
+			border-color: #218cef;
+			background-color: #fff;
+			color: #222;
+		}
+		
+		.__ .runtime-item .form-group.has-error input.form-control {
+			background-color: #fdf0ee;
+			border-color: #e85c41;
+		}
+			
+		.__ .runtime-item input[type="radio"] {
+			height: auto;
+		}
+		
+		
+		.__ .runtime-item label.field-radio {
+			border-radius: 3px !important;
+			border: 1px solid #d5d5d5;
+			transition: border-color 0.25s, background-color 0.25s;
+			background-color: white;
+			height: 44px;
+			height: 4.4rem;
+			min-width: 44px;
+			min-width: 4.4rem;
+			position: relative;
+			padding-top: 10px;
+			font-size: 16px;
+
+		}
+		
+		.__ .radio-group .btn:hover {
+			border-color: #218cef;
+		}
+		
+		.__ .radio-group .btn-warning:hover {
+			background: #fff;
+		}
+		
+		.__ .runtime-item label.field-radio .rich-editor-content {
+			float: right;
+		}
+		
+		.__ span.text-danger {
+			display: none;
+		}
+
+.container {
+    max-width: ;
+}

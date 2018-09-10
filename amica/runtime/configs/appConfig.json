@@ -1,0 +1,1 @@
+{"logger":{"disable":false,"loggerLevel":"{{loggerLevel}}"},"feature":{"ISODateFormat":true,"GlobalEventHandlersImplementation":"iGoDirtyData","VirtualSelectInDropdown":false,"ViewPDF":false,"DisableBeforeLeaveScreenEventOnStartup":true},"disconnectedEnvironment":"{{disconnectedMode}}","application_static_path":"","nestedVersionsClientDataMapping":{}}
