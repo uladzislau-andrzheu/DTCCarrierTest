@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Example Insurance Carrier</title>
+</head>
+  <style>
+	#dtc {
+		height:100%;
+		margin: 0;
+		position: relative; 
+		min-height: 100%;
+		box-sizing: border-box;
+	}
+	div[data-type=checkbox]::before{
+		content:  "\00a0";
+	}
+	div[data-type=checkbox]::after{
+		content:  "\00a0";
+	}
+
+	div[data-type=radio]::before{
+		content:  "\00a0";
+	}
+	div[data-type=radio]::after{
+		content:  "\00a0";
+	}
+	div[data-name='AC_PD__COBPenPeriod'],.field-label.rich-editor-content.dangerous-html{
+		font-weight: bold;
+	}
+	
+.field-label.rich-editor-content.dangerous-html {
+                white-space: nowrap;
+}
+
+
+        .tab {
+            overflow: hidden;
+            background-color: #fff;
+			position: relative;
+			border: none;
+			outline: none;
+        }
+
+            /* Style the buttons inside the tab */
+            .tab button {
+                background-color: inherit;
+                float: left;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 14px 16px;
+                transition: 0.3s;
+                font-size: 17px;
+				color: #298fc2;
+            }
+
+                /* Change background color of buttons on hover */
+                .tab button:hover {
+                    background-color: #ddd;
+                }
+
+                /* Create an active/current tablink class */
+                .tab button.active {
+                    background-color: #298fc2;
+					color: #fff;
+                }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+		
+	
+  </style>
+
+<body>
+
+  <!-- Page Content -->
+  <!-- IPIPELINE Widget  script -->
+        <script data-name="CesLib" src="https://ngsd-dtc.ipipeline.com/dist/CesLib.Classic.js"></script>
+        <script>
+		var CesPlatform = getCesPlatform({
+            OrganizationId: "IPIPELINE",
+            CompanyId: "IPIPELINE",
+            SubCompanyId: "7480",
+            CodeSubcompanyId: "7480",
+            State: "AL",
+            ProductId: "8890",
+            ScreenPackage: "QQ",
+            FormsPackageName: "OA_AgentQQ",
+            Name: "OneAmerica",
+            ElementId: "dtc",
+            Env: "PD1",
+            Nav: false
+          }, function (result) {
+            console.info('Loaded: ' + result.toString());
+          })
+ 		  
+  		  
+        </script>		  
+	<!-- END IPIPELINE Widget script-->		
+	
+	<script>
+        function openScreen(evt, scrName) {
+	
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(scrName).style.display = "block";
+            evt.currentTarget.className += " active";
+            let obj = {};
+            obj["type"] = "OPEN_SCREEN_REQUEST";
+            obj["screenName"] = scrName;
+            parent.postMessage(obj, "*");
+        }		  
+
+window.addEventListener('message', function(e) {
+                        if (e.data.type === 'BEFORE_LOAD_SCREEN_SUCCESS') {
+                                preload();
+                            }
+		})
+		
+function preload(){
+//  var effectiveDate = Utils.getParameterByName('EffectiveDate');
+//  var code = Utils.getParameterByName('Code');
+//  var effectiveDateKey =  effectiveDate && code ? effectiveDate + code : null;
+	var coreApi = window.global.App.runtimeCoreApi;
+	var effectiveDateKey = "02152018TESTCODE";      
+//  alert(effectiveDate);
+//  alert(code);
+  var clientData = {
+  clientData: {
+    EffectiveDate: {
+      value: effectiveDateKey,
+      formattedValue: effectiveDateKey
+      }
+      }
+  }
+  coreApi.updateRuntimeState(clientData);
+  coreApi.refreshUI(true);		
+
+} 		
+        </script>
+		
+                 <div class="tab">
+                        <button class="tablinks" onclick="openScreen(event, 'AssetCare')" id="defaultOpen">Asset-Care Products</button>
+                        <button class="tablinks" onclick="openScreen(event, 'AnnuityCare')">Annuity Care Products</button>
+                    </div>
+                    <!--runtime-entry-->
+                    <div id="AssetCare" class="tabcontent">
+                    </div>
+                    <div id="AnnuityCare" class="tabcontent">
+                    </div>
+					<div id="dtc"></div>
+                    <div class="clear"><p /></div>
+                	
+
+    <div class="row">
+      <div class="col-lg-12">
+      </div>
+      Here is the footer with some information...
+    </div>
+        <script>
+            document.getElementById("defaultOpen").click();
+        </script>
+
+</body>
+
+</html>
