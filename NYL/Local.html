@@ -2,14 +2,11 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
   <title>Example Insurance Carrier</title>
-
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <style>
@@ -18,7 +15,6 @@
     }
   </style>
 </head>
-
 <body>
 
   <!-- Navigation -->
@@ -54,15 +50,18 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-
-        <script data-name="CesLib" src="https://ngsd-dtc-qa.ipipeline.com/dist/CesLib.Classic.js"></script>
+        <!-- CLASSIC EXAMPLE (LOCAL) -->
+ 
+        <script data-name="CesLib" src="http://127.0.0.1:53854/dist/CesLib.Classic.js"></script>
         <script>
-                    function getUrlParameter(name) {
+          // http://127.0.0.1:8080/index.html?UserId=71c99fc5-9906-44f8-9f44-892de18a9eb3&CaseId=cf768209-b211-4547-93aa-78bd78caa217
+          function getUrlParameter(name) {
                     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
                     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
                     var results = regex.exec(location.search);
                     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
                   };
+
           var CesPlatform = getCesPlatform({
             OrganizationId: "IPIPELINE",
             CompanyId: "IPIPELINE",
@@ -74,15 +73,14 @@
             FormsPackageName: "NYLTeleApp",
             Name: "NYL",
             ElementId: "dtc",
-            Env: "QN2",
-            UserId: getUrlParameter("UserId"), 
-            CaseId: getUrlParameter("CaseId"), 
+            Env: "",
+            UserId: getUrlParameter("UserId"), //"71c99fc5-9906-44f8-9f44-892de18a9eb3",
+            CaseId: getUrlParameter("CaseId"), //"cf768209-b211-4547-93aa-78bd78caa217",
             Nav: true
           }, function(result) {
             console.info('Loaded: ' + result.toString());
           })
         </script>
-
         <div id="dtc"></div>
       </div>
     </div>
@@ -92,8 +90,6 @@
       Here is the footer with some information...
     </div>
   </div>
-
-
 </body>
 
 </html>

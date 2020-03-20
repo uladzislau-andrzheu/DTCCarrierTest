@@ -11,7 +11,7 @@
   <title>Example Insurance Carrier</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <style>
     .modal-dialog {
       max-width: 100%;
@@ -49,7 +49,7 @@
       </div>
     </div>
   </nav>
-
+ 
   <!-- Page Content -->
   <div class="container">
     <div class="row">
@@ -63,7 +63,6 @@
                     var results = regex.exec(location.search);
                     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
                   };
-
           var CesPlatform = getCesPlatform({
             OrganizationId: "IPIPELINE",
             CompanyId: "IPIPELINE",
@@ -75,7 +74,7 @@
             FormsPackageName: "NYLTeleApp",
             Name: "NYL",
             ElementId: "dtc",
-            Env: "QD2",
+            Env: "QN2",
             UserId: getUrlParameter("UserId"), 
             CaseId: getUrlParameter("CaseId"), 
             Nav: true
@@ -93,8 +92,6 @@
       Here is the footer with some information...
     </div>
   </div>
-
-
 </body>
 
 </html>
