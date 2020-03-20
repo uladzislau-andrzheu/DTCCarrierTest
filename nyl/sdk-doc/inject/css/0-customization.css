@@ -1,0 +1,4 @@
+header > a:first-child > img {
+    width: 120px !important;
+    padding-top: 6px;
+}

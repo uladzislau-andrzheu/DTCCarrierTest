@@ -1,0 +1,98 @@
+{
+  "coverage": "61.8%",
+  "expectCount": 144,
+  "actualCount": 89,
+  "files": {
+    "sdk/ESigEventHandlers.js": {
+      "expectCount": 17,
+      "actualCount": 13,
+      "undocumentLines": [
+        16,
+        47,
+        49,
+        70
+      ]
+    },
+    "sdk/GlobalEventHandlers.js": {
+      "expectCount": 34,
+      "actualCount": 31,
+      "undocumentLines": [
+        287,
+        289,
+        291
+      ]
+    },
+    "sdk/RuntimeCoreAPI.js": {
+      "expectCount": 43,
+      "actualCount": 39,
+      "undocumentLines": [
+        39,
+        43,
+        1025,
+        1027
+      ]
+    },
+    "sdk/SDKESigEventHandlerNames.js": {
+      "expectCount": 11,
+      "actualCount": 0,
+      "undocumentLines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    "sdk/SDKEventHandlerNames.js": {
+      "expectCount": 31,
+      "actualCount": 0,
+      "undocumentLines": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        31,
+        32,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        33,
+        34
+      ]
+    },
+    "sdk/SharedGlobalEventHandlers.js": {
+      "expectCount": 8,
+      "actualCount": 6,
+      "undocumentLines": [
+        15,
+        17
+      ]
+    }
+  }
+}

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">sdk/ESigEventHandlers.js | Screen designer SDK</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="ipln-scrd"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Screen designer SDK"><meta property="twitter:description" content="ipln-scrd"><link rel="stylesheet" href="./inject/css/0-customization.css"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/ipipeline/ngen_screen_designer"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sdk/ESigEventHandlers.js~ESigEventHandlers.html">ESigEventHandlers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sdk/GlobalEventHandlers.js~GlobalEventHandlers.html">GlobalEventHandlers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html">RuntimeCoreAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sdk/SharedGlobalEventHandlers.js~SharedGlobalEventHandlers.html">SharedGlobalEventHandlers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-runtimeCoreApiInstance">runtimeCoreApiInstance</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_ACCEPT_CONSENT">ESIGUI_ACCEPT_CONSENT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_ACCEPT_DISCLOSURE">ESIGUI_ACCEPT_DISCLOSURE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_CAPTURE_EVENT">ESIGUI_CAPTURE_EVENT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_COPY_NESTED_DATA">ESIGUI_COPY_NESTED_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_DECLINE_CONSENT">ESIGUI_DECLINE_CONSENT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_DECLINE_DISCLOSURE">ESIGUI_DECLINE_DISCLOSURE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_FINISH_SIGNING">ESIGUI_FINISH_SIGNING</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_FLUSH_AUDITTRAIL">ESIGUI_FLUSH_AUDITTRAIL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_GET_SIGNING_STATUS">ESIGUI_GET_SIGNING_STATUS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_GET_VENDOR_URL">ESIGUI_GET_VENDOR_URL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_VIEW_PDF">ESIGUI_VIEW_PDF</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ACTIVATE_FORM_PACKAGE">ACTIVATE_FORM_PACKAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-APPLY_ESIGN">APPLY_ESIGN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CALL_CUSTOM_ASSEMBLY">CALL_CUSTOM_ASSEMBLY</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CALL_JS_CUSTOM_ASSEMBLY">CALL_JS_CUSTOM_ASSEMBLY</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CALL_LOGGER">CALL_LOGGER</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CALL_SERVER_PROCEDURE">CALL_SERVER_PROCEDURE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CHANGE_CREDIT_CARD">CHANGE_CREDIT_CARD</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CHECK_PARAMED_SCHEDULER_STATUS">CHECK_PARAMED_SCHEDULER_STATUS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CREATE_AIS_CASE">CREATE_AIS_CASE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DECLINE_ESIGN">DECLINE_ESIGN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-EXPORT_FORM_FROM_IGO">EXPORT_FORM_FROM_IGO</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_GOOGLE_PLACES_DETAILS">GET_GOOGLE_PLACES_DETAILS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_GOOGLE_PLACES_PREDICTIONS">GET_GOOGLE_PLACES_PREDICTIONS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_SMARTY_STREETS_DETAILS">GET_SMARTY_STREETS_DETAILS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_SMARTY_STREETS_PREDICTIONS">GET_SMARTY_STREETS_PREDICTIONS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_SOURCEDROPDOWN_DATA">GET_SOURCEDROPDOWN_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_SOURCEGRID_DATA">GET_SOURCEGRID_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-INITIAL_LOAD_DATA">INITIAL_LOAD_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-LOAD_DATA">LOAD_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ON_DYNAMIC_TABLE_EVENT">ON_DYNAMIC_TABLE_EVENT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ON_FIELD_VALIDATE">ON_FIELD_VALIDATE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-OPEN_AIS_CASE">OPEN_AIS_CASE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RETRIEVE_PARAMED_SCHEDULER_URL">RETRIEVE_PARAMED_SCHEDULER_URL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SAVE_DATA">SAVE_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_EMAIL">SEND_EMAIL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SHOW_ATTACHMENTS">SHOW_ATTACHMENTS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UNDERWRITE_AIS_CASE">UNDERWRITE_AIS_CASE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPLOAD_FILE">UPLOAD_FILE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-VALIDATE_CREDIT_CARD">VALIDATE_CREDIT_CARD</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-VERIFY_EMAIL">VERIFY_EMAIL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-VIEW_PDF">VIEW_PDF</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ValidationResult">ValidationResult</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ValidationType">ValidationType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Validations">Validations</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">sdk/ESigEventHandlers.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import _ from &apos;lodash&apos;;
+import logger from &apos;runtime/../../logger&apos;;
+import moment from &apos;shared/moment&apos;;
+import createESIGViewPDFModalWindow from &apos;runtime/sdk/components/ESIGViewPDFModalWindow.react&apos;;
+import ft from &apos;shared/constants/FieldTypes&apos;;
+import { FINISH_ESIG_UI_INTERNAL, COPY_NESTED_DATA_INTERNAL } from &apos;runtime/constants/MessageTypes&apos;;
+import postMessageHelper from &apos;runtime/utils/postMessageHelper&apos;;
+import { getEsiguiData } from &apos;runtime/nested/esigui/utils/esiguiDataTaker&apos;;
+import { VERSION_ID } from &apos;runtime/nested/esigui/constants/globalKeys&apos;;
+import { getClientDataMappingFromNestedToParent } from &apos;runtime/nested/esigui/utils/getClientDataMapping&apos;;
+import mapSourceClientDataToTarget from &apos;runtime/nested/esigui/utils/mapSourceClientDataToTarget&apos;;
+import shouldOpenInSeparateTab from &apos;runtime/nested/esigui/utils/shouldOpenInSeparateTab&apos;;
+import { runtimeCoreApiInstance } from &apos;runtime/sdk/RuntimeCoreAPI&apos;;
+import RuntimeActions from &apos;runtime/actions/RuntimeActionCreators&apos;;
+
+const _addCapturedEvent = (context, data) =&gt; {
+    if (!_.isArray(context.capturedEvents)) context.capturedEvents = [];
+
+    if (!_.isPlainObject(data)) data = {};
+
+    const { fieldName = &apos;&apos;, fieldType = &apos;&apos;, fieldValue = &apos;&apos;, eventType = &apos;&apos; } = data;
+
+    const event = {
+        FieldName: fieldName,
+        FieldType: fieldType,
+        EventDate: moment.utc().format()
+    };
+
+    if (fieldType === ft.BUTTON) {
+        event.FieldValue = &apos;&apos;;
+        event.EventType = &apos;click&apos;;
+    } else if (fieldType === ft.RADIOBUTTON) {
+        event.FieldValue = fieldValue;
+        event.EventType = &apos;click&apos;;
+    } else if (fieldType === ft.CHECKBOX) {
+        if (fieldValue === &apos;true&apos;) event.EventType = &apos;checked&apos;;
+        if (fieldValue === &apos;false&apos;) event.EventType = &apos;unchecked&apos;;
+        event.FieldValue = &apos;&apos;;
+    } else {
+        event.FieldValue = fieldValue;
+        event.EventType = eventType;
+    }
+
+    context.capturedEvents.push(event);
+};
+
+const _getCapturedEvents = context =&gt; (_.isArray(context.capturedEvents) ? context.capturedEvents : []);
+
+const _clearCapturedEvents = context =&gt; {
+    context.capturedEvents = [];
+};
+
+/**
+ * eSig UI SDK class. Used as separate SDK class for eSig UI applications.
+ */
+export class ESigEventHandlers {
+    /**
+     * This method is invoked whenever runtime executes the &quot;capture event&quot; action in eSigUI
+     * @since v0.89.*
+     * @param {Object} data - event data
+     * @param {String} data.fieldName - name of a field that generated the event
+     * @param {String} data.fieldType - type of a field that generated the event
+     * @param {String} data.fieldValue - value of a field that generated the event
+     * @param {String} data.eventType - type of the event on a field that generated the capture event (e.g. &apos;click&apos;, &apos;valuechanged&apos;, etc.)
+     */
+    async ESIGUI_captureEvent(data) {
+        _addCapturedEvent(this, data);
+    }
+
+    async ESIGUI_flushAuditTrail() {
+        const { serviceRequestProvider } = this.coreApi;
+        const clientDataKey = this.coreApi.runtimeStateItems.CLIENT_DATA;
+        const capturedEvents = _getCapturedEvents(this);
+
+        const authToken = await this.requestAuthToken();
+
+        const { success, error, message } = await serviceRequestProvider.ESIGUI_flushAuditTrail(
+            capturedEvents,
+            authToken
+        );
+
+        this.coreApi.updateRuntimeState({
+            [clientDataKey]: {
+                ESIGUI_flushAuditTrail_isSuccessful: { value: success, formattedValue: success },
+                ESIGUI_flushAuditTrail_errorCode: { value: error, formattedValue: error },
+                ESIGUI_flushAuditTrail_errorMessage: { value: message, formattedValue: message }
+            }
+        });
+
+        _clearCapturedEvents(this);
+    }
+
+    /**
+     * This method is invoked whenever runtime executes the &quot;accept disclosure&quot; action in eSigUI.
+     * @since v0.89.*
+     */
+    async ESIGUI_acceptDisclosure() {
+        const { serviceRequestProvider } = this.coreApi;
+        const clientDataKey = this.coreApi.runtimeStateItems.CLIENT_DATA;
+
+        const authToken = await this.requestAuthToken();
+
+        const { success, error, message } = await serviceRequestProvider.ESIGUI_acceptDisclosure(authToken);
+
+        this.coreApi.updateRuntimeState({
+            [clientDataKey]: {
+                ESIGUI_disclosureAcceptance_isSuccessful: {
+                    value: success,
+                    formattedValue: success
+                },
+                ESIGUI_disclosureAcceptance_errorCode: { value: error, formattedValue: error },
+                ESIGUI_disclosureAcceptance_errorMessage: {
+                    value: message,
+                    formattedValue: message
+                }
+            }
+        });
+    }
+
+    /**
+     * This method is invoked whenever runtime executes the &quot;accept consent&quot; action in eSigUI.
+     * @since v0.89.*
+     */
+    async ESIGUI_acceptConsent() {
+        const { serviceRequestProvider } = this.coreApi;
+        const clientDataKey = this.coreApi.runtimeStateItems.CLIENT_DATA;
+
+        const authToken = await this.requestAuthToken();
+
+        const { success, error, message } = await serviceRequestProvider.ESIGUI_acceptConsent(authToken);
+
+        this.coreApi.updateRuntimeState({
+            [clientDataKey]: {
+                ESIGUI_consentAcceptance_isSuccessful: { value: success, formattedValue: success },
+                ESIGUI_consentAcceptance_errorCode: { value: error, formattedValue: error },
+                ESIGUI_consentAcceptance_errorMessage: { value: message, formattedValue: message }
+            }
+        });
+    }
+
+    /**
+     * This method is invoked whenever runtime executes the &quot;decline disclosure&quot; action in eSigUI.
+     * @since v0.89.*
+     */
+    async ESIGUI_declineDisclosure() {
+        const { serviceRequestProvider } = this.coreApi;
+        const clientDataKey = this.coreApi.runtimeStateItems.CLIENT_DATA;
+
+        const authToken = await this.requestAuthToken();
+
+        const { success, error, message } = await serviceRequestProvider.ESIGUI_declineDisclosure(authToken);
+
+        this.coreApi.updateRuntimeState({
+            [clientDataKey]: {
+                ESIGUI_disclosureDecline_isSuccessful: { value: success, formattedValue: success },
+                ESIGUI_disclosureDecline_errorCode: { value: error, formattedValue: error },
+                ESIGUI_disclosureDecline_errorMessage: { value: message, formattedValue: message }
+            }
+        });
+    }
+
+    /**
+     * This method is invoked whenever runtime executes the &quot;decline consent&quot; action in eSigUI.
+     * @since v0.89.*
+     */
+    async ESIGUI_declineConsent() {
+        const { serviceRequestProvider } = this.coreApi;
+        const clientDataKey = this.coreApi.runtimeStateItems.CLIENT_DATA;
+
+        const authToken = await this.requestAuthToken();
+
+        const { success, error, message } = await serviceRequestProvider.ESIGUI_declineConsent(authToken);
+
+        this.coreApi.updateRuntimeState({
+            [clientDataKey]: {
+                ESIGUI_consentDecline_isSuccessful: { value: success, formattedValue: success },
+                ESIGUI_consentDecline_errorCode: { value: error, formattedValue: error },
+                ESIGUI_consentDecline_errorMessage: { value: message, formattedValue: message }
+            }
+        });
+    }
+
+    /**
+     * This method is invoked whenever runtime executes the &quot;view PDF&quot; action in eSigUI (not to be confused with generic &quot;view PDF&quot;, which is not eSig-specific)
+     * @since v0.89.*
+     */
+    async ESIGUI_viewPDF() {
+        const authToken = await this.requestAuthToken();
+
+        const { data } = await this.coreApi.serviceRequestProvider.ESIGUI_getPDFsURL(authToken);
+        const url = _.get(data, [&apos;Signers&apos;, 0, &apos;DocumentViewUrl&apos;], null);
+
+        if (!url) throw new Error(&apos;ESIGUI: Url for viewing document (pdf) was not provided&apos;);
+
+        if (shouldOpenInSeparateTab()) {
+            const viewPdfWindow = window.open(url, &apos;View PDF&apos;);
+            if (!viewPdfWindow) logger.runtime.esig.error(&apos;ESIG UI view pdf separate tab window is blocked by browser&apos;);
+        } else {
+            this.coreApi.showModal(
+                createESIGViewPDFModalWindow({
+                    pdfUrl: url,
+                    onClose: this.coreApi.hideModal
+                })
+            );
+        }
+    }
+
+    /**
+     * This method is invoked whenever runtime executes the &quot;get signing status&quot; action in eSigUI (after the nested application receives a post message about signature completion)
+     * @since v0.89.*
+     * @returns {Promise&lt;Object&gt;} - promise of signing status
+     */
+    async ESIGUI_getSigningStatus() {
+        const ANY_ERROR_STATUS = -1;
+        const { serviceRequestProvider } = this.coreApi;
+        const clientDataKey = this.coreApi.runtimeStateItems.CLIENT_DATA;
+
+        const authToken = await this.requestAuthToken();
+
+        const response = await serviceRequestProvider.ESIGUI_getSigningStatus(authToken);
+        const { data, success, error, message } = response;
+        const status = _.get(data, [&apos;DynamicData&apos;, &apos;StatusId&apos;], ANY_ERROR_STATUS);
+
+        this.coreApi.updateRuntimeState({
+            [clientDataKey]: {
+                ESIGUI_vendorSigning_status: { value: status, formattedValue: status },
+                ESIGUI_vendorSigning_isSuccessful: { value: success, formattedValue: success },
+                ESIGUI_vendorSigning_errorCode: { value: error, formattedValue: error },
+                ESIGUI_vendorSigning_errorMessage: { value: message, formattedValue: message }
+            }
+        });
+
+        return status;
+    }
+
+    /**
+     * This method is invoked whenever runtime executes the &quot;get vendor URL&quot; action in eSigUI
+     * @since v0.89.*
+     * @returns {Promise&lt;String&gt;} - promise of the vendor URL
+     */
+    async ESIGUI_getVendorURL() {
+        const { serviceRequestProvider } = this.coreApi;
+        const clientDataKey = this.coreApi.runtimeStateItems.CLIENT_DATA;
+
+        const authToken = await this.requestAuthToken();
+
+        const response = await serviceRequestProvider.ESIGUI_getVendorURL(authToken);
+        const { data, success, error, message } = response;
+
+        this.coreApi.updateRuntimeState({
+            [clientDataKey]: {
+                ESIGUI_requestURL_isSuccessful: { value: success, formattedValue: success },
+                ESIGUI_requestURL_errorCode: { value: error, formattedValue: error },
+                ESIGUI_requestURL_errorMessage: { value: message, formattedValue: message }
+            }
+        });
+
+        return _.get(data, [&apos;Signers&apos;, 0, &apos;SigningUrl&apos;], null);
+    }
+
+    /**
+     * This method is invoked when nested application Runtime attempts to initialize with external data that has been transmitted from host application.
+     * @since v0.92.*
+     * @param {Object} data - ClientData from the host application, see format description in `SD Runtime fields data`;
+     * @returns {undefined}
+     */
+    initialLoadData(data) {
+        if (!data) return;
+
+        this.coreApi.restoreRuntimeState({
+            [this.coreApi.runtimeStateItems.CLIENT_DATA]: data
+        });
+
+        // To prevent case when nobody set current screen we should check it and update to first visible screen.
+        const {
+            [runtimeCoreApiInstance.runtimeStateItems.CURRENT_SCREEN]: currentScreenName
+        } = runtimeCoreApiInstance.getRuntimeState(runtimeCoreApiInstance.runtimeStateItems.CURRENT_SCREEN);
+
+        if (!currentScreenName) {
+            RuntimeActions.updateCurrentScreenNoEmit();
+        }
+    }
+
+    /**
+     * This method is invoked whenever runtime executes the &quot;finish signing&quot; action in eSigUI
+     * @since v0.92.*
+     */
+    async ESIGUI_finishSigning() {
+        const nestedVersionRef = _.get(getEsiguiData(), VERSION_ID);
+        postMessageHelper.sendMessageToParent({ type: FINISH_ESIG_UI_INTERNAL, nestedVersionRef });
+    }
+
+    /**
+     * This method is invoked whenever runtime executes the &quot;Copy data from Nested to Parent Version&quot; action in eSigUI
+     * @since v0.111.*
+     */
+    ESIGUI_copyNestedData() {
+        const versionRef = _.get(getEsiguiData(), VERSION_ID);
+        const { clientData: nestedClientData } = this.coreApi.getRuntimeState(
+            this.coreApi.runtimeStateItems.CLIENT_DATA
+        );
+        const clientDataMapping = getClientDataMappingFromNestedToParent(versionRef);
+        const eSigUiCaseData = mapSourceClientDataToTarget(nestedClientData, clientDataMapping);
+
+        postMessageHelper.sendMessageToParent({
+            type: COPY_NESTED_DATA_INTERNAL,
+            payload: JSON.stringify(eSigUiCaseData)
+        });
+    }
+
+    /**
+     * This helper method knows how to get authentication token for requests to esig service.
+     * @since v0.97.*
+     * @returns {string}
+     */
+    async requestAuthToken() {
+        const { serviceRequestProvider } = this.coreApi;
+        let authToken;
+
+        const maxNumberOfAttempts = 10; // TODO: take from config
+        let counter = 0;
+        while (!authToken &amp;&amp; ++counter &lt;= maxNumberOfAttempts) {
+            try {
+                authToken = await serviceRequestProvider.getEsigUIServiceAuthToken();
+            } catch (e) {
+                logger.runtime.coreApi.error(e, `failed to request ESIG authToken, attempt - ${counter}`);
+            }
+        }
+
+        return authToken;
+    }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

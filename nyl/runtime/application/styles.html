@@ -1,0 +1,99 @@
+<noscript id="deferred-styles">
+    <!--fonts-->
+    
+        <link href="{{staticsPath}}/assets/runtime-fonts-5bc2be5e2d4314125a63.css" rel="stylesheet">
+    
+    <!--fonts-->
+
+    <!--font-awesome-->
+    
+        <link href="{{staticsPath}}/assets/runtime-font-awesome-38d31d535779293c5f8d.css" rel="stylesheet">
+    
+    <!--font-awesome-->
+
+    <!--bootstrap-theme-->
+    
+        <link href="{{staticsPath}}/assets/runtime-bootstrap-theme-022a84acde267ab856c0.css" rel="stylesheet">
+    
+    <!--bootstrap-theme-->
+
+    <!--bootstrap-overrides-->
+    
+        <link href="{{staticsPath}}/assets/runtime-bootstrap-overrides-bb75962828d7f3490073.css" rel="stylesheet">
+    
+    <!--bootstrap-overrides-->
+
+    <!--runtime-styles-->
+        <link href="{{staticsPath}}/assets/runtime-644e2515846b0f7e1917.css" rel="stylesheet">
+    <!--runtime-styles-->
+
+    <!--runtime-controls-->
+    
+        <link href="{{staticsPath}}/assets/runtime-controls-67c71046fd8c7d1fbf40.css" rel="stylesheet">
+    
+    <!--runtime-controls-->
+
+    <!--browser-fixes-->
+    
+        <link href="{{staticsPath}}/assets/runtime-browser-fixes-f32b1deb2ae1507f37c3.css" rel="stylesheet">
+    
+    <!--browser-fixes-->
+</noscript>
+
+<script>
+    var deferredStylesNode = document.getElementById('deferred-styles');
+    if (deferredStylesNode) {
+        var deferredStylesHTML = deferredStylesNode.textContent;
+        var replacement = document.createElement('div');
+        replacement.innerHTML = deferredStylesHTML;
+        var linkNodes = replacement.querySelectorAll('link');
+
+        var lastStyleIndex = linkNodes.length - 1;
+        if (lastStyleIndex >= 0) {
+            window.__isLastDeferredRuntimeCssLoaded = false;
+
+            var runOnce = function(target) {
+                var isExecuted = false;
+                return function() {
+                    if (isExecuted) return;
+                    isExecuted = true;
+                    target();
+                }
+            };
+
+            var notifyRuntimeApp = function() {
+                // either invoke self-defined global callback, or set a flag to notify the runtime app that loading is over
+                if (typeof window.__onLastDeferredRuntimeCssLoaded === 'function') {
+                    window.__onLastDeferredRuntimeCssLoaded();
+                }
+                window.__isLastDeferredRuntimeCssLoaded = true;
+            };
+
+            // make the function once-executable because we subscribe it to 2 handlers below
+            var loadDeferredStyles = runOnce(function() {
+                Array.prototype.forEach.call(linkNodes, function (linkNode, index) {
+                    var newLink = document.createElement('link');
+                    newLink.rel = linkNode.getAttribute('rel');
+                    newLink.href = linkNode.getAttribute('href');
+                    // add onload handler to the last deferred link to notify the runtime app when last CSS is entirely loaded
+                    if (index === lastStyleIndex) {
+                        newLink.onload = notifyRuntimeApp;
+                    }
+                    document.head.appendChild(newLink);
+                });
+                deferredStylesNode.parentElement.removeChild(deferredStylesNode);
+            });
+
+
+            var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+
+            // subscribe to 2 events at once and run on whichever runs first
+            // This is needed because Chrome doesn't run raf if tab is inactive, so in this case
+            // we'll proceed with css loading on window.onload event
+            if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+            window.addEventListener('load', loadDeferredStyles);
+        }
+    }
+</script>
+

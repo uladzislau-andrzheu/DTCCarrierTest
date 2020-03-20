@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../">
+  <title data-ice="title">Manual | Screen designer SDK</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="ipln-scrd"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Screen designer SDK"><meta property="twitter:description" content="ipln-scrd"><link rel="stylesheet" href="./inject/css/0-customization.css"></head>
+<body class="layout-container manual-root" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/ipipeline/ngen_screen_designer"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html" data-ice="link">Changelog</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-unreleased-" data-ice="link">[Unreleased]</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-132---" data-ice="link">[0.132.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-131---" data-ice="link">[0.131.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-111---" data-ice="link">[0.111.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-108---" data-ice="link">[0.108.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-106---" data-ice="link">[0.106.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-102---" data-ice="link">[0.102.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-97---" data-ice="link">[0.97.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-96---" data-ice="link">[0.96.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-93---" data-ice="link">[0.93.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-92-2-" data-ice="link">[0.92.2]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-92---" data-ice="link">[0.92.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-91---" data-ice="link">[0.91.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-90---" data-ice="link">[0.90.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-89---" data-ice="link">[0.89.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-87---" data-ice="link">[0.87.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-85---" data-ice="link">[0.85.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-84---" data-ice="link">[0.84.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-83---" data-ice="link">[0.83.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-82---" data-ice="link">[0.82.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-79---" data-ice="link">[0.79.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-77---" data-ice="link">[0.77.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-75---" data-ice="link">[0.75.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-74---" data-ice="link">[0.74.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-74---" data-ice="link">[0.74.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-73---" data-ice="link">[0.73.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-72---" data-ice="link">[0.72.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-71---" data-ice="link">[0.71.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-70---" data-ice="link">[0.70.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-example-" data-ice="link">[Example]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#removed" data-ice="link">Removed</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#deprecated" data-ice="link">Deprecated</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#fixed" data-ice="link">Fixed</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#security" data-ice="link">Security</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/data format.html"><a href="manual/data format.html" data-ice="link">Data interchange format between Server and Runtime (how data is stored inside runtime core)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-fields-data-" data-ice="link">SD Runtime fields data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-fields-data-" data-ice="link">Corresponding Server fields data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-sourcedropdown-control-data-" data-ice="link">SD Runtime SourceDropdown control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-sourcedropdown-control-data-" data-ice="link">Corresponding Server SourceDropdown control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-grid-control-data-" data-ice="link">SD Runtime Grid control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-grid-control-data-" data-ice="link">Corresponding Server Grid control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-sourcegrid-control-data-" data-ice="link">SD Runtime SourceGrid control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-sourcegrid-control-data-" data-ice="link">Corresponding Server SourceGrid control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-mask-control-data-" data-ice="link">SD Runtime Mask control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-mask-control-data-" data-ice="link">Corresponding Server Mask control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-softlocked-data-" data-ice="link">SD Runtime SoftLocked data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-softlocked-data-" data-ice="link">Corresponding Server SoftLocked data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-email-control-data" data-ice="link">SD Runtime Email control data</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-email-control-data-" data-ice="link">Corresponding Server Email control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-creditcard-control-data" data-ice="link">SD Runtime CreditCard control data</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-creditcard-control-data-" data-ice="link">Corresponding Server CreditCard control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#-a-name--dynamictable----a-sd-runtime-dynamictable-control-data" data-ice="link">SD Runtime DynamicTable control data</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-dynamictable-control-data-" data-ice="link">Corresponding Server DynamicTable control data:</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/css namespacing.html"><a href="manual/css namespacing.html" data-ice="link">CSS namespacing</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/dynamic table.html"><a href="manual/dynamic table.html" data-ice="link">Dynamic table configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/dynamic table.html"><a href="manual/dynamic table.html#table-options" data-ice="link">Table options</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/dynamic table.html"><a href="manual/dynamic table.html#column-options" data-ice="link">Column Options</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/dynamic table.html"><a href="manual/dynamic table.html#row-options" data-ice="link">Row Options</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/dynamic table.html"><a href="manual/dynamic table.html#cell-options" data-ice="link">Cell Options</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/dynamic table.html"><a href="manual/dynamic table.html#full-example" data-ice="link">Full example</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="data-interchange-format-between-server-and-runtime--how-data-is-stored-inside-runtime-core-">Data interchange format between Server and Runtime (how data is stored inside runtime core)</h1><h3 id="sd-runtime-fields-data-">SD Runtime fields data:</h3><pre><code><code class="source-code prettyprint">fieldName: {
+    value: &apos;val&apos;,
+    formattedValue: &apos;formattedval&apos;
+}
+
+anotherFieldName: {
+    value: &apos;123&apos;
+    formattedValue: &apos;$123&apos;
+}</code>
+</code></pre><h3 id="corresponding-server-fields-data-">Corresponding Server fields data:</h3><pre><code><code class="source-code prettyprint">...
+fieldName = &apos;val&apos;,
+fieldName_fmt = &apos;formattedval&apos;,
+anotherFieldName = &apos;123&apos;,
+anotherFieldName_fmt = &apos;$123&apos;,
+...</code>
+</code></pre><hr>
+<h3 id="sd-runtime-sourcedropdown-control-data-">SD Runtime SourceDropdown control data:</h3><pre><code><code class="source-code prettyprint">// Single select dropdown:
+sourceDropdownName: {
+    value: &apos;selectedOptionValue&apos;,
+    formattedValue: &apos;selectedOptionName&apos;
+    data: {
+        options: [{
+            opt1: &quot;opt1value&quot;,
+            anotheropt: &quot;anotherValue&quot;
+        }
+    ]}
+}
+
+
+// Multiselect dropdown (with 3 selected values):
+
+multiSourceDropdownName: {
+    value: &apos;val1,val2,val3&apos;,
+    formattedValue: &apos;name1,name2,name3&apos;
+    data: {
+        options: [
+            {
+                opt1: &quot;opt1value&quot;,
+                anotheropt: &quot;anotherValue&quot;
+            },
+            {
+                somethig: &quot;someOtherValue&quot;
+            },
+            {
+                // no additional options
+            }
+        ]
+    }
+}</code>
+</code></pre><h3 id="corresponding-server-sourcedropdown-control-data-">Corresponding Server SourceDropdown control data:</h3><p>cases:</p>
+<pre><code><code class="source-code prettyprint">// Single select dropdown:
+...
+sourceDropdownName = &apos;selectedOptionValue&apos;,
+sourceDropdownName_fmt = &apos;selectedOptionName&apos;,
+sourceDropdownName||options = &apos;[{&quot;name&quot;:&quot;selectedOptionName&quot;, &quot;value&quot;:&quot;selectedOptionValue&quot;, &quot;opt1&quot;:&quot;opt1value&quot;, &quot;anotheropt&quot;:&quot;anotherValue&quot;}]&apos;
+...
+
+// Multiselect dropdown (with 3 selected values):
+...
+multiSourceDropdownName = &apos;val1,val2,val3&apos;,
+multiSourceDropdownName_fmt = &apos;name1|name2|name3&apos;,
+multiSourceDropdownName||options = &apos;[{&quot;name&quot;:&quot;val1&quot;, &quot;value&quot;:&quot;name1&quot;, &quot;opt1&quot;:&quot;opt1value&quot;, &quot;anotheropt&quot;:&quot;anotherValue&quot;}, {&quot;name&quot;:&quot;val2&quot;, &quot;value&quot;:&quot;name2&quot;, &quot;something&quot;:&quot;someOtherValue&quot;}, {&quot;name&quot;:&quot;val3&quot;, &quot;value&quot;:&quot;name3&quot;}]&apos;
+...
+
+NOTES:
+1. &quot;fieldName__options&quot; key contains double-underscore&quot;
+2. &quot;fieldName__options&quot; should contain valid JSON in a string
+3. &quot;fieldName__options&quot; should contain all data for a selected option, including &quot;name&quot; and &quot;value&quot; despite they are already available in fieldName and fieldName_fmt.</code>
+</code></pre><hr>
+<h3 id="sd-runtime-grid-control-data-">SD Runtime Grid control data:</h3><pre><code><code class="source-code prettyprint">gridName: {
+    data: [{                       // first row
+        col1: {
+            value: &apos;john&apos;,
+            formattedValue: &apos;johnny&apos;
+        },
+        col2: {
+            value: &apos;123&apos;,
+            formattedValue: &apos;$123&apos;
+        }
+    },{                            // second row
+        col1: {
+            value: &apos;don&apos;,
+            formattedValue: &apos;donny&apos;
+        },
+        col2: {
+            value: &apos;9&apos;,
+            formattedValue: &apos;$9&apos;
+        }
+    }]
+}</code>
+</code></pre><h3 id="corresponding-server-grid-control-data-">Corresponding Server Grid control data:</h3><pre><code><code class="source-code prettyprint">// NOTE: grid name is not used!
+...,
+col1__1 = &apos;john&apos;,
+col1__1_fmt = &apos;johnny&apos;,
+col2__1 = &apos;123&apos;,
+col2__1_fmt = &apos;$123&apos;,
+col1__2 = &apos;don&apos;,
+col1__2_fmt = &apos;donny&apos;,
+col2__2 = &apos;9&apos;,
+col2__2_fmt = &apos;9&apos;,
+...</code>
+</code></pre><hr>
+<h3 id="sd-runtime-sourcegrid-control-data-">SD Runtime SourceGrid control data:</h3><pre><code><code class="source-code prettyprint">sourceGridName: {
+    data: [{                        // first row
+        &quot;row-id&quot;: {                 // &quot;row-id&quot; is predefined name
+            value: &apos;id1&apos;,           // &quot;row-id&quot; values are unique across source grid rows
+            formattedValue: &apos;&apos;
+        },
+        col1: {
+            value: &apos;john&apos;,
+        },
+        col2: {
+            value: &apos;123&apos;,
+            formattedValue: &apos;$123&apos;
+        }
+    },{                             // second row
+        &quot;row-id&quot;: {
+            value: &apos;id2&apos;,
+                formattedValue: &apos;&apos;
+        },
+        col1: {
+            value: &apos;don&apos;,
+        },
+        col2: {
+            value: &apos;9&apos;,
+            formattedValue: &apos;$9&apos;
+        }
+    }]
+}</code>
+</code></pre><h3 id="corresponding-server-sourcegrid-control-data-">Corresponding Server SourceGrid control data:</h3><pre><code><code class="source-code prettyprint">// NOTE: grid name is not used!
+...,
+sourceGridName = &apos;[{&quot;row-id&quot;:{&quot;value&quot;:&quot;id1&quot;,&quot;formattedValue&quot;:&quot;&quot;},&quot;col1&quot;:{&quot;value&quot;:&quot;john&quot;},&quot;col2&quot;:{&quot;value&quot;:&quot;123&quot;,&quot;formattedValue&quot;:&quot;$123&quot;}},{&quot;row-id&quot;:{&quot;value&quot;:&quot;id1&quot;,&quot;formattedValue&quot;:&quot;&quot;},&quot;col1&quot;:{&quot;value&quot;:&quot;don&quot;},&quot;col2&quot;:{&quot;value&quot;:&quot;9&quot;,&quot;formattedValue&quot;:&quot;$9&quot;}}]&apos;
+...</code>
+</code></pre><hr>
+<h3 id="sd-runtime-mask-control-data-">SD Runtime Mask control data:</h3><pre><code><code class="source-code prettyprint">maskcontrolName: {
+    value: &apos;value&apos;,
+    formattedValue: &apos;formatted-value&apos;,
+    data: {
+        maskedValue: &apos;masked-value&apos;
+    }
+}</code>
+</code></pre><h3 id="corresponding-server-mask-control-data-">Corresponding Server Mask control data:</h3><p>cases:</p>
+<pre><code><code class="source-code prettyprint">// properties for maskcontrolName &apos;showMaskedCharactersInPDF&apos; and &apos;encrypt&apos; = false
+
+maskcontrolName = &apos;value&apos;,
+maskcontrolName_fmt = &apos;formatted-value&apos;,
+maskcontrolName_enc = false
+// NOTE: maskcontrolName_msk doesn&apos;t added
+
+// &apos;showMaskedCharactersInPDF&apos; and &apos;encrypt&apos; = true
+
+maskcontrolName = &apos;value&apos;,
+maskcontrolName_fmt = &apos;formatted-value&apos;,
+maskcontrolName_msk = &apos;masked-value&apos;,
+maskcontrolName_enc = true</code>
+</code></pre><hr>
+<h3 id="sd-runtime-softlocked-data-">SD Runtime SoftLocked data:</h3><pre><code><code class="source-code prettyprint">name: {
+    value: &apos;value&apos;,
+    formattedValue: &apos;formatted-value&apos;
+}
+
+// in case when control belongs to softLocked screen:
+lockedName: {
+    value: &apos;value&apos;,
+    formattedValue: &apos;formatted-value&apos;,
+    locked: true
+}
+
+// in case when control empty and belongs to softLocked screen:
+emptyLockedName: {
+    locked: true
+}
+
+gridName: {
+    data: [{
+        col1: {
+            value: &apos;john&apos;,
+            formattedValue: &apos;johnny&apos;
+        },
+        col2: {
+            value: &apos;123&apos;,
+            formattedValue: &apos;$123&apos;
+        }
+    }],
+    locked: true
+}</code>
+</code></pre><h3 id="corresponding-server-softlocked-data-">Corresponding Server SoftLocked data:</h3><pre><code><code class="source-code prettyprint">...,
+name =&apos;value&apos;,
+name_fmt = &apos;formatted-value&apos;,
+...,
+
+
+...,
+lockedName =&apos;value&apos;,
+lockedName_fmt = &apos;formatted-value&apos;,
+lockedName_lck = true,
+...,
+
+
+...,
+emptyLockedName_lck = true,
+...,
+
+...,
+col1__1 = &apos;john&apos;,
+col1__1_fmt = &apos;johnny&apos;,
+col1__1_lck = true,
+col2__1 = &apos;123&apos;,
+col2__1_fmt = &apos;$123&apos;,
+col2__1_lck = true,
+...,</code>
+</code></pre><hr>
+<h3 id="sd-runtime-email-control-data">SD Runtime Email control data</h3><pre><code><code class="source-code prettyprint">emailName: {
+    value: &apos;value@of.value&apos;,
+    formattedValue: &apos;formattedvalue@of.formattedvalue&apos;,
+    data: {
+        status: &apos;error&apos;,
+        message: &apos;blue sky&apos;
+    }
+}</code>
+</code></pre><h3 id="corresponding-server-email-control-data-">Corresponding Server Email control data:</h3><pre><code><code class="source-code prettyprint">emailName: &apos;value@of.value&apos;,
+emailName_fmt: &apos;formattedvalue@of.formattedvalue&apos;,
+emailName_emdata: &quot;{\&quot;status\&quot;:\&quot;error\&quot;,\&quot;message\&quot;:\&quot;blue sky\&quot;}&quot;</code>
+</code></pre><hr>
+<h3 id="sd-runtime-creditcard-control-data">SD Runtime CreditCard control data</h3><pre><code><code class="source-code prettyprint">creditCardName: {
+  value: {
+    controlsValues: {
+      cardholder: {
+        value: &apos;John Doe&apos;,
+        formattedValue: &apos;John Doe&apos;,
+
+      },
+      street: {
+        value: &apos;1st Ave&apos;,
+        formattedValue: &apos;1st Ave&apos;,
+
+      },
+      city: {
+        value: &apos;Lost city&apos;,
+        formattedValue: &apos;Lost city&apos;,
+
+      },
+      province: {
+        value: &apos;Provincia&apos;,
+        formattedValue: &apos;Provincia&apos;,
+
+      },
+      state: {
+        value: &apos;Alaska&apos;,
+        formattedValue: &apos;Alaska&apos;,
+
+      },
+      country: {
+        value: &apos;USA&apos;,
+        formattedValue: &apos;USA&apos;,
+
+      },
+      zip: {
+        value: &apos;12345&apos;,
+        formattedValue: &apos;12345-____&apos;,
+
+      },
+      amount: {
+        value: &quot;100&quot;,
+        formattedValue: &quot;$100&quot;
+      }
+    },
+    maskedValues: {
+      ccn: {
+        value: &apos;************1234&apos;,
+        formattedValue: &apos;************1234&apos;,
+
+      },
+      cvv: {
+        value: &apos;***&apos;,
+        formattedValue: &apos;***&apos;,
+
+      },
+      ced: {
+        value: &apos;**/**&apos;,
+        formattedValue: &apos;**/**&apos;,
+
+      }
+    }
+  },
+  data: {
+    status: &apos;valid&apos;,
+    message: &apos;Hulala&apos;
+  }
+}</code>
+</code></pre><h3 id="corresponding-server-creditcard-control-data-">Corresponding Server CreditCard control data:</h3><pre><code><code class="source-code prettyprint">creditCardName: &apos;&quot;{
+  &quot;controlsValues&quot;: {
+    &quot;cardholder&quot;: {
+      &quot;value&quot;: &quot;John Doe&quot;,
+      &quot;formattedValue&quot;: &quot;John Doe&quot;
+    },
+    &quot;street&quot;: {
+      &quot;value&quot;: &quot;1st Ave&quot;,
+      &quot;formattedValue&quot;: &quot;1st Ave&quot;
+    },
+    &quot;city&quot;: {
+      &quot;value&quot;: &quot;Lost city&quot;,
+      &quot;formattedValue&quot;: &quot;Lost city&quot;
+    },
+    &quot;province&quot;: {
+      &quot;value&quot;: &quot;Provincia&quot;,
+      &quot;formattedValue&quot;: &quot;Provincia&quot;
+    },
+    &quot;state&quot;: {
+      &quot;value&quot;: &quot;Alaska&quot;,
+      &quot;formattedValue&quot;: &quot;Alaska&quot;
+    },
+    &quot;country&quot;: {
+      &quot;value&quot;: &quot;USA&quot;,
+      &quot;formattedValue&quot;: &quot;USA&quot;
+    },
+    &quot;zip&quot;: {
+      &quot;value&quot;: &quot;12345&quot;,
+      &quot;formattedValue&quot;: &quot;12345-____&quot;
+    },
+    amount: {
+      &quot;value&quot;: &quot;100&quot;,
+      &quot;formattedValue&quot;: &quot;$100&quot;
+    }
+  },
+  &quot;maskedValues&quot;: {
+    &quot;ccn&quot;: {
+      &quot;value&quot;: &quot;************1234&quot;,
+      &quot;formattedValue&quot;: &quot;************1234&quot;
+    },
+    &quot;cvv&quot;: {
+      &quot;value&quot;: &quot;***&quot;,
+      &quot;formattedValue&quot;: &quot;***&quot;
+    },
+    &quot;ced&quot;: {
+      &quot;value&quot;: &quot;**/**&quot;,
+      &quot;formattedValue&quot;: &quot;**/**&quot;
+    }
+  }
+}&quot;&apos;,
+// no _fmt
+// credit card data shouldn&apos;t go to Server!</code>
+</code></pre><hr>
+<h3 id="-a-name--dynamictable----a-sd-runtime-dynamictable-control-data"><a name="DynamicTable"></a>SD Runtime DynamicTable control data</h3><p>dynamicTableControlName: {
+    value: <a href="./manual/dynamic%20table.html">JSON described here</a>
+}</p>
+<p>Example:</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">dynamicTableControlName: {
+    value: {
+        columns: [{
+            name: &apos;firstName&apos;,
+            title: &apos;First name&apos;
+        }],
+        data: []
+    }
+}</code>
+</code></pre>
+<h3 id="corresponding-server-dynamictable-control-data-">Corresponding Server DynamicTable control data:</h3><p>JSON-stringified DynamicTable control data</p>
+<p>Example:</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">dynamicTableControlName: &apos;{&quot;columns&quot;:[{&quot;name&quot;:&quot;firstName&quot;,&quot;title&quot;:&quot;First name&quot;}],&quot;data&quot;:[]}&apos;</code>
+</code></pre>
+<hr>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

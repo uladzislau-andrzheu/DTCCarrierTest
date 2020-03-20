@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>NYL TIDE Mockup</title>
+
+    <!--script src="./appContainer.js"></script-->
+    <link href=".\fontawesome\css\all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--script src="./load-runtime.js"></script-->
+
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="ngsd-style-overrides.css">
+
+  </head>
+  <body>
+    <nav id="header" class="navbar navbar-light">
+      <a class="navbar-brand" href="#">
+        <img src="images/NYL.jpg" width="65" height="65" class="d-inline-block align-top" alt="NYL">
+      </a>
+      <div id="navbarNav">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Products<i class="fas fa-angle-down"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Profile<i class="fas fa-angle-down"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact | Help<i class="fas fa-angle-down"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div id="user-info">
+        David Stone
+        <p id="separator" style="display: none"> | </p>
+        <br />
+        <a href="#">Sign Out</a>
+      </div>
+    </nav>
+    <!-- <script id="" src="/assets/progress-bar/load-progress-bar.js"></script> -->
+
+    <!--div class="progress-bar-NYL">
+      <div class="steps">
+        <div class="steps-text">
+          <p class="steps-not-complete">Welcome</p>
+          <p class="steps-not-complete">Your History</p>
+          <p class="steps-not-complete">Your Health</p>
+          <p class="steps-not-complete">Additional Benefits</p>
+          <p class="steps-not-complete">Asset Flex</p>
+          <p class="steps-not-complete">Review & Submit</p>
+        </div>
+        <div class="progress-NYL">
+          <div class="progress-bar"></div>
+        </div>
+        <div id="bar-bottom"></div>
+      </div>
+    </div-->
+    <div class="content">
+      <script data-name="CesLib" src="http://127.0.0.1:53854/dist/CesLib.Classic.js"></script>
+        <script>
+          var CesPlatform = getCesPlatform({
+            OrganizationId: "IPIPELINE",
+            CompanyId: "IPIPELINE",
+            SubCompanyId: "7616",
+            CodeSubCompanyId: "7616",
+            State: "AL",
+            ProductId: "6539",
+            ScreenPackage: "TELEAPP",
+            FormsPackageName: "NYLTeleApp",
+            Name: "NYL",
+            ElementId: "dtc",
+            Env: "",
+            Nav: true,
+            UserId: "6edef344-09a4-4a14-9429-2f74c27c7570",
+            CaseId: "e0f094a6-a14d-49e5-a0ac-8d6a5bb990b8"
+          }, function(result) {
+            console.info('Loaded: ' + result.toString());
+
+          })
+        </script>
+        <!--
+        <script data-name="CesLib" src="https://ngsd-dtc-qa.ipipeline.com/dist/CesLib.Classic.js"></script>
+        <script>
+          var CesPlatform = getCesPlatform({
+            OrganizationId: "IPIPELINE",
+            CompanyId: "IPIPELINE",
+            SubCompanyId: "7424",
+            CodeSubcompanyId: "7424",
+            State: "AL",
+            ProductId: "8803",
+            ScreenPackage: "Term",
+            FormsPackageName: "AMICA_DTC",
+            Name: "Amica",
+            ElementId: "dtc",
+            Env: "qd1",
+            Nav: true
+          }, function (result) {
+            console.info('Loaded: ' + result.toString());
+          })
+        </script>
+         -->
+        <div id="dtc">
+        </div><!--
+          <div id="main">
+            <div id="title-box">
+              <div id="title">
+                <p>YOUR HEALTH</p>
+              </div>
+              <div id="title-question">
+                <p>In the last 10 years, have you been diagnosed, treated, tested positive for or been given</p>
+                <p>medical advice by a member of the medical profession for any of the following?</p>
+              </div>
+            </div>
+        <div class="section">
+          <h1>High blood pressure, chestpain, murmur, arrhythmia, heart attack, other heart disorder or disease?</h1>
+          <div class="section-divider"></div>
+
+          <div class="radios">
+            <label class="radio-NYL">
+              Yes
+              <input type="checkbox" checked="checked">
+              <span class="radio-checkmark"></span>
+            </label>
+            <label class="radio-NYL">
+              No
+              <input type="checkbox">
+              <span class="radio-checkmark"></span>
+            </label>
+          </div>
+          <div class="checkboxes">
+            <label class="checkbox-label">
+              <input type="checkbox"/>
+              <span class="checkbox-NYL"></span>
+              High blood pressure
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox"/>
+              <span class="checkbox-NYL"></span>
+              Chest pain
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox"/>
+              <span class="checkbox-NYL"></span>
+              Murmur
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox"/>
+              <span class="checkbox-NYL"></span>
+              Arrhythmia
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox"/>
+              <span class="checkbox-NYL"></span>
+              Heart attack
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox"/>
+              <span class="checkbox-NYL"></span>
+              Other heart disorder or diseases
+            </label>
+          </div>
+
+          <div class="input-NYL" style="display: block; width: 30%">
+            <h4>Other related medical conditions</h4>
+            <button class="btn-NYL-dropdown dropdown-toggle" style="width: 100%" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Select
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h1>High blood sugar or diabetes? (Including for females gestational diabetes)</h1>
+          <div class="section-divider"></div>
+          <div class="radios">
+            <label class="radio-NYL">
+              Yes
+              <input type="checkbox">
+              <span class="radio-checkmark"></span>
+            </label>
+            <label class="radio-NYL">
+              No
+              <input type="checkbox" checked="checked">
+              <span class="radio-checkmark"></span>
+            </label>
+          </div>
+        </div>
+        <div class="section">
+          <h1>Asthma, shortness of breath COPD, emphysema, or any other lung or respiratory disorder?</h1>
+          <div class="section-divider"></div>
+          <div class="radios">
+            <label class="radio-NYL">
+              Yes
+              <input type="checkbox">
+              <span class="radio-checkmark"></span>
+            </label>
+            <label class="radio-NYL">
+              No
+              <input type="checkbox" checked="checked">
+              <span class="radio-checkmark"></span>
+            </label>
+          </div>
+        </div>
+        <div class="section">
+          <h1>Tumor, melanoma, leukemia, lymphoma, or any type of cancer?</h1>
+          <div class="section-divider"></div>
+          <div class="radios">
+            <label class="radio-NYL">
+              Yes
+              <input type="checkbox">
+              <span class="radio-checkmark"></span>
+            </label>
+            <label class="radio-NYL">
+              No
+              <input type="checkbox" checked="checked">
+              <span class="radio-checkmark"></span>
+            </label>
+          </div>
+        </div>
+        <div class="nav-buttons">
+          <input type="button" class="btn btn-NYL-secondary" value="Back">
+          <input type="button" class="btn btn-NYL" value="Next">
+        </div>
+
+        <!-div class="questions">
+          <div class="question">
+            <div id="top">
+              <p>High blood pressure, chest pain, murmur, arrhythmia, heart attack, other heart disorder or disease?</p>
+            </div>
+            <div id="bottom">
+              <div class="radio-yes-no">
+                <label class="NYL-radio">
+                  Yes
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="NYL-radio">
+                  No
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div style="display: inline;">
+                <div class="input-NYL" style="display: inline-block; width: 60%">
+                  <h4>Condition</h4>
+                  <button class="btn-NYL-dropdown dropdown-toggle" style="width: 100%" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    High Blood Pressure
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
+                <div class="input-NYL" style="display: inline-block; padding-left: 10px; width: 12%"">
+                  <h4>Onset Date</h4>
+                  <input class="textbox-NYL" type="text" style="width: 100%" type="button" value="3/3/2020" />
+                </div>
+              </div>
+              <button type="button" class="btn btn-NYL">Search</button>
+            </div>
+          </div>
+        </div
+      </div
+    </div>--><!-- Eliminate whitespace
+ --><div id="sidebar">
+      <p>Just a reminder, we are asking for information about the person this insurance is to cover.</p>
+      <p>Please answer to the best of your knowledge.</p>
+
+      <div id="help-text">
+        <p><b>Get Help</b></p>
+        <p>Help Link 1</p>
+        <p>Help Link 2</p>
+        <p>Help Link 3</p>
+        <p>Help Link 4</p>
+      </div>
+    </div>
+
+    <footer class="footer-NYL">
+      <div class="footer-NYL-content">
+          <div class="footer-row">
+            <p>Disclosure Statement</p>
+            <p>Privacy Policy</p>
+            <p>Business Continuity</p>
+          </div>
+          <div class="footer-row">
+            <p>Legal Notice</p>
+            <p>Glossary</p>
+            <p>Feedback</p>
+          </div>
+      </div>
+      <div class="section-divider"></div>
+      <div class="footer-NYL-copyright">
+        <p>© 2020 New York Life Insurance Company. New York, NY.</p>
+        <p>ALL RIGHTS RESERVED.</p>
+      </div>
+    <!-- </footer>
+    <script src="./ngsd-overrides.js"></script>
+    <script src="./assets/ngsd-header/load-headers.js"></script> -->
+
+  </body>
+  </html>

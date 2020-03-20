@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">sdk/GlobalEventHandlers.js | Screen designer SDK</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="ipln-scrd"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Screen designer SDK"><meta property="twitter:description" content="ipln-scrd"><link rel="stylesheet" href="./inject/css/0-customization.css"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/ipipeline/ngen_screen_designer"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sdk/ESigEventHandlers.js~ESigEventHandlers.html">ESigEventHandlers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sdk/GlobalEventHandlers.js~GlobalEventHandlers.html">GlobalEventHandlers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html">RuntimeCoreAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sdk/SharedGlobalEventHandlers.js~SharedGlobalEventHandlers.html">SharedGlobalEventHandlers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-runtimeCoreApiInstance">runtimeCoreApiInstance</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_ACCEPT_CONSENT">ESIGUI_ACCEPT_CONSENT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_ACCEPT_DISCLOSURE">ESIGUI_ACCEPT_DISCLOSURE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_CAPTURE_EVENT">ESIGUI_CAPTURE_EVENT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_COPY_NESTED_DATA">ESIGUI_COPY_NESTED_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_DECLINE_CONSENT">ESIGUI_DECLINE_CONSENT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_DECLINE_DISCLOSURE">ESIGUI_DECLINE_DISCLOSURE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_FINISH_SIGNING">ESIGUI_FINISH_SIGNING</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_FLUSH_AUDITTRAIL">ESIGUI_FLUSH_AUDITTRAIL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_GET_SIGNING_STATUS">ESIGUI_GET_SIGNING_STATUS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_GET_VENDOR_URL">ESIGUI_GET_VENDOR_URL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_VIEW_PDF">ESIGUI_VIEW_PDF</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ACTIVATE_FORM_PACKAGE">ACTIVATE_FORM_PACKAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-APPLY_ESIGN">APPLY_ESIGN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CALL_CUSTOM_ASSEMBLY">CALL_CUSTOM_ASSEMBLY</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CALL_JS_CUSTOM_ASSEMBLY">CALL_JS_CUSTOM_ASSEMBLY</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CALL_LOGGER">CALL_LOGGER</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CALL_SERVER_PROCEDURE">CALL_SERVER_PROCEDURE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CHANGE_CREDIT_CARD">CHANGE_CREDIT_CARD</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CHECK_PARAMED_SCHEDULER_STATUS">CHECK_PARAMED_SCHEDULER_STATUS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CREATE_AIS_CASE">CREATE_AIS_CASE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DECLINE_ESIGN">DECLINE_ESIGN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-EXPORT_FORM_FROM_IGO">EXPORT_FORM_FROM_IGO</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_GOOGLE_PLACES_DETAILS">GET_GOOGLE_PLACES_DETAILS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_GOOGLE_PLACES_PREDICTIONS">GET_GOOGLE_PLACES_PREDICTIONS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_SMARTY_STREETS_DETAILS">GET_SMARTY_STREETS_DETAILS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_SMARTY_STREETS_PREDICTIONS">GET_SMARTY_STREETS_PREDICTIONS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_SOURCEDROPDOWN_DATA">GET_SOURCEDROPDOWN_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_SOURCEGRID_DATA">GET_SOURCEGRID_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-INITIAL_LOAD_DATA">INITIAL_LOAD_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-LOAD_DATA">LOAD_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ON_DYNAMIC_TABLE_EVENT">ON_DYNAMIC_TABLE_EVENT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ON_FIELD_VALIDATE">ON_FIELD_VALIDATE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-OPEN_AIS_CASE">OPEN_AIS_CASE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RETRIEVE_PARAMED_SCHEDULER_URL">RETRIEVE_PARAMED_SCHEDULER_URL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SAVE_DATA">SAVE_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_EMAIL">SEND_EMAIL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SHOW_ATTACHMENTS">SHOW_ATTACHMENTS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UNDERWRITE_AIS_CASE">UNDERWRITE_AIS_CASE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPLOAD_FILE">UPLOAD_FILE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-VALIDATE_CREDIT_CARD">VALIDATE_CREDIT_CARD</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-VERIFY_EMAIL">VERIFY_EMAIL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-VIEW_PDF">VIEW_PDF</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ValidationResult">ValidationResult</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ValidationType">ValidationType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Validations">Validations</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">sdk/GlobalEventHandlers.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React from &apos;react&apos;;
+import { runtimeCoreApiInstance } from &apos;runtime/sdk/RuntimeCoreAPI&apos;;
+
+/* eslint no-unused-vars:0 */
+/* istanbul ignore file  */
+
+/**
+ * Base SDK class.
+ */
+export class GlobalEventHandlers {
+    /**
+     * Reference to SDK API functions.
+     * @example
+     * ExtensionClass.prototype.saveData = function() {
+     *     const clientData = this.coreApi.getRuntimeData();
+     *     //...
+     * }
+     */
+    coreApi; // declaring here just for documentation purposes. it actually doesn&apos;t affect the generated class
+
+    /**
+     * Superclass definition to provide access to implementation of base methods from SDK.
+     * NOTE: default SDK implementation doesn&apos;t have any logic in base methods.
+     * @example
+     * ExtensionClass.prototype.callCustomAssembly = function(assemblyName) {
+     *     return this.superclass.callCustomAssembly(assemblyName);
+     * }
+     */
+    superclass; // declaring here just for documentation purposes. it actually doesn&apos;t affect the generated class
+
+    /**
+     * This method is invoked whenever Runtime makes a call to custom assembly (excluding custom assemblies for SourceGrid and SourceDropdown data retrieval).
+     * @since v0.56.*
+     * @param {String} assemblyName - name of custom assembly to call
+     * @returns {Promise} - A Promise of operation completion if implementation contains any asynchronous operations. If implementation is synchronous you may return either resolved Promise or undefined.
+     * @example
+     * ExtensionClass.prototype.callCustomAssembly = function(assemblyName) {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *     switch(assemblyName) {
+     *         case: &apos;CustomAssembly1&apos;:
+     *             // update runtime data
+     *             break;
+     *         // handle calls to other custom assemblies
+     *     }
+     *     // return result of base method execution if you are extending the default implementation:
+     *     return superclass.callCustomAssembly(assemblyName);
+     * }
+     */
+    callCustomAssembly(assemblyName) {}
+
+    /**
+     * This method is invoked whenever Runtime makes a call to JavaScript custom assembly. Invocation occurs synchronously for Rule and Event action. It is allowed to return Promise and execute asynchronous code ONLY for Event action.
+     * @since v0.77.*
+     * @param {String} assemblyName - name of JavaScript custom assembly to call
+     * @returns {undefined|Promise} - If implementation is synchronous you may return either undefined or resolved Promise. Return Promise of operation completion if implementation contains any asynchronous operations only valid for Event action.
+     * @example
+     * ExtensionClass.prototype.callJsCustomAssembly = function(assemblyName) {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *     switch(assemblyName) {
+     *         case: &apos;JavaScriptCustomAssembly1&apos;:
+     *             // update runtime data
+     *             break;
+     *         // handle calls to other JS custom assemblies
+     *     }
+     *     // return result of base method execution if you are extending the default implementation:
+     *     return superclass.callJsCustomAssembly(assemblyName);
+     * }
+     */
+    callJsCustomAssembly(assemblyName) {}
+
+    /**
+     * This method is invoked whenever Runtime makes a call to server procedure.
+     * @since v0.73.*
+     * @param {String} procedureName - name of server procedure to call
+     * @returns {Promise} - A Promise of operation completion if implementation contains any asynchronous operations. If implementation is synchronous you may return either resolved Promise or undefined.
+     * @example
+     * ExtensionClass.prototype.callServerProcedure = function(procedureName) {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *     switch(procedureName) {
+     *         case: &apos;Procedure1&apos;:
+     *             // update runtime data
+     *             break;
+     *         // handle calls to other procedures
+     *     }
+     *     // return result of base method execution if you are extending the default implementation:
+     *     return superclass.callServerProcedure(procedureName);
+     * }
+     */
+    callServerProcedure(procedureName) {}
+
+    /**
+     * Specific iGo method to apply e-signature
+     * @since v0.73.*
+     * @returns {Promise&lt;Object&gt;} - A Promise of operation completion if implementation contains any asynchronous operations and/or call to superclass.applyEsign (superclass.applyEsign returns a Promise). If implementation is synchronous you may return either resolved Promise or undefined.
+     * @example
+     * ExtensionClass.prototype.applyEsign = function() {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *
+     *     // ... your code here
+     *
+     *     // return result of base method execution if you are extending the default implementation:
+     *     return superclass.applyEsign();
+     * }
+     */
+    applyEsign() {}
+
+    /**
+     * Specific iGo method to decline e-signature
+     * @since v0.73.*
+     * @returns {Promise&lt;Object&gt;} - A Promise of operation completion if implementation contains any asynchronous operations and/or call to superclass.declineEsign (superclass.declineEsign returns a Promise). If implementation is synchronous you may return either resolved Promise or undefined.
+     * @example
+     * ExtensionClass.prototype.declineEsign = function() {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *
+     *     // ... your code here
+     *
+     *     // return result of base method execution if you are extending the default implementation:
+     *     return superclass.declineEsign();
+     * }
+     */
+    declineEsign() {}
+
+    /**
+     * Specific iGo method to activate form package
+     * @since v0.73.*
+     * @returns {Promise&lt;Object&gt;} - A Promise of operation completion if implementation contains any asynchronous operations and/or call to superclass.activateFormPackage (superclass.activateFormPackage returns a Promise). If implementation is synchronous you may return either resolved Promise or undefined.
+     * @example
+     * ExtensionClass.prototype.activateFormPackage = function(name) {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *
+     *     // ... your code here
+     *
+     *     // return result of base method execution if you are extending the default implementation:
+     *     return superclass.activateFormPackage(name);
+     * }
+     */
+    activateFormPackage() {}
+
+    /**
+     * Specific iGo method to prepare data before showing pdf
+     * @since v0.73.*
+     * @returns {Promise&lt;Object&gt;} - A Promise of operation completion if implementation contains any asynchronous operations and/or call to superclass.viewPDF (superclass.viewPDF returns a Promise). If implementation is synchronous you may return either resolved Promise or undefined.
+     * @example
+     * ExtensionClass.prototype.viewPDF = function() {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *
+     *     // ... your code here
+     *
+     *     // return result of base method execution if you are extending the default implementation:
+     *     return superclass.viewPDF();
+     * }
+     */
+    viewPDF() {}
+
+    /**
+     * This method is @deprecated and will be removed in nearest time. Use viewPDF() instead.
+     */
+    exportFormFromIGO() {}
+
+    /**
+     * This method is invoked whenever Runtime attempts to retrieve data for a SourceGrid.
+     * @since v0.56.*
+     * @param {String} assemblyName - name of custom assembly which returns Source Grid data, could be either JS or Server side custom assembly
+     * @returns {String|Promise} - stringified JSON Array or Promise of such Array which contains data for Source Grid. You must return a Promise if implementation contains any asynchronous operations and/or call to superclass.getSourceGridData (superclass.getSourceGridData returns a Promise that resolves to requested data). If implementation is synchronous you may return either Promise resolved to stringified JSON Array or just stringified JSON Array with data.
+     * @property {Object} JSON_Array[] - data object specifying data for single Source Grid row
+     * @property {String} JSON_Array[].row-id - unique row id
+     * @property {String} JSON_Array[].&lt;column_name&gt; - value for specified &lt;column_name&gt; in current row
+     * @example
+     * ExtensionClass.prototype.getSourceGridData = function(assemblyName) {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *     var data;
+     *
+     *     // ... your code here
+     *
+     *     // return result of base method execution if you are extending the default implementation:
+     *     return superclass.getSourceGridData(assemblyName);
+     *     // returned data example: &apos;[{\&quot;row-id\&quot;: \&quot;1\&quot;,\&quot;Name\&quot;: \&quot;John\&quot;,\&quot;DOB\&quot;: \&quot;2016-10-10T00:00:00+00:00\&quot;},{\&quot;row-id\&quot;: \&quot;2\&quot;,\&quot;Name\&quot;: \&quot;Bob\&quot;,\&quot;DOB\&quot;: \&quot;2010-02-13T00:00:00+00:00\&quot;}]&apos;
+     * }
+     */
+    getSourceGridData(assemblyName) {}
+
+    /**
+     * This method is invoked whenever Runtime attempts to retrieve data for a SourceDropdown.
+     * NOTE: its implementation should call services in background (don&apos;t use load progress indicator)
+     * to avoid source dropdown list being closed after the data is loaded.
+     * @since v0.56.*
+     * @param {String} assemblyName - name of custom assembly which returns Source Dropdown data, could be either JS or Server side custom assembly
+     * @returns {String|Promise} - stringified JSON Object or a Promise of such object which contains data for Source Dropdown. You must return a Promise if implementation contains any asynchronous operations and/or call to superclass.getSourceDropdownData (superclass.getSourceDropdownData returns a Promise that resolves to requested data). If implementation is synchronous you may return either Promise resolved to stringified JSON Object or just stringified JSON Object with data.
+     * @property {Object[]} JSON_Object.records[] - array of records, each representing single data item for Source Dropdown
+     * @property {String} JSON_Object.records[].name - Required. Item name (will be displayed in dropdown control)
+     * @property {String} JSON_Object.records[].value - Required. Item value (internal data value)
+     * @property {*} JSON_Object.records[].* - Optional. Any other supplementary data for a record
+     * @example
+     * ExtensionClass.prototype.getSourceDropdownData = function(assemblyName) {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *
+     *     // ... your code here
+     *
+     *     // return result of base method execution if you are extending the default implementation:
+     *     return superclass.getSourceDropdownData(assemblyName);
+     *     // returned data example: &apos;{&quot;records&quot;: [{&quot;name&quot;: &quot;Belarus&quot;,&quot;value&quot;: &quot;Minsk&quot;,&quot;option1&quot;: &quot;qwe&quot;,&quot;option2&quot;: &quot;asd&quot;},{&quot;name&quot;: &quot;USA&quot;,&quot;value&quot;: &quot;Washington&quot;,&quot;option1&quot;: &quot;zxc&quot;,&quot;option2&quot;: &quot;rty&quot;}]}&apos;
+     * }
+     */
+    getSourceDropdownData(assemblyName) {}
+
+    /**
+     * This method is invoked whenever Runtime attempts to validate credit card data via specific services.
+     * @since v0.65.*
+     * @param  {Object} creditCardData - filled in credit card data. Also contains extra parameters from client data. See `SD Runtime CreditCard control data` in &lt;a href=&quot;manual/data%20format.html&quot;&gt;Data Interchange Format description&lt;/a&gt;
+     * @param  {String} creditCardControlName
+     * @param  {String} cardType - Visa, AmEx, MasterCard, etc...
+     * @param  {Object} ftniRequestOptions - Request options to be sent to FTNI service (defaultStatus, doNotUpdateCustomer, doNotUseCustomerName, doNotUseCustomerAddress)
+     * @returns {Promise&lt;Object&gt;} - Promise of the validateCreditCard operation completion. Resolving data format is the same as for @{creditCardData} param
+     * @example
+     * ExtensionClass.prototype.validateCreditCard = function(creditCardData, creditCardControlName, cardType) {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *
+     *     // ... your code here
+     *
+     *     // return result of base method execution if you are extending the default implementation:
+     *     return superclass.validateCreditCard(creditCardData, creditCardControlName, cardType);
+     * }
+     */
+    validateCreditCard(creditCardData, creditCardControlName, cardType, ftniRequestOptions) {}
+
+    /**
+     * This method is used to erase previously entered credit card data.
+     * @since v0.65.*
+     * @param  {String} creditCardControlName - name of credit card control to be erased
+     * @returns {Promise} - Promise of the changeCreditCard operation completion. No data need to be resolved
+     * @example
+     * ExtensionClass.prototype.changeCreditCard = function(creditCardControlName) {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *
+     *     // ... your code here
+     *
+     *     // return result of base method execution if you are extending the default implementation:
+     *     return superclass.changeCreditCard(creditCardControlName);
+     * }
+     */
+    changeCreditCard(creditCardControlName) {}
+
+    /**
+     * This method is invoked whenever email control makes a call to validate email.
+     * @since v0.67.*
+     * @param {String} email - email to validate
+     * @param {String} verificationService - verification service provider. One of [&apos;kickbox&apos;]
+     * @returns {Promise&lt;Object&gt;} - Promise of operation completion which should resolve an object
+     * @property {String} Object.status - Required. Status of validation operation. One of [&apos;valid&apos;, &apos;invalid&apos;, &apos;error&apos;, &apos;unverified&apos;]
+     * @property {String} [Object.message] - Optional message about validation execution on service
+     * @example
+     * ExtensionClass.prototype.verifyEmail = function(email, verificationService) {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *
+     *     // ...your code here
+     *
+     *     // return result of base method execution if you are extending the default implementation:
+     *     return superclass.verifyEmail(email, verificationService);
+     * }
+     */
+    verifyEmail(email, verificationService) {}
+
+    createAISCase(controlName) {}
+
+    openAISCase(controlName) {}
+
+    underwriteAISCase(controlName, underwriteToken) {}
+
+    /**
+     * This method is invoked whenever Runtime attempts to receive Smarty Streets Address Predictions
+     * @since v0.91.*
+     * @param {String} value - according to this value address predictions will be suggested
+     * @returns {Array} - Smarty Streets address predictions
+     * Example of output data:
+     * [
+     *   {
+     *     name: &apos;22 Antelope Rd, Seneca MO&apos;,
+     *     id: &apos;22 Antelope Rd, Seneca MO&apos;,
+     *     data: {
+     *          street: &apos;22 Antelope Rd&apos;,
+     *          city: &apos;Seneca&apos;,
+     *          state: &apos;MO&apos;
+     *     }
+     *   },
+     *   {
+     *     name: &apos;333 Avenue B, Coudersport PA&apos;,
+     *     id: &apos;333 Avenue B, Coudersport PA&apos;,
+     *     data: {
+     *          street: &apos;333 Avenue B&apos;,
+     *          city: &apos;Coudersport&apos;,
+     *          state: &apos;PA&apos;
+     *     }
+     *   }
+     * ]
+     * @example
+     * ExtensionClass.prototype.getSmartyStreetsPredictions = function(value) {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *
+     *     // ...your code here
+     *
+     *     // return result of base method execution if you are extending the default implementation:
+     *     return superclass.getSmartyStreetsPredictions(value);
+     * }
+     */
+    getSmartyStreetsPredictions(value) {}
+
+    /**
+     * This method is invoked whenever Runtime attempts to receive Google Places Address Predictions
+     * @since v0.91.*
+     * @param {String} value - according to this value address predictions will be suggested
+     * @returns {Array} - Google Places address predictions
+     * Example of output data:
+     * [
+     *   {
+     *     name: &apos;150 West 34th Street, New York, NY, USA&apos;,
+     *     id: &apos;150 West 34th Street, New York, NY, USA&apos;,
+     *     data: {
+     *          placeId: &apos;ChIJ9SwqvK5ZwokRjbiilW_p2rs&apos;
+     *     }
+     *   },
+     *   {
+     *     name: &apos;1085-1087 Boylston Street, Boston, MA, USA&apos;,
+     *     id: &apos;1085-1087 Boylston Street, Boston, MA, USA&apos;,
+     *     data: {
+     *          placeId: &apos;ChIJjcKMJBt644kRVXqk_329y6o&apos;
+     *     }
+     *   }
+     * ]
+     * @example
+     * ExtensionClass.prototype.getGooglePlacesPredictions = function(value) {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *
+     *     // ...your code here
+     *
+     *     // return result of base method execution if you are extending the default implementation:
+     *     return superclass.getGooglePlacesPredictions(value);
+     * }
+     */
+    getGooglePlacesPredictions(value) {}
+
+    /**
+     * This method is invoked whenever Runtime attempts to receive Smarty Streets Address Details
+     * @since v0.91.*
+     * @param {String} value - according to this value address details will be received
+     * @returns {Object} - Smarty Streets address details
+     * @property {string} country - country
+     * @property {string} city - city
+     * @property {string} state - state
+     * @property {string} address - address
+     * @property {string} zip - zip code
+     * Example of output data:
+     * {
+     *    address: &quot;222 Vellenorth Rd&quot;,
+     *    city: &quot;Blue Ridge&quot;,
+     *    country: &quot;US&quot;,
+     *    state: &quot;GA&quot;,
+     *    zip: &quot;30513-2813&quot;
+     * }
+     * @example
+     * ExtensionClass.prototype.getSmartyStreetsDetails = function(value) {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *
+     *     // ...your code here
+     *
+     *     // return result of base method execution if you are extending the default implementation:
+     *     return superclass.getSmartyStreetsDetails(value);
+     * }
+     */
+    getSmartyStreetsDetails(value) {}
+
+    /**
+     * This method is invoked whenever Runtime attempts to receive Google Places Address Details
+     * @since v0.91.*
+     * @param {String} value - according to this value address details will be received
+     * @returns {Object} - Google Places address details
+     * @property {string} country - country
+     * @property {string} city - city
+     * @property {string} state - state
+     * @property {string} address - address
+     * @property {string} zip - zip code
+     * Example of output data:
+     * {
+     *    address: &quot;1085-1087 Boylston Street&quot;,
+     *    city: &quot;Boston&quot;,
+     *    country: &quot;USA&quot;,
+     *    state: &quot;MA&quot;,
+     *    zip: &quot;02215&quot;
+     * }
+     * @example
+     * ExtensionClass.prototype.getGooglePlacesDetails = function(value) {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *
+     *     // ...your code here
+     *
+     *     // return result of base method execution if you are extending the default implementation:
+     *     return superclass.getGooglePlacesDetails(value);
+     * }
+     */
+    getGooglePlacesDetails(value) {}
+
+    /**
+     * This method is invoked whenever Runtime attempts to save data.
+     * All runtime data is available via API.
+     * @since v0.56.*
+     * @returns {Promise} - Promise of the save operation completion if implementation contains any asynchronous operations and/or call to superclass.saveData (superclass.saveData returns a Promise). If implementation is synchronous you may return either resolved Promise or undefined. Note that this action is not expected to provide any data to runtime upon return. If you need to modify runtime data inside this action handler, use coreApi.updateRuntimeData().
+     * @example
+     * ExtensionClass.prototype.saveData = function() {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *     var runtimeData = coreApi.getRuntimeData();
+     *
+     *     // ... perform your saving operations or whatever else
+     *
+     *     // return Promise of base method execution if you are extending the default implementation:
+     *     return superclass.saveData();
+     * }
+     */
+    saveData() {}
+
+    /**
+     * This method is invoked whenever Runtime attempts to initialize with external data. Data could be loaded either synchronously or asynchronously.
+     * To load data synchronously pass it as a parameter. To load data asynchronously call the method without any parameters
+     * @since v0.80.*
+     * @param {Object} data - data to be loaded into runtime
+     * @returns {Promise|undefined} - Promise of the load operation completion if implementation contains any asynchronous operations and/or call to superclass.loadData (superclass.loadData returns a Promise).
+     * If implementation is synchronous you may return either resolved Promise or undefined. Note that this action is not expected to provide any data to runtime upon return.
+     * If you need to modify runtime data inside this action handler, use coreApi.updateRuntimeData().
+     * @example
+     * ExtensionClass.prototype.initialLoadData = function() {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *
+     *     // ... perform your runtime data initialization operations or whatever else
+     *
+     *     // return Promise of base method execution if you are extending the default implementation:
+     *     return superclass.initialLoadData();
+     * }
+     */
+    initialLoadData(data) {}
+
+    /**
+     * This method is invoked whenever Runtime attempts to load data. Data could be loaded either synchronously or asynchronously.
+     * To load data synchronously pass it as a parameter. To load data asynchronously call the method without any parameters
+     * @since v0.70.*
+     * @param {Object} data - data to be loaded into runtime
+     * @returns {Promise|undefined} - Promise of the load operation completion if implementation contains any asynchronous operations and/or call to superclass.loadData (superclass.loadData returns a Promise).
+     * If implementation is synchronous you may return either resolved Promise or undefined. Note that this action is not expected to provide any data to runtime upon return.
+     * If you need to modify runtime data inside this action handler, use coreApi.updateRuntimeData().
+     * @example
+     * ExtensionClass.prototype.loadData = function() {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *
+     *     // ... perform your loading operations or whatever else
+     *
+     *     // return Promise of base method execution if you are extending the default implementation:
+     *     return superclass.loadData();
+     * }
+     */
+    loadData(data) {}
+
+    /**
+     * Specific iGo method to trigger sending email to clickwrap users
+     * @since v0.73.*
+     * @returns {Promise&lt;Object&gt;} - A Promise of operation completion if implementation contains any asynchronous operations and/or call to superclass.sendEmail (superclass.sendEmail returns a Promise). If implementation is synchronous you may return either resolved Promise or undefined.
+     * @example
+     * ExtensionClass.prototype.sendEmail = function(roleId) {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *
+     *     // ... your code here
+     *
+     *     // return result of base method execution if you are extending the default implementation:
+     *     return superclass.sendEmail(roleId);
+     * }
+     */
+    sendEmail() {}
+
+    /**
+     * This method is invoked whenever Runtime makes a call to receive url to scheduler for selected paramed service.
+     * @since v0.85.*
+     * @param  {string} controlName - name of paramed control;
+     * @param  {string} service - selected paramed service;
+     * @returns {Promise&lt;Object&gt;} - Promise of operation completion which should resolve to an object;
+     * @property {string} Object.url - Required. Url to scheduler service;
+     */
+    retrieveParamedSchedulerUrl(controlName, service) {}
+
+    /**
+     * This method is invoked whenever Runtime makes a call to check status of scheduling.
+     * @since v0.85.*
+     * @param  {string} controlName - name of paramed control;
+     * @returns {Promise&lt;Object&gt;} - Promise of operation completion which should resolve to an object;
+     * @property {boolean} Object.schedulingDone - Required. Boolean flag that inform about finishing scheduling;
+     */
+    checkParamedSchedulerStatus(controlName) {}
+
+    /**
+     * This method is invoked whenever Runtime attempts to log something
+     * @since v0.73.*
+     * @returns {Promise&lt;Object&gt;} - A Promise of operation completion if implementation contains any asynchronous operations and/or call to superclass.callLogger (superclass.callLogger returns a Promise). If implementation is synchronous you may return either resolved Promise or undefined.
+     * @example
+     * ExtensionClass.prototype.callLogger = function(log) {
+     *     // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+     *     var coreApi = this.coreApi;
+     *     var superclass = this.superclass;
+     *
+     *     // ... your code here
+     *
+     *     // return result of base method execution if you are extending the default implementation:
+     *     return superclass.callLogger(log);
+     * }
+     */
+    callLogger() {}
+
+    /**
+     * This method is invoked whenever Runtime attempts to upload file
+     * if method called and implemented according to example, user will see modal window with upload file form and with attachments list otherwise you can create your own implementation for upload file form and show attachments list and render it via coreApi showModal method or in a different way
+     * @since v0.87.*
+     * @param  {string} defaultFileName - default file name from event action;
+     * @example
+     * ExtensionClass.prototype.uploadFile = function(defaultFileName) {
+     *   var maxFileSize = 1000000000;
+     *   var allowedFileTypes = [&apos;pdf&apos;, &apos;docx&apos;];
+     *   var maxFileNameLength = 50;
+     *   var maxDescriptionLength = 100;
+     *
+     *   var _self = this;
+     *
+     *   var UploadFileContainerComponent = function() {
+     *       return _self.coreApi.renderUploadFileComponent({
+     *           defaultFileName,
+     *           maxFileSize,
+     *           allowedFileTypes,
+     *           maxFileNameLength,
+     *           maxDescriptionLength
+     *       });
+     *   };
+     *
+     *   _self.coreApi.showModal(UploadFileContainerComponent);
+     * }
+     */
+    uploadFile(defaultFileName) {}
+
+    /**
+     * This method is invoked whenever Runtime attempts to show attachments
+     * if method called and implemented according to example, user will see modal window with attachments list otherwise you can create your own implementation for show attachments list and render it via coreApi showModal method or in a different way
+     *
+     * @since v0.87.*
+     * @example
+     * ExtensionClass.prototype.showAttachments = function() {
+     *     var _self = this;
+     *
+     *     var ShowAttachmentsComponent = function() {
+     *        return _self.coreApi.renderShowAttachmentsComponent();
+     *     };
+     *
+     *     _self.coreApi.showModal(ShowAttachmentsComponent);
+     * }
+     */
+    showAttachments() {}
+
+    /**
+     * This method is invoked as a reaction on events happening inside dynamic table control. It&apos;s expected that the abstract logic inside would be the next:
+     * depending on event type some changes could be made to the control state via specific coreApi method. Then, calling coreApi.refreshUI method,
+     * changes to the control state will be applied in UI (control will be re-rendered). See `SD Runtime DynamicTable control data` in
+     * &lt;a href=&quot;manual/data%20format.html#DynamicTable&quot;&gt;Data Interchange Format description&lt;/a&gt; for details relating to the state of
+     * DynamicTable field (how it&apos;s stored in runtime core and available here via coreApi methods).
+     *
+     * @since v0.131.*
+     * @param {string} tableFieldName - name of field ( given in property card in designer)
+     * @param {tableInit|editorClick|editorValueChange|editorFocus|editorBlur|sortChange|pageChange|itemsPerPageChange} type - name of the event
+     * @param {object} args - specific to event type arguments.
+     * @param {string} [args.columnName] - name of a column where event is happening
+     * @param {number} [args.rowId] - index of a row where event is happening
+     * @param {string|number|boolean} [args.value] - value of an editor passed in `editorValueChange` event
+     * @param {asc|desc} [args.direction] - sorting direction for a column
+     * @param {number} [args.page] - page number for changing page event
+     * @param {number} [args.itemsPerPageChange] - itemsPerPageChange for changing items per page event
+     *
+     * @return {undefined}
+     *
+     * @example
+     *  Args by type:
+     *    - tableInit
+     *          no args
+     *    - editorClick
+     *        - columnName
+     *        - rowId
+     *
+     *    - editorValueChange
+     *        - columnName
+     *        - rowId
+     *        - value
+     *
+     *    - editorFocus
+     *        - columnName
+     *        - rowId
+     *
+     *    - editorBlur
+     *        - columnName
+     *        - rowId
+     *
+     *    - sortChange
+     *        - columnName
+     *        - direction
+     *
+     *    - pageChange
+     *       - page
+     *
+     *    - itemsPerPageChange
+     *       - itemsPerPageChange
+     * @example
+     * Example of implementation:
+     *
+     * ExtensionClass.prototype.onDynamicTableEvent = function(tableFieldName, type, args) {
+     *
+     *   // Use only updateFieldStateImmutably coreApi method to update state
+     *   if (type === &apos;editorValueChange&apos;) {
+     *       this.coreApi.updateFieldStateImmutably(fieldName, state =&gt; {
+     *          const row = state.value.data.find(row =&gt; row.rowId === args.rowId);
+     *          if(!row) return;
+     *
+     *          row[args.columnName].value = args.value;
+     *          return state;
+     *       });
+     *   }
+     *
+     *   this.coreApi.refreshUI();
+     *
+     * }
+     */
+    onDynamicTableEvent(tableFieldName, type, args) {}
+
+    /**
+     * Type of validation examination, like isRequired, minLength, etc...
+     * @typedef {string} ValidationType
+     */
+    /**
+     * Result of validation performed be runtime core as an object with metadata (contains validation result and optional message)
+     * @typedef {Object} ValidationResult
+     * @property {&apos;success&apos;|&apos;warning&apos;|&apos;error&apos;|null} validity - result of validation performed by runtime core
+     * @property {string} [validationMessage] - validation message which is attached to validation result by runtime core
+     */
+    /**
+     * Validation object which comes as argument to onFieldValidate
+     * @typedef {Object.&lt;ValidationType, ValidationResult&gt;} Validations
+     *
+     * @example
+     * {
+     *     IsRequired: {validity: &apos;success&apos;},
+     *     MinLength: {validity: &apos;warning&apos;, validationMessage: &apos;File size must be less than 20mb&apos;},
+     * }
+     */
+    /**
+     * This method is invoked by runtime core as a hook to internal field validation.
+     * Invocation happens right before validation results of different validators (isRequired, maxLength, etc...), which are setup for a specific field,
+     * will be merged into final validation status for the field (whether field is valid or not) by the runtime core.
+     * This means that here you have full control over validation mechanism of runtime core: you can rewrite
+     * result just for one validator in series (for example you&apos;d like to override how isRequired should be calculated for a mask control field) or
+     * you can deny all validations made by runtime core and perform your validations here.
+     *
+     * NOTE: Be careful with performance, this method is invoked frequently.
+     *
+     * @since v0.131.*
+     * @param {object} field - object containing all properties of the field (type, name, label, etc...)
+     * @param {object} data - state of a control (its value, formattedValue, etc...). See &lt;a href=&quot;manual/data%20format.html&quot;&gt;Data Interchange Format description&lt;/a&gt;
+     * to find out format of field state by its type
+     * @param {Validations} validations - contains performed validations with results of validations for current field by runtime core
+     * @return {Validations|undefined} - modified validations with custom validations performed in this method.
+     * Returning object from this function signals to runtime core that this SDK method customizes validation.
+     * Returning any other value signals that no custom validations are performed by this SDK method so validation calculated by the runtime core itself will be applied.
+     * Returning empty object signals to runtime core that field must be valid (as no validations performed) and all validations performed by the runtime core itself should be ignored
+     *
+     * @example
+     * ExtensionClass.prototype.onFieldValidate = function(field, data, validations) {
+     *
+     *       ... Example 1
+     *       # I want to override how isRequired validation is calculated for just one field with the specific name
+     *       if(field.name === &apos;PI_AGE&apos;) {
+     *           if(data.value !== null) {
+     *               if(validations.isRequired) {
+     *                   # Override validation result
+     *                   validations.isRequired.validity = &apos;success&apos;;
+     *                   return validations;
+     *               }
+     *           }
+     *       }
+     *
+     *       ... Example 2
+     *       # I want to override how isRequired validation is calculated for all fields with the specific type
+     *       if(field.type === &apos;numberedit&apos;) {
+     *           if(data.value !== null) {
+     *               if(validations.isRequired) {
+     *                   # Override validation result
+     *                   validations.isRequired.validity = &apos;success&apos;;
+     *                   return validations;
+     *               }
+     *           }
+     *       }
+     *
+     *       ... Example 3
+     *       # I want make field with specific name always valid
+     *       if(field.name === &apos;PI_AGE&apos;) {
+     *           return {};
+     *       }
+     *
+     *       ... Example 4
+     *       # I want make field with specific name always invalid
+     *       if(field.name === &apos;PI_AGE&apos;) {
+     *           return {
+     *               myCustomValidation: { validity: &apos;error&apos; }
+     *           };
+     *       }
+     * }
+     */
+    onFieldValidate(field, data, validations) {}
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

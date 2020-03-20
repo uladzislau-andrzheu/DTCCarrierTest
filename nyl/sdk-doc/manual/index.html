@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../">
+  <title data-ice="title">Manual | Screen designer SDK</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="ipln-scrd"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Screen designer SDK"><meta property="twitter:description" content="ipln-scrd"><link rel="stylesheet" href="./inject/css/0-customization.css"></head>
+<body class="layout-container manual-root manual-index" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/ipipeline/ngen_screen_designer"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html" data-ice="link">Changelog</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-unreleased-" data-ice="link">[Unreleased]</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-106---" data-ice="link">[0.106.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-102---" data-ice="link">[0.102.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-97---" data-ice="link">[0.97.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-96---" data-ice="link">[0.96.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-93---" data-ice="link">[0.93.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-92-2-" data-ice="link">[0.92.2]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-92---" data-ice="link">[0.92.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-91---" data-ice="link">[0.91.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-90---" data-ice="link">[0.90.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-89---" data-ice="link">[0.89.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-87---" data-ice="link">[0.87.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-85---" data-ice="link">[0.85.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-84---" data-ice="link">[0.84.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-83---" data-ice="link">[0.83.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-82---" data-ice="link">[0.82.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-79---" data-ice="link">[0.79.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-77---" data-ice="link">[0.77.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-75---" data-ice="link">[0.75.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-74---" data-ice="link">[0.74.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-74---" data-ice="link">[0.74.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-73---" data-ice="link">[0.73.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-72---" data-ice="link">[0.72.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-71---" data-ice="link">[0.71.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-70---" data-ice="link">[0.70.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-example-" data-ice="link">[Example]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#removed" data-ice="link">Removed</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#deprecated" data-ice="link">Deprecated</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#fixed" data-ice="link">Fixed</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#security" data-ice="link">Security</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/data format.html"><a href="manual/data format.html" data-ice="link">Data interchange format between Server and Runtime (how data is stored inside runtime core)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-fields-data-" data-ice="link">SD Runtime fields data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-fields-data-" data-ice="link">Corresponding Server fields data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-sourcedropdown-control-data-" data-ice="link">SD Runtime SourceDropdown control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-sourcedropdown-control-data-" data-ice="link">Corresponding Server SourceDropdown control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-grid-control-data-" data-ice="link">SD Runtime Grid control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-grid-control-data-" data-ice="link">Corresponding Server Grid control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-sourcegrid-control-data-" data-ice="link">SD Runtime SourceGrid control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-sourcegrid-control-data-" data-ice="link">Corresponding Server SourceGrid control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-mask-control-data-" data-ice="link">SD Runtime Mask control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-mask-control-data-" data-ice="link">Corresponding Server Mask control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-softlocked-data-" data-ice="link">SD Runtime SoftLocked data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-softlocked-data-" data-ice="link">Corresponding Server SoftLocked data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-email-control-data" data-ice="link">SD Runtime Email control data</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-email-control-data-" data-ice="link">Corresponding Server Email control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-creditcard-control-data" data-ice="link">SD Runtime CreditCard control data</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-creditcard-control-data-" data-ice="link">Corresponding Server CreditCard control data:</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/css namespacing.html"><a href="manual/css namespacing.html" data-ice="link">CSS namespacing</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown">
+  <div class="manual-user-index" data-ice="manualUserIndex"><h1 id="sdk-description">SDK Description</h1><p>SDK allows to override/extend the following actions performed by SD Runtime:</p>
+<ul>
+<li><em>saveData</em> - invoked when Runtime wants to save client data on server;</li>
+<li><em>loadData</em> - invoked when Runtime wants to load client data from server asynchronously;</li>
+<li><em>callCustomAssembly</em> - invoked when Runtime calls a 3rd party service to perform calculations or
+retrieve some data;</li>
+<li><em>callJsCustomAssembly</em> - invoked when Runtime calls a custom javascript service to execute any
+custom logic;</li>
+<li><em>getSourceGridData</em> - invoked when Runtime requests data for a specific Source Grid control;</li>
+<li><em>getSourceDropdownData</em> - invoked when Runtime requests data for a specific Source Dropdown
+control;</li>
+<li><em>validateCreditCard</em> - invoked to validate credit card data via specific services;</li>
+<li><em>changeCreditCard</em> - invoked to erase previously entered credit card data;</li>
+<li><em>verifyEmail</em> - invoked whenever email control makes a call to validate email;</li>
+<li><em>viewPDF</em> - invoked whenever event action &quot;View PDF&quot; happened. This handler executes
+<code>RuntimeCoreAPI.showModal</code> method and pass there a component with pdf iframe inside. You could
+override this handler and show your own modal window components;</li>
+<li><em>uploadFile</em> - invoked whenever Runtime attempts to upload file;</li>
+<li><em>showAttachments</em> - invoked whenever Runtime attempts to show attachments.</li>
+</ul>
+<p>Names of available actions are defined in the API constant
+<code>global.App.runtimeCoreApi.sdkEventHandlerNames</code>. Detailed documentation of SDK actions is available
+in <code>GlobalEventHandlers</code> section of this guide.</p>
+<h1 id="usage">Usage</h1><p>SDK provides a JavaScript API to override/extend specified actions, access Runtime data, call 3rd
+party services, transform data, etc.</p>
+<p>SDK API is available via global JS function <code>createGlobalEventHandlersExtension(ExtensionClass)</code>.
+The function is called by runtime upon its initialization and supplies the <code>ExtensionClass</code>
+parameter, which can be used to access/override implementation of SDK actions.</p>
+<p>The <code>createGlobalEventHandlersExtension</code> function <strong>must be declared before the <code>runtime-xxx.js</code>
+script</strong>.</p>
+<p>Example: The &quot;scripts.html&quot; file inside &quot;application&quot; folder of the downloaded runtime could be
+modified in a way:</p>
+<pre><code class="lang-html"><code class="source-code prettyprint">&lt;!-- Load custom script first --&gt;
+&lt;script&gt;
+    function createGlobalEventHandlersExtension(ExtensionClass) {
+        // your code here
+    }
+&lt;/script&gt;
+
+&lt;!-- External libraries  --&gt;
+&lt;script src=&quot;{{staticsPath}}/assets/jquery-3.3.1.min.js&quot; defer&gt;&lt;/script&gt;
+&lt;script src=&quot;{{staticsPath}}/assets/bootstrap-3.3.7.min.js&quot; defer&gt;&lt;/script&gt;
+
+&lt;!-- Then load runtime.js --&gt;
+&lt;script src=&quot;{{staticsPath}}/assets/runtime.js&quot; defer&gt;&lt;/script&gt;</code>
+</code></pre>
+<h2 id="external-libraries">External libraries</h2><p>If there is necessity in external libraries load them in <code>scripts.html</code>. By default it contains
+<code>jquery-3.3.1.min.js</code> and <code>bootstrap-3.3.7.min.js</code>. Replace these links if you need another versions
+of libraries, but note that <code>runtime.js</code> is tested with <code>2.1.3</code> and <code>3.3.1</code> versions of <code>jQuery</code> and
+<code>3.3.7</code> of <code>bootstrap</code>. Using other versions is possible but stable work is not guaranteed. Remember
+that <code>runtime.js</code> doesn&apos;t work without <code>jQuery</code> and <code>bootstrap</code>.</p>
+<p>In global scope available next libraries:</p>
+<ul>
+<li>React v15.1.0 <a href="https://github.com/facebook/react/tree/v15.0.1/docs">https://github.com/facebook/react/tree/v15.0.1/docs</a></li>
+<li>ReactBootstrap v0.28.5 <a href="https://github.com/react-bootstrap/react-bootstrap/tree/v0.28.5/docs">https://github.com/react-bootstrap/react-bootstrap/tree/v0.28.5/docs</a></li>
+</ul>
+<pre><code class="lang-html"><code class="source-code prettyprint">&lt;!-- Examples --&gt;
+&lt;script&gt;
+    function createGlobalEventHandlersExtension(ExtensionClass) {
+        React.createElement(ReactBootstrap.Modal,
+        {
+            autoFocus: true,
+            animation: false,
+            show: true,
+            backdrop: &apos;static&apos;,
+            onHide: hideModal,
+            bsSize: &apos;large&apos;
+        })
+    }
+&lt;/script&gt;</code>
+</code></pre>
+<h2 id="default-implementation">Default implementation</h2><p>In order to keep default implementation of any action just don&apos;t override corresponding SDK action
+or even don&apos;t implement the <code>createGlovalEventHandlersExtension</code> function. <br> By default all
+methods inside ExtensionClass don&apos;t update UI (re-render view according to updated state). They are
+called inside EventManager which manages asynchronous function calls and updates UI automatically
+after completing calling current stack of asynchronous functions. In order to update UI whenever you
+need call <code>refreshUI</code> method of <code>runtimeCoreApi</code>.</p>
+<h2 id="extending-default-implementation">Extending default implementation</h2><p>Default implementation of any SDK action is available via <code>ExtensionClass.superclass</code> property. In
+order to extend default action behavior you need to redefine corresponding SDK action and use the
+<code>ExtensionClass.superclass</code> to access base implementation:</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">function createGlobalEventHandlersExtension(ExtensionClass) {
+    var callCustomAssemblyHandlerName =
+        global.App.runtimeCoreApi.sdkEventHandlerNames.CALL_CUSTOM_ASSEMBLY;
+    ExtensionClass.prototype[callCustomAssemblyHandlerName] = function(assemblyName) {
+        // e.g. update PI_FirstName in runtime data
+        this.coreApi.updateRuntimeData({
+            caseData: [
+                {
+                    name: &apos;PI_FirstName&apos;,
+                    value: &apos;Andrew&apos;,
+                    formattedValue: &apos;Andrew&apos;,
+                    isValid: &apos;true&apos;
+                }
+            ],
+            shouldReplaceSavedData: false
+        });
+
+        // call default implementation of callCustomAssembly and return the resulting promise,
+        // which resolves in data provided by a custom assembly (if any)
+        return this.superclass.callCustomAssembly(assemblyName);
+    };
+}</code>
+</code></pre>
+<h2 id="overriding-default-implementation">Overriding default implementation</h2><p>In order to override default action behavior you just need to redefine a corresponding SDK action in
+ExtensionClass prototype:</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">function createGlobalEventHandlersExtension(ExtensionClass) {
+    var callCustomAssemblyHandlerName =
+        global.App.runtimeCoreApi.sdkEventHandlerNames.CALL_CUSTOM_ASSEMBLY;
+    ExtensionClass.prototype[callCustomAssemblyHandlerName] = function(assemblyName) {
+        console.log(&quot;Don&apos;t really call:&quot;, assemblyName);
+    };
+}</code>
+</code></pre>
+<h2 id="runtime-core-api-functions">Runtime core API functions</h2><p>Runtime API functions are available through <code>ExtensionClass.coreApi</code> property (available only inside
+<code>ExtensionClass</code> methods). Also this <code>API</code> is exposed globally: <code>global.App.runtimeCoreApi</code>. <br>
+Documentation of API methods is available in the <code>API</code> section of this guide.</p>
+<h2 id="embedding-runtime-into-page">Embedding runtime into page</h2><p>To do that, on your web page wrapper element for runtime should be created. Plus, you have to design
+JS function which should find and return this wrapper element.</p>
+<p>Example: The next wrapper is created: <code>&lt;div id=&quot;runtime-entry&quot;&gt;&lt;/div&gt;</code> To embed runtime application
+into this wrapper you need to create the next function:</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">global.App.getRuntimeEntryPoint = function() {
+    return document.querySelector(&apos;#runtime-entry&apos;);
+};</code>
+</code></pre>
+<p>This function should be defined after <code>global</code> is defined.</p>
+<h2 id="working-with-javascript-custom-assemblies">Working with JavaScript Custom Assemblies</h2><p>The JavaScript (JS) Custom Assemblies (CA) are services (technically just JS functions) which loaded
+directly to client as script and work without any network activity, unlike default custom
+assemblies. To load JS CA and make it available for the application it should be initialized in
+<code>global.App.jsCA</code> object by default:</p>
+<pre><code class="lang-html"><code class="source-code prettyprint">&lt;script&gt;
+    (function () {
+        function setFullNameCaFunction() {
+            // this points to ExtensionClass
+            const clientData = this.coreApi.getRuntimeData();
+
+            const firstName = clientData.FirstName.value;
+            const lastName = clientData.LastName.value;
+            const fullName = firstName + &quot; &quot; + lastName;
+
+            this.coreApi.updateRuntimeData({
+                caseData: [
+                    {
+                        name: &apos;FullName&apos;,
+                        value: fullName,
+                        formattedValue: fullName
+                    }
+                ]
+            });
+        }
+
+        window.global = window.global || {};
+
+        global.App = global.App || {};
+
+        global.App.jsCA = {
+            setFullNameCa: setFullNameCaFunction
+        }
+    })();
+&lt;/script&gt;</code>
+</code></pre>
+<p>The format of <code>global.App.jsCA</code> object is the following:</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">global.App.jsCA = { key: value };</code>
+</code></pre>
+<p>where: <code>key</code> - name of the JS CA which is set to <code>call_js_service</code> action in screen designer.
+<code>value</code> - JS function which should be executed when <code>call_js_service</code> action occurs.</p>
+<p><strong>IMPORTANT</strong> JS CA function must be implement in <strong>synchronous</strong> way while using it inside Rule&apos;s
+<code>call_js_service</code> action. It possible to run asynchronous code ONLY for Event&apos;s <code>call_js_service</code>
+action.</p>
+<p>It is also possible to override default behaviour how to invoke JS CA. There is a method in SDK
+<code>ExtensionClass</code> called <code>callJsCustomAssembly</code>. Please check section <code>Overriding default
+implementation</code> to understand how to override it.</p>
+<h2 id="triggering-actions-and-events">Triggering Actions and Events</h2><h3 id="general-information">General information</h3><p>Application uses messages to communicate with its container (for example if it&apos;s opened in an
+iframe). A container may send messages to the Application, thus requesting it to perform certain
+actions. In its turn the Application sends messages to container to notify it about events which
+happen inside the Application.</p>
+<h4 id="incoming-messages--handled-by-application-">Incoming Messages (handled by Application)</h4><p>In order to trigger an action in the Application, send a message to it. Syntax:</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">applicationWindow.postMessage({ type: &apos;&lt;INCOMING_MESSAGE_TYPE&gt;&apos; [, data: &lt;OPTIONAL_DATA_OBJECT&gt;] }, &apos;*&apos;);</code>
+</code></pre>
+<p>All incoming messages generate a &quot;feedback&quot; message, which provides a status of the requested action
+execution. See the &quot;Outgoing Messages&quot; section below with detailed description of these messages.</p>
+<h5 id="types-of-incoming-messages-">Types of incoming messages:</h5><ul>
+<li><code>BEFORE_LEAVE_SCREEN_REQUEST</code></li>
+</ul>
+<p>Triggers the &quot;Before Leave&quot; action on a current screen.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">applicationWindow.postMessage({ type: &apos;BEFORE_LEAVE_SCREEN_REQUEST&apos; }, &apos;*&apos;);</code>
+</code></pre>
+<ul>
+<li><code>SAVE_CLIENT_DATA_REQUEST</code></li>
+</ul>
+<p>Triggers saving of client data.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">applicationWindow.postMessage({ type: &apos;SAVE_CLIENT_DATA_REQUEST&apos; }, &apos;*&apos;);</code>
+</code></pre>
+<ul>
+<li><code>VIEW_PDF_REQUEST</code></li>
+</ul>
+<p>Triggers the &quot;View PDF&quot; action.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">applicationWindow.postMessage({ type: &apos;VIEW_PDF_REQUEST&apos; }, &apos;*&apos;);</code>
+</code></pre>
+<ul>
+<li><code>LOAD_CLIENT_DATA_REQUEST</code></li>
+</ul>
+<p>Triggers loading of client data either from server or from provided parameter. In the latter case no
+server requests will be sent, provided values override current client data state.</p>
+<p>NOTE: You can override default implementation of data loading. See <code>loadData</code> method in
+GlobalEventHandlers.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">// load client data from server:
+applicationWindow.postMessage({ type: &apos;LOAD_CLIENT_DATA_REQUEST&apos; }, &apos;*&apos;);
+
+// load client data from provided data object:
+applicationWindow.postMessage(
+    {
+        type: &apos;LOAD_CLIENT_DATA_REQUEST&apos;,
+        clientData: {
+            /* your data here */
+        }
+    },
+    &apos;*&apos;
+);</code>
+</code></pre>
+<ul>
+<li><code>OPEN_SCREEN_REQUEST</code></li>
+</ul>
+<p>Switches to a screen with specified name.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">applicationWindow.postMessage(
+    { type: &apos;OPEN_SCREEN_REQUEST&apos;, screenName: &apos;&lt;screen_name_to_open&gt;&apos; },
+    &apos;*&apos;
+);</code>
+</code></pre>
+<h4 id="outgoing-messages--sent-by-application-">Outgoing Messages (sent by Application)</h4><p>In order to handle messages sent by the Application inside a container, use event listeners. Syntax:</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">window.addEventListener(&apos;message&apos;, function(e) {
+    if (e.data.type === OUTGOING_MESSAGE_TYPE) {
+        // where OUTGOING_MESSAGE_TYPE is one of supported message types
+        var messageData = e.data.data;
+        // do something
+    }
+});</code>
+</code></pre>
+<h5 id="types-of-outgoing-messages--">Types of outgoing messages :</h5><ul>
+<li><code>OPEN_SCREEN_REQUEST_SUCCESS</code>, <code>OPEN_SCREEN_REQUEST_FAILED</code></li>
+</ul>
+<p>&quot;Feedback&quot; messages for <code>OPEN_SCREEN_REQUEST</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">window.addEventListener(&apos;message&apos;, function(e) {
+    if (e.data.type === &apos;OPEN_SCREEN_REQUEST_SUCCESS&apos;) {
+        // handle successful case
+    }
+    if (e.data.type === &apos;OPEN_SCREEN_REQUEST_FAILED&apos;) {
+        var error = e.data.data; // error object
+        // handle error
+    }
+});</code>
+</code></pre>
+<ul>
+<li><code>BEFORE_LEAVE_SCREEN_SUCCESS</code>, <code>BEFORE_LEAVE_SCREEN_FAILED</code></li>
+</ul>
+<p>&quot;Feedback&quot; messages for <code>BEFORE_LEAVE_SCREEN_REQUEST</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">window.addEventListener(&apos;message&apos;, function(e) {
+    if (e.data.type === &apos;BEFORE_LEAVE_SCREEN_SUCCESS&apos;) {
+        // handle successful case
+    }
+    if (e.data.type === &apos;BEFORE_LEAVE_SCREEN_FAILED&apos;) {
+        var error = e.data.data; // error object
+        // handle error
+    }
+});</code>
+</code></pre>
+<ul>
+<li><code>SAVE_CLIENT_DATA_SUCCESS</code>, <code>SAVE_CLIENT_DATA_FAILED</code></li>
+</ul>
+<p>&quot;Feedback&quot; messages for <code>SAVE_CLIENT_DATA_REQUEST</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">window.addEventListener(&apos;message&apos;, function(e) {
+    if (e.data.type === &apos;SAVE_CLIENT_DATA_SUCCESS&apos;) {
+        // handle successful case
+    }
+    if (e.data.type === &apos;SAVE_CLIENT_DATA_FAILED&apos;) {
+        var error = e.data.data; // error object
+        // handle error
+    }
+});</code>
+</code></pre>
+<ul>
+<li><code>VIEW_PDF_SUCCESS</code>, <code>VIEW_PDF_FAILED</code></li>
+</ul>
+<p>&quot;Feedback&quot; messages for <code>VIEW_PDF_REQUEST</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">window.addEventListener(&apos;message&apos;, function(e) {
+    if (e.data.type === &apos;VIEW_PDF_SUCCESS&apos;) {
+        // handle successful case
+    }
+    if (e.data.type === &apos;VIEW_PDF_FAILED&apos;) {
+        var error = e.data.data; // error object
+        // handle error
+    }
+});</code>
+</code></pre>
+<ul>
+<li><code>LOAD_CLIENT_DATA_SUCCESS</code>, <code>LOAD_CLIENT_DATA_FAILED</code></li>
+</ul>
+<p>&quot;Feedback&quot; messages for <code>LOAD_CLIENT_DATA_REQUEST</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">window.addEventListener(&apos;message&apos;, function(e) {
+    if (e.data.type === &apos;LOAD_CLIENT_DATA_SUCCESS&apos;) {
+        // handle successful case
+    }
+    if (e.data.type === &apos;LOAD_CLIENT_DATA_FAILED&apos;) {
+        var error = e.data.data; // error object
+        // handle error
+    }
+});</code>
+</code></pre>
+<ul>
+<li><code>BEFORE_LOAD_SCREEN_FAILED</code>, <code>BEFORE_LOAD_SCREEN_SUCCESS</code></li>
+</ul>
+<p>&quot;Feedback&quot; messages for internal action &quot;Before Load Screen&quot;, which cannot be triggered from an
+outside container and occurs whenever current screen switches to another one.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">window.addEventListener(&apos;message&apos;, function(e) {
+    if (e.data.type === &apos;BEFORE_LOAD_SCREEN_FAILED&apos;) {
+        // handle successful case
+    }
+    if (e.data.type === &apos;BEFORE_LOAD_SCREEN_SUCCESS&apos;) {
+        var error = e.data.data; // error object
+        // handle error
+    }
+});</code>
+</code></pre>
+<ul>
+<li><code>UPLOAD_FILE</code></li>
+</ul>
+<p>Fired when &quot;Upload File&quot; action is executed inside the Application.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">window.addEventListener(&apos;message&apos;, function(e) {
+    if (e.data.type === &apos;UPLOAD_FILE&apos;) {
+        var defaultFileName = e.data.data; // default file name specified in the &quot;UploadFile&quot; action
+        // process action
+    }
+});</code>
+</code></pre>
+<ul>
+<li><code>SHOW_ATTACHMENT_LIST</code></li>
+</ul>
+<p>Fired when &quot;Show Attachments&quot; action is executed inside the Application.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">window.addEventListener(&apos;message&apos;, function(e) {
+    if (e.data.type === &apos;SHOW_ATTACHMENT_LIST&apos;) {
+        // process action
+    }
+});</code>
+</code></pre>
+<ul>
+<li><code>START_ESIG_UI</code></li>
+</ul>
+<p>Fired when &quot;Start eSig UI&quot; action is executed inside the Application.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">window.addEventListener(&apos;message&apos;, function(e) {
+    if (e.data.type === &apos;START_ESIG_UI&apos;) {
+        // do appropriate stuff
+    }
+});</code>
+</code></pre>
+<ul>
+<li><code>FINISH_ESIG_UI</code></li>
+</ul>
+<p>Fired when &quot;Finish eSig UI&quot; action is executed inside the Application.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">window.addEventListener(&apos;message&apos;, function(e) {
+    if (e.data.type === &apos;FINISH_ESIG_UI&apos;) {
+        // do appropriate stuff
+    }
+});</code>
+</code></pre>
+<ul>
+<li><code>MULTIPLE_EDITING_FAILED</code></li>
+</ul>
+<p>Fired when a server request returns the &quot;MULTIPLE_EDITING_BLOCK&quot; error.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">window.addEventListener(&apos;message&apos;, function(e) {
+    if (e.data.type === &apos;MULTIPLE_EDITING_FAILED&apos;) {
+        // do appropriate stuff
+    }
+});</code>
+</code></pre>
+<ul>
+<li><code>UPDATE_SESSION_TIMER_REQUEST</code></li>
+</ul>
+<p>Fired before each request to server to allow performing any required actions, e.g. update session
+timer.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">window.addEventListener(&apos;message&apos;, function(e) {
+    if (e.data.type === &apos;UPDATE_SESSION_TIMER_REQUEST&apos;) {
+        // process event
+    }
+});</code>
+</code></pre>
+<ul>
+<li><code>UPDATE_FIRST_AND_LAST_NAME_REQUEST</code></li>
+</ul>
+<p>Fired on any value change inside the application. Contains values of &quot;PIFirstName&quot; and &quot;PILastName&quot;
+client data items.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">window.addEventListener(&apos;message&apos;, function(e) {
+    if (e.data.type === &apos;UPDATE_FIRST_AND_LAST_NAME_REQUEST&apos;) {
+        var firstName = e.data.data.PIFirstName;
+        var lastName = e.data.data.PILastName;
+        // process retrieved values
+    }
+});</code>
+</code></pre>
+<ul>
+<li><code>START_SCREEN_CHANGING</code></li>
+</ul>
+<p>Fired on navigation between screens. Indicates the start of the screen changing process. Contains
+name of the next screen &quot;screenName&quot;.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">window.addEventListener(&apos;message&apos;, function(e) {
+    if (e.data.type === &apos;START_SCREEN_CHANGING&apos;) {
+        var screenName = e.data.screenName;
+        // process event
+    }
+});</code>
+</code></pre>
+<ul>
+<li><code>FINISH_SCREEN_CHANGING</code></li>
+</ul>
+<p>Fired on navigation between screens. Indicates the finish of the screen changing process. Contains
+name of the new screen &quot;screenName&quot;.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">window.addEventListener(&apos;message&apos;, function(e) {
+    if (e.data.type === &apos;FINISH_SCREEN_CHANGING&apos;) {
+        var screenName = e.data.screenName;
+        // process event
+    }
+});</code>
+</code></pre>
+<h2 id="ui-configuration">UI Configuration</h2><p>You can use configs/uiConfig.json file to adopt the user interface to your company&apos;s specific
+Requirements.</p>
+<h3 id="screen-navigation-panel">Screen navigation panel</h3><p>The screen navigation panel&apos;s visibility is handled changing show_nav_panel property: <code>true</code> to
+show, <code>false</code> to hide. By default the screen navigation panel is visible(show_nav_pane: &apos;true&apos;).</p>
+<h3 id="backspace-behavior">Backspace behavior</h3><p>Backspace to go <code>back</code> action in non-Chrome browsers could be controlled by
+<code>disable_backspace_navigation</code> property: <code>true</code> to disable moving backwards through the browser
+history, <code>false</code> to enable moving backwards through browser history. Note that Chrome disables going
+back by history by itself.</p>
+<h3 id="applying-custom-styles-and-fonts">Applying custom styles and fonts</h3><p>Exported application includes all required stylesheets by default. However you can replace any
+default stylesheet with custom one. To do it, open styles.html file and just update href attribute
+of particular &lt;link&gt; (HTML element) to point it to your custom resource. All default stylesheets are
+wrapped in comments with name of the resource that &lt;link&gt; element will load.</p>
+<p>Also note that all style link elements should be put inside the wrapping &lt;noscript id=&quot;deferred-styles&quot;&gt;
+tag to allow loading them in a deferred manner to avoid blocking the runtime application HTML rendering.
+This is required for displaying the loading spinner.</p>
+<p>styles.html</p>
+<pre><code class="lang-html"><code class="source-code prettyprint">&lt;noscript id=&quot;deferred-styles&quot;&gt;
+    &lt;!--fonts--&gt;
+        &lt;link href=&quot;{{staticsPath}}/assets/runtime-fonts-fb9249627a6a1adfb091.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;!--fonts--&gt;
+
+    &lt;!--font-awesome--&gt;
+        &lt;link href=&quot;{{staticsPath}}/assets/runtime-font-awesome-50cc4c94e470f2e05632.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;!--font-awesome--&gt;
+
+    &lt;!--bootstrap-theme--&gt;
+        &lt;link href=&quot;{{staticsPath}}/assets/runtime-bootstrap-theme-9a029d11b10303249111.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;!--bootstrap-theme--&gt;
+
+    &lt;!--bootstrap-overrides--&gt;
+        &lt;link href=&quot;{{staticsPath}}/assets/runtime-bootstrap-overrides-9a029d11b10304564654.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;!--bootstrap-overrides--&gt;
+
+    &lt;!--bootstrap-controls--&gt;
+        &lt;link href=&quot;{{staticsPath}}/assets/runtime-controls-518eaa3f2883aa62e72f.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;!--bootstrap-controls--&gt;
+
+    &lt;!--runtime-styles--&gt;
+        &lt;link href=&quot;{{staticsPath}}/assets/runtime-a501552b175aef3fa4f4.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;!--runtime-styles--&gt;
+
+    &lt;!--browser-fixes--&gt;
+        &lt;link href=&quot;{{staticsPath}}/assets/runtime-browser-fixes-fb9249627a6df67d7df22.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;!--browser-fixes--&gt;
+&lt;/noscript&gt;</code>
+</code></pre>
+<p>If you want to update for example bootstrap theme just replace href attribute of &lt;link&gt; to use
+different URI. Same works for fonts and other styles.</p>
+<p>styles.html</p>
+<pre><code class="lang-html"><code class="source-code prettyprint">&lt;!--bootstrap-theme--&gt;
+    &lt;link href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;!--bootstrap-theme--&gt;</code>
+</code></pre>
+</div>
+
+  
+
+  <div class="manual-cards">
+    
+  <div class="manual-card-wrap" data-ice="cards">
+      <div class="manual-card">
+        <div data-ice="card"><h1>Changelog</h1><p>All notable changes to SDK will be documented in this file.</p><h2>[Unreleased]</h2><ul>
+<li>Think about moving SDK to separate repository</li>
+<li>Removed iGo references from SDK documentation</li>
+</ul><h2>[0.106.*]</h2><h3>Added</h3><ul>
+<li><p>methods to shared SDK:</p>
+<ul>
+<li><code>needToAutoValidateScreens</code></li>
+<li><code>autoValidateScreens</code></li>
+</ul>
+</li>
+<li><p>Runtime core API methods:</p>
+<ul>
+<li><code>openNextVisibleScreen</code></li>
+<li><code>openScreenByName</code></li>
+<li><code>openFirstIncompleteScreen</code></li>
+</ul>
+</li>
+</ul><h3>Changed</h3><ul>
+<li>Runtime core API methods:<ul>
+<li><code>showLoader</code>: added new param - loaderId, added ability to pass custom message which would be shown under spinner and updated docs</li>
+<li><code>hideLoader</code>: added new param - loaderId, update docs</li>
+<li><code>renderUploadFileComponent</code> method receives now new properties: maxFileNameLength, maxDescriptionLength; method doesn&apos;t receive now next properties: uploadFileEndpoint, uploadSucceedCallback</li>
+</ul>
+</li>
+</ul><h2>[0.102.*]</h2><h3>Changed</h3><ul>
+<li><code>activateFormPackage</code> method now supports two implementations via launchdarkly. Old one when the request is sent to server to perform an operation. New one when fields are updated on client side without any network activity, which should be faster.</li>
+</ul><h2>[0.97.*]</h2><h3>Added</h3><ul>
+<li>New method to Esig SDK - <code>requestAuthToken</code></li>
+</ul><h2>[0.96.*]</h2><h3>Changed</h3><ul>
+<li>Changed the way CSS resources are loaded for the runtime application. See &quot;Applying custom styles and fonts&quot; section of the &quot;SDK User Guide&quot;.</li>
+</ul><h2>[0.93.*]</h2><h3>Changed</h3><ul>
+<li>Renamed method <code>ESIGUI_checkSigningStatus</code> to <code>ESIGUI_getSigningStatus</code></li>
+<li><code>validateCreditCard</code> request now sends additional options taken from fourth parameter:
+&apos;ftniRequestOptions&apos;: defaultStatus, DoNotUpdateCustomer, DoNotUseCustomerName,
+DoNotUseCustomerAddress</li>
+</ul><h2>[0.92.2]</h2><h3>Added</h3><ul>
+<li><code>closeEsigUiApp</code> method introduced in <code>SharedGlobalEventHandlers</code> to handle closing eSigUI
+application.</li>
+</ul><h3>Changed</h3><ul>
+<li><code>ESIGUI_finishSigning</code> method introduced in <code>ESigEventHandlers</code> to notify host application about
+closing.</li>
+</ul><h2>[0.92.*]</h2><h3>Added</h3><ul>
+<li><code>SharedGlobalEventHandlers</code> class. Its instance object is used to extend the <code>GlobalEventHandlers</code>
+with functionality to start eSigUI:<ul>
+<li><code>ESIGUI_startSigning</code></li>
+</ul>
+</li>
+<li><code>initialLoadData</code> method introduced in <code>ESigEventHandlers</code> to handle eSigUI initializing on
+application run;</li>
+</ul><h3>Changed</h3><ul>
+<li><code>ESigEventHandlers</code> to independent SDK with eSigUI-specific functionality;</li>
+<li>Extract method <code>ESIGUI_startSigning</code> from <code>ESigEventHandlers</code> to <code>SharedGlobalEventHandlers</code> SDK;</li>
+</ul><h2>[0.91.*]</h2><h3>Added</h3><ul>
+<li>Runtime core API methods: <code>convertSmartyStreetsPredictions</code>, <code>convertGooglePlacesPredictions</code>,
+<code>parseSmartyStreetsAddress</code>, <code>parseGooglePlacesAddress</code>, <code>getStringProductPropertyByName</code></li>
+<li>Global Event Handlers: <code>getSmartyStreetsPredictions</code>, <code>getGooglePlacesPredictions</code>,
+<code>getSmartyStreetsDetails</code>, <code>getGooglePlacesDetails</code></li>
+</ul><h3>Changed</h3><ul>
+<li>IGo Specific Global Event Handlers&apos; method <code>viewPDF</code> now calls predefined CA if its name was
+specified.</li>
+<li>jQuery was updated to 3.3.1</li>
+<li>bootstrap was updated to 3.3.7 to support 3.x.x versions of jQuery</li>
+</ul><h2>[0.90.*]</h2><h3>Added</h3><ul>
+<li>Runtime core API methods:<ul>
+<li><code>getDestiny</code></li>
+</ul>
+</li>
+</ul><h2>[0.89.*]</h2><h3>Added</h3><ul>
+<li><code>ESigEventHandlers</code> class. Its instance object is used to extend the <code>GlobalEventHandlers</code> with
+eSigUI-specific functionality:<ul>
+<li><code>ESIGUI_acceptConsent</code></li>
+<li><code>ESIGUI_acceptDisclosure</code></li>
+<li><code>ESIGUI_captureEvent</code></li>
+<li><code>ESIGUI_checkSigningStatus</code></li>
+<li><code>ESIGUI_declineConsent</code></li>
+<li><code>ESIGUI_declineDisclosure</code></li>
+<li><code>ESIGUI_finishSigning</code></li>
+<li><code>ESIGUI_flushAuditTrail</code></li>
+<li><code>ESIGUI_getVendorURL</code></li>
+<li><code>ESIGUI_startSigning</code></li>
+<li><code>ESIGUI_viewPDF</code></li>
+</ul>
+</li>
+<li>Runtime core API methods:<ul>
+<li><code>generateIndexHtmlForNested</code></li>
+</ul>
+</li>
+</ul><h2>[0.87.*]</h2><h3>Added</h3><ul>
+<li>Runtime core API methods: <code>renderUploadFileComponent</code>, <code>renderShowAttachmentsComponent</code>,
+<code>getApiEndpoint</code></li>
+<li>Global Event Handlers: <code>uploadFile</code>, <code>showAttachments</code></li>
+</ul><h2>[0.85.*]</h2><h3>Added</h3><ul>
+<li>Runtime core API methods: <code>getUserDataTypeByName</code></li>
+<li>Global Event Handlers: <code>retrieveParamedSchedulerUrl</code>, <code>checkParamedSchedulerStatus</code></li>
+</ul><h3>Changed</h3><ul>
+<li><code>USER_DATA</code> item is appended to runtime core API object <code>runtimeStateItems</code></li>
+<li>Runtime core API method <code>getRuntimeState</code> now supports USER_DATA runtime state item to retrieve
+the user data object</li>
+</ul><h2>[0.84.*]</h2><h3>Added</h3><ul>
+<li>Runtime core API methods: <code>showModal</code>, <code>hideModal</code></li>
+</ul><h3>Changed</h3><ul>
+<li><strong>(Breaking)</strong> <code>exportFormFromIGO</code> from GlobalEventHandlers renamed to <code>viewPDF</code>.</li>
+</ul><h2>[0.83.*]</h2><h3>Added</h3><ul>
+<li>Runtime core API methods: <code>restoreDefaultValues</code>, <code>getRuntimeDirtyData</code></li>
+</ul><h2>[0.82.*]</h2><h3>Changed</h3><ul>
+<li><strong>(Breaking)</strong> Runtime core API method <code>getRuntimeState</code> being called without arguments now
+returns an object with all runtime state items including <code>previousScreenName</code>. In previous
+versions of API it returned an object with only <code>previousScreenName</code>)</li>
+<li><strong>(Warning)</strong> Runtime core API methods <code>getRuntimeData</code> and <code>updateRuntimeData</code> are now deprecated
+and will be removed in one of future releases. <code>getRuntimeState</code> and <code>updateRuntimeState</code> should
+be used instead</li>
+<li>Runtime core API method <code>getRuntimeState</code> now accepts array of items to retrieve as a parameter
+and returns the object with all specified parameters (in previous versions of API it returned an
+object with only <code>previousScreenName</code>)</li>
+<li><code>loadData</code> now accepts data to load as a parameter. If it&apos;s undefined then <code>loadData</code> tries to
+load the data from the server (by default and as it was before).</li>
+<li>Runtime core API method <code>updateRuntimeData</code> can now also accept data in format returned by
+<code>getRuntimeData</code> method</li>
+</ul><h3>Added</h3><ul>
+<li>Runtime core API methods: <code>resetRuntimeState</code>, <code>restoreRuntimeState</code>, <code>updateRuntimeState</code>,
+&apos;getFieldByName&apos;</li>
+<li>Runtime core API constant: <code>runtimeStateItems</code> which contains names of runtime state items used in
+<code>getRuntimeState</code>, <code>resetRuntimeState</code>, <code>restoreRuntimeState</code>, <code>updateRuntimeState</code> API methods</li>
+<li>Runtime core API constant: <code>sdkEventHandlerNames</code> which contains names of events that can be
+handled via SDK.</li>
+</ul><h2>[0.79.*]</h2><h3>Changed</h3><p>The following change is not Breaking unless you use Javascript custom assemblies.</p><ul>
+<li>Two methods in GlobalEventHandlers: <code>getSourceDropdownData</code> and <code>getSourceGridData</code> are updated to
+load data from javascript custom assembly first. If JS custom assembly is missing, request is sent
+to the server.</li>
+</ul><h2>[0.77.*]</h2><h3>Added</h3><ul>
+<li><code>callJsCustomAssembly</code> method introduced in GlobalEventHandlers to handle new action
+<code>call_js_service</code> in screen designer</li>
+</ul><h2>[0.75.*]</h2><h3>Changed</h3><p>The following changes may be considered as breaking if you are using custom stylesheets instead of
+default.</p><ul>
+<li><p><strong>(Breaking)</strong> Controls styles extracted to separate bundle runtime-controls.css. List of changes:</p>
+<ul>
+<li>Controls styles extracted from runtime.css to runtime-controls.css</li>
+<li>Styles for radio and checkbox buttons updated and moved from runtime-bootstrap-overrides.css to
+runtime-controls.css bundle</li>
+<li><p>Radio/Checkbox button control&apos;s CSS classes updated:</p>
+<ul>
+<li>btn-group class removed</li>
+<li>btn-group-vertical class renamed to radio-group-vertical</li>
+<li>btn and btn-_ classes renamed to input-btn and input-btn-_ classes accordingly</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h2>[0.74.*]</h2><h3>Changed</h3><ul>
+<li>Third party styles extracted from runtime.css to separate style sheets:<ul>
+<li>runtime-bootstrap-theme.css</li>
+<li>runtime-bootstrap-overrides.css</li>
+<li>runtime-fonts.css</li>
+<li>runtime-font-awesome.css</li>
+<li>runtime-browser-fixes.css</li>
+</ul>
+</li>
+</ul><h2>[0.74.*]</h2><h3>Changed</h3><ul>
+<li><code>validateCreditCard</code> request now sends additional parameters taken from client data:
+ProcessingInstruction, Field1, Field2, FieldDelimiter, LedgerData</li>
+</ul><h2>[0.73.*]</h2><h3>Added</h3><ul>
+<li><code>callServerProcedure</code> to GlobalEventHandlers</li>
+<li><code>applyEsign</code> to GlobalEventHandlers</li>
+<li><code>declineEsign</code> to GlobalEventHandlers</li>
+<li><code>activateFormPackage</code> to GlobalEventHandlers</li>
+<li><code>exportFormFromIGO</code> to GlobalEventHandlers</li>
+<li><code>sendEmail</code> to GlobalEventHandlers</li>
+<li><code>callLogger</code> to GlobalEventHandlers</li>
+</ul><h2>[0.72.*]</h2><h3>Added</h3><ul>
+<li>css namespacing page</li>
+<li>ability to use namespaced css</li>
+</ul><h2>[0.71.*]</h2><blockquote>
+<p>2017-10-16</p>
+</blockquote><h3>Changed</h3><ul>
+<li>jQuery and Bootstrap extracted from runtime.js and are loaded separately in <code>scripts.html</code></li>
+<li>All scripts in <code>scripts.html</code> are loaded with <code>defer</code> attribute</li>
+</ul><h2>[0.70.*]</h2><blockquote>
+<p>2017-09-07</p>
+</blockquote><h3>Added</h3><ul>
+<li>CHANGELOG.md</li>
+<li>expose runtime core api to global scope (<code>global.App.runtimeCoreApi</code>)</li>
+<li>add <code>loadData</code> to GlobalEventHandlers</li>
+<li>add <code>refreshUI</code> method to runtime core api</li>
+</ul><h3>Changed</h3><ul>
+<li><strong>(Breaking)</strong> rename <code>api</code> to <code>coreApi</code> inside <code>GlobalEventHandlers.js</code></li>
+<li><strong>(Breaking)</strong> <code>global.GlobalEventHandlers</code> --&gt; <code>global.App.__globalEventHandlers</code></li>
+</ul><hr><hr><h2>[Example]</h2><blockquote>
+<p>2055-01-01</p>
+</blockquote><h3>Added</h3><ul>
+<li>Support <code>blabla</code> on <code>blabla</code><h3 id="changed">Changed</h3></li>
+<li>Method <code>meow</code> should do it louder</li>
+<li><strong>(Breaking)</strong> Method <code>alibaba</code> should show pink <code>gin</code> now<h3 id="removed">Removed</h3><h3 id="deprecated">Deprecated</h3><h3 id="fixed">Fixed</h3><h3 id="security">Security</h3></li>
+</ul></div>
+        <a data-ice="link" href="manual/CHANGELOG.html"></a>
+      </div>
+    </div>
+<div class="manual-card-wrap" data-ice="cards">
+      <div class="manual-card">
+        <div data-ice="card"><h1>Data interchange format between Server and Runtime (how data is stored inside runtime core)</h1><h3>SD Runtime fields data:</h3><pre><code><code class="source-code prettyprint">fieldName: {
+    value: &apos;val&apos;,
+    formattedValue: &apos;formattedval&apos;
+}
+
+anotherFieldName: {
+    value: &apos;123&apos;
+    formattedValue: &apos;$123&apos;
+}</code>
+</code></pre><h3>Corresponding Server fields data:</h3><pre><code><code class="source-code prettyprint">...
+fieldName = &apos;val&apos;,
+fieldName_fmt = &apos;formattedval&apos;,
+anotherFieldName = &apos;123&apos;,
+anotherFieldName_fmt = &apos;$123&apos;,
+...</code>
+</code></pre><hr><h3>SD Runtime SourceDropdown control data:</h3><pre><code><code class="source-code prettyprint">// Single select dropdown:
+sourceDropdownName: {
+    value: &apos;selectedOptionValue&apos;,
+    formattedValue: &apos;selectedOptionName&apos;
+    data: {
+        options: [{
+            opt1: &quot;opt1value&quot;,
+            anotheropt: &quot;anotherValue&quot;
+        }
+    ]}
+}
+
+
+// Multiselect dropdown (with 3 selected values):
+
+multiSourceDropdownName: {
+    value: &apos;val1,val2,val3&apos;,
+    formattedValue: &apos;name1,name2,name3&apos;
+    data: {
+        options: [
+            {
+                opt1: &quot;opt1value&quot;,
+                anotheropt: &quot;anotherValue&quot;
+            },
+            {
+                somethig: &quot;someOtherValue&quot;
+            },
+            {
+                // no additional options
+            }
+        ]
+    }
+}</code>
+</code></pre><h3>Corresponding Server SourceDropdown control data:</h3><p>cases:</p><pre><code><code class="source-code prettyprint">// Single select dropdown:
+...
+sourceDropdownName = &apos;selectedOptionValue&apos;,
+sourceDropdownName_fmt = &apos;selectedOptionName&apos;,
+sourceDropdownName||options = &apos;[{&quot;name&quot;:&quot;selectedOptionName&quot;, &quot;value&quot;:&quot;selectedOptionValue&quot;, &quot;opt1&quot;:&quot;opt1value&quot;, &quot;anotheropt&quot;:&quot;anotherValue&quot;}]&apos;
+...
+
+// Multiselect dropdown (with 3 selected values):
+...
+multiSourceDropdownName = &apos;val1,val2,val3&apos;,
+multiSourceDropdownName_fmt = &apos;name1|name2|name3&apos;,
+multiSourceDropdownName||options = &apos;[{&quot;name&quot;:&quot;val1&quot;, &quot;value&quot;:&quot;name1&quot;, &quot;opt1&quot;:&quot;opt1value&quot;, &quot;anotheropt&quot;:&quot;anotherValue&quot;}, {&quot;name&quot;:&quot;val2&quot;, &quot;value&quot;:&quot;name2&quot;, &quot;something&quot;:&quot;someOtherValue&quot;}, {&quot;name&quot;:&quot;val3&quot;, &quot;value&quot;:&quot;name3&quot;}]&apos;
+...
+
+NOTES:
+1. &quot;fieldName__options&quot; key contains double-underscore&quot;
+2. &quot;fieldName__options&quot; should contain valid JSON in a string
+3. &quot;fieldName__options&quot; should contain all data for a selected option, including &quot;name&quot; and &quot;value&quot; despite they are already available in fieldName and fieldName_fmt.</code>
+</code></pre><hr><h3>SD Runtime Grid control data:</h3><pre><code><code class="source-code prettyprint">gridName: {
+    data: [{                       // first row
+        col1: {
+            value: &apos;john&apos;,
+            formattedValue: &apos;johnny&apos;
+        },
+        col2: {
+            value: &apos;123&apos;,
+            formattedValue: &apos;$123&apos;
+        }
+    },{                            // second row
+        col1: {
+            value: &apos;don&apos;,
+            formattedValue: &apos;donny&apos;
+        },
+        col2: {
+            value: &apos;9&apos;,
+            formattedValue: &apos;$9&apos;
+        }
+    }]
+}</code>
+</code></pre><h3>Corresponding Server Grid control data:</h3><pre><code><code class="source-code prettyprint">// NOTE: grid name is not used!
+...,
+col1__1 = &apos;john&apos;,
+col1__1_fmt = &apos;johnny&apos;,
+col2__1 = &apos;123&apos;,
+col2__1_fmt = &apos;$123&apos;,
+col1__2 = &apos;don&apos;,
+col1__2_fmt = &apos;donny&apos;,
+col2__2 = &apos;9&apos;,
+col2__2_fmt = &apos;9&apos;,
+...</code>
+</code></pre><hr><h3>SD Runtime SourceGrid control data:</h3><pre><code><code class="source-code prettyprint">sourceGridName: {
+    data: [{                        // first row
+        &quot;row-id&quot;: {                 // &quot;row-id&quot; is predefined name
+            value: &apos;id1&apos;,           // &quot;row-id&quot; values are unique across source grid rows
+            formattedValue: &apos;&apos;
+        },
+        col1: {
+            value: &apos;john&apos;,
+        },
+        col2: {
+            value: &apos;123&apos;,
+            formattedValue: &apos;$123&apos;
+        }
+    },{                             // second row
+        &quot;row-id&quot;: {
+            value: &apos;id2&apos;,
+                formattedValue: &apos;&apos;
+        },
+        col1: {
+            value: &apos;don&apos;,
+        },
+        col2: {
+            value: &apos;9&apos;,
+            formattedValue: &apos;$9&apos;
+        }
+    }]
+}</code>
+</code></pre><h3>Corresponding Server SourceGrid control data:</h3><pre><code><code class="source-code prettyprint">// NOTE: grid name is not used!
+...,
+sourceGridName = &apos;[{&quot;row-id&quot;:{&quot;value&quot;:&quot;id1&quot;,&quot;formattedValue&quot;:&quot;&quot;},&quot;col1&quot;:{&quot;value&quot;:&quot;john&quot;},&quot;col2&quot;:{&quot;value&quot;:&quot;123&quot;,&quot;formattedValue&quot;:&quot;$123&quot;}},{&quot;row-id&quot;:{&quot;value&quot;:&quot;id1&quot;,&quot;formattedValue&quot;:&quot;&quot;},&quot;col1&quot;:{&quot;value&quot;:&quot;don&quot;},&quot;col2&quot;:{&quot;value&quot;:&quot;9&quot;,&quot;formattedValue&quot;:&quot;$9&quot;}}]&apos;
+...</code>
+</code></pre><hr><h3>SD Runtime Mask control data:</h3><pre><code><code class="source-code prettyprint">maskcontrolName: {
+    value: &apos;value&apos;,
+    formattedValue: &apos;formatted-value&apos;,
+    data: {
+        maskedValue: &apos;masked-value&apos;
+    }
+}</code>
+</code></pre><h3>Corresponding Server Mask control data:</h3><p>cases:</p><pre><code><code class="source-code prettyprint">// properties for maskcontrolName &apos;showMaskedCharactersInPDF&apos; and &apos;encrypt&apos; = false
+
+maskcontrolName = &apos;value&apos;,
+maskcontrolName_fmt = &apos;formatted-value&apos;,
+maskcontrolName_enc = false
+// NOTE: maskcontrolName_msk doesn&apos;t added
+
+// &apos;showMaskedCharactersInPDF&apos; and &apos;encrypt&apos; = true
+
+maskcontrolName = &apos;value&apos;,
+maskcontrolName_fmt = &apos;formatted-value&apos;,
+maskcontrolName_msk = &apos;masked-value&apos;,
+maskcontrolName_enc = true</code>
+</code></pre><hr><h3>SD Runtime SoftLocked data:</h3><pre><code><code class="source-code prettyprint">name: {
+    value: &apos;value&apos;,
+    formattedValue: &apos;formatted-value&apos;
+}
+
+// in case when control belongs to softLocked screen:
+lockedName: {
+    value: &apos;value&apos;,
+    formattedValue: &apos;formatted-value&apos;,
+    locked: true
+}
+
+// in case when control empty and belongs to softLocked screen:
+emptyLockedName: {
+    locked: true
+}
+
+gridName: {
+    data: [{
+        col1: {
+            value: &apos;john&apos;,
+            formattedValue: &apos;johnny&apos;
+        },
+        col2: {
+            value: &apos;123&apos;,
+            formattedValue: &apos;$123&apos;
+        }
+    }],
+    locked: true
+}</code>
+</code></pre><h3>Corresponding Server SoftLocked data:</h3><pre><code><code class="source-code prettyprint">...,
+name =&apos;value&apos;,
+name_fmt = &apos;formatted-value&apos;,
+...,
+
+
+...,
+lockedName =&apos;value&apos;,
+lockedName_fmt = &apos;formatted-value&apos;,
+lockedName_lck = true,
+...,
+
+
+...,
+emptyLockedName_lck = true,
+...,
+
+...,
+col1__1 = &apos;john&apos;,
+col1__1_fmt = &apos;johnny&apos;,
+col1__1_lck = true,
+col2__1 = &apos;123&apos;,
+col2__1_fmt = &apos;$123&apos;,
+col2__1_lck = true,
+...,</code>
+</code></pre><hr><h3>SD Runtime Email control data</h3><pre><code><code class="source-code prettyprint">emailName: {
+    value: &apos;value@of.value&apos;,
+    formattedValue: &apos;formattedvalue@of.formattedvalue&apos;,
+    data: {
+        status: &apos;error&apos;,
+        message: &apos;blue sky&apos;
+    }
+}</code>
+</code></pre><h3>Corresponding Server Email control data:</h3><pre><code><code class="source-code prettyprint">emailName: &apos;value@of.value&apos;,
+emailName_fmt: &apos;formattedvalue@of.formattedvalue&apos;,
+emailName_emdata: &quot;{\&quot;status\&quot;:\&quot;error\&quot;,\&quot;message\&quot;:\&quot;blue sky\&quot;}&quot;</code>
+</code></pre><hr><h3>SD Runtime CreditCard control data</h3><pre><code><code class="source-code prettyprint">creditCardName: {
+  value: {
+    controlsValues: {
+      cardholder: {
+        value: &apos;John Doe&apos;,
+        formattedValue: &apos;John Doe&apos;,
+
+      },
+      street: {
+        value: &apos;1st Ave&apos;,
+        formattedValue: &apos;1st Ave&apos;,
+
+      },
+      city: {
+        value: &apos;Lost city&apos;,
+        formattedValue: &apos;Lost city&apos;,
+
+      },
+      province: {
+        value: &apos;Provincia&apos;,
+        formattedValue: &apos;Provincia&apos;,
+
+      },
+      state: {
+        value: &apos;Alaska&apos;,
+        formattedValue: &apos;Alaska&apos;,
+
+      },
+      country: {
+        value: &apos;USA&apos;,
+        formattedValue: &apos;USA&apos;,
+
+      },
+      zip: {
+        value: &apos;12345&apos;,
+        formattedValue: &apos;12345-____&apos;,
+
+      },
+      amount: {
+        value: &quot;100&quot;,
+        formattedValue: &quot;$100&quot;
+      }
+    },
+    maskedValues: {
+      ccn: {
+        value: &apos;************1234&apos;,
+        formattedValue: &apos;************1234&apos;,
+
+      },
+      cvv: {
+        value: &apos;***&apos;,
+        formattedValue: &apos;***&apos;,
+
+      },
+      ced: {
+        value: &apos;**/**&apos;,
+        formattedValue: &apos;**/**&apos;,
+
+      }
+    }
+  },
+  data: {
+    status: &apos;valid&apos;,
+    message: &apos;Hulala&apos;
+  }
+}</code>
+</code></pre><h3>Corresponding Server CreditCard control data:</h3><pre><code><code class="source-code prettyprint">creditCardName: &apos;&quot;{
+  &quot;controlsValues&quot;: {
+    &quot;cardholder&quot;: {
+      &quot;value&quot;: &quot;John Doe&quot;,
+      &quot;formattedValue&quot;: &quot;John Doe&quot;
+    },
+    &quot;street&quot;: {
+      &quot;value&quot;: &quot;1st Ave&quot;,
+      &quot;formattedValue&quot;: &quot;1st Ave&quot;
+    },
+    &quot;city&quot;: {
+      &quot;value&quot;: &quot;Lost city&quot;,
+      &quot;formattedValue&quot;: &quot;Lost city&quot;
+    },
+    &quot;province&quot;: {
+      &quot;value&quot;: &quot;Provincia&quot;,
+      &quot;formattedValue&quot;: &quot;Provincia&quot;
+    },
+    &quot;state&quot;: {
+      &quot;value&quot;: &quot;Alaska&quot;,
+      &quot;formattedValue&quot;: &quot;Alaska&quot;
+    },
+    &quot;country&quot;: {
+      &quot;value&quot;: &quot;USA&quot;,
+      &quot;formattedValue&quot;: &quot;USA&quot;
+    },
+    &quot;zip&quot;: {
+      &quot;value&quot;: &quot;12345&quot;,
+      &quot;formattedValue&quot;: &quot;12345-____&quot;
+    },
+    amount: {
+      &quot;value&quot;: &quot;100&quot;,
+      &quot;formattedValue&quot;: &quot;$100&quot;
+    }
+  },
+  &quot;maskedValues&quot;: {
+    &quot;ccn&quot;: {
+      &quot;value&quot;: &quot;************1234&quot;,
+      &quot;formattedValue&quot;: &quot;************1234&quot;
+    },
+    &quot;cvv&quot;: {
+      &quot;value&quot;: &quot;***&quot;,
+      &quot;formattedValue&quot;: &quot;***&quot;
+    },
+    &quot;ced&quot;: {
+      &quot;value&quot;: &quot;**/**&quot;,
+      &quot;formattedValue&quot;: &quot;**/**&quot;
+    }
+  }
+}&quot;&apos;,
+// no _fmt
+// credit card data shouldn&apos;t go to Server!</code>
+</code></pre><hr></div>
+        <a data-ice="link" href="manual/data format.html"></a>
+      </div>
+    </div>
+<div class="manual-card-wrap" data-ice="cards">
+      <div class="manual-card">
+        <div data-ice="card"><h1>CSS namespacing</h1><p>Runtime package contains css files which could conflict with parent web site ( in case of embedding
+runtime app into web page ). Therefore SDK provides ability to resolve such sort of conflicts via
+generating <code>namespaced</code> css files. In case you have css conflicts you need to manually change path
+to css files inside <code>styles.html</code>.</p><p>Example:</p><pre><code class="lang-html"><code class="source-code prettyprint">&lt;link href=&quot;{{staticsPath}}/assets/runtime-d9062fc459f15ab12eab.css&quot; rel=&quot;stylesheet&quot;&gt;</code>
+</code></pre><p>to</p><pre><code class="lang-html"><code class="source-code prettyprint">&lt;link href=&quot;{{staticsPath}}/assets/namespacedCss/runtime-d9062fc459f15ab12eab.css&quot; rel=&quot;stylesheet&quot;&gt;</code>
+</code></pre><p>Be aware that runtime root html element (which is configured via <code>global.App.getRuntimeEntryPoint</code>
+see <code>Embedding runtime into page</code> section) should have specific css class. By default it&apos;s <code>__</code> but
+maybe changed at screen designer build time.</p></div>
+        <a data-ice="link" href="manual/css namespacing.html"></a>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

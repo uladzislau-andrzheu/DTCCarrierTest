@@ -1,0 +1,3816 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">IGoSpecificGlobalEventHandlers | Screen designer SDK</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="ipln-scrd"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Screen designer SDK"><meta property="twitter:description" content="ipln-scrd"><link rel="stylesheet" href="./inject/css/0-customization.css"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/ipipeline/ngen_screen_designer"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sdk/ESigEventHandlers.js~ESigEventHandlers.html">ESigEventHandlers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html">IGoSpecificGlobalEventHandlers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html">RuntimeCoreAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sdk/SharedGlobalEventHandlers.js~SharedGlobalEventHandlers.html">SharedGlobalEventHandlers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-runtimeCoreApiInstance">runtimeCoreApiInstance</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ACTIVATE_FORM_PACKAGE">ACTIVATE_FORM_PACKAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-APPLY_ESIGN">APPLY_ESIGN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CALL_CUSTOM_ASSEMBLY">CALL_CUSTOM_ASSEMBLY</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CALL_JS_CUSTOM_ASSEMBLY">CALL_JS_CUSTOM_ASSEMBLY</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CALL_LOGGER">CALL_LOGGER</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CALL_SERVER_PROCEDURE">CALL_SERVER_PROCEDURE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CHANGE_CREDIT_CARD">CHANGE_CREDIT_CARD</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CHECK_PARAMED_SCHEDULER_STATUS">CHECK_PARAMED_SCHEDULER_STATUS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CREATE_AIS_CASE">CREATE_AIS_CASE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DECLINE_ESIGN">DECLINE_ESIGN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-EXPORT_FORM_FROM_IGO">EXPORT_FORM_FROM_IGO</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_GOOGLE_PLACES_DETAILS">GET_GOOGLE_PLACES_DETAILS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_GOOGLE_PLACES_PREDICTIONS">GET_GOOGLE_PLACES_PREDICTIONS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_SMARTY_STREETS_DETAILS">GET_SMARTY_STREETS_DETAILS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_SMARTY_STREETS_PREDICTIONS">GET_SMARTY_STREETS_PREDICTIONS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_SOURCEDROPDOWN_DATA">GET_SOURCEDROPDOWN_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_SOURCEGRID_DATA">GET_SOURCEGRID_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-INITIAL_LOAD_DATA">INITIAL_LOAD_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-LOAD_DATA">LOAD_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-OPEN_AIS_CASE">OPEN_AIS_CASE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RETRIEVE_PARAMED_SCHEDULER_URL">RETRIEVE_PARAMED_SCHEDULER_URL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SAVE_DATA">SAVE_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_EMAIL">SEND_EMAIL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SHOW_ATTACHMENTS">SHOW_ATTACHMENTS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UNDERWRITE_AIS_CASE">UNDERWRITE_AIS_CASE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPLOAD_FILE">UPLOAD_FILE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-VALIDATE_CREDIT_CARD">VALIDATE_CREDIT_CARD</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-VERIFY_EMAIL">VERIFY_EMAIL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-VIEW_PDF">VIEW_PDF</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="header-notice">
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {IGoSpecificGlobalEventHandlers} from &apos;<span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber26">ipln-scrd/sdk/IGoSpecificGlobalEventHandlers.js</a></span>&apos;</code></pre></div>
+  <span data-ice="access">public</span>
+  <span data-ice="kind">class</span>
+  
+  
+  
+  <span data-ice="source">| <span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber26">source</a></span></span>
+</div>
+
+<div class="self-detail detail">
+  <h1 data-ice="name">IGoSpecificGlobalEventHandlers</h1>
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <div class="description" data-ice="description"><p>iGo-specific base SDK class.</p>
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+</div>
+
+
+
+
+<div data-ice="memberSummary"><h2>Member Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Public Members</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-member-coreApi">coreApi</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Reference to SDK API functions.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-member-superclass">superclass</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Superclass definition to provide access to implementation of base methods from SDK.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<div data-ice="methodSummary"><h2>Method Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Public Methods</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-activateFormPackage">activateFormPackage</a></span></span><span class="code" data-ice="signature">(name: <span>*</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Specific iGo method to activate form package</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.73.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-applyEsign">applyEsign</a></span></span><span class="code" data-ice="signature">(): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Specific iGo method to apply e-signature</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.73.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-callCustomAssembly">callCustomAssembly</a></span></span><span class="code" data-ice="signature">(assemblyName: <span>String</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is invoked whenever Runtime makes a call to custom assembly (excluding custom assemblies for SourceGrid and SourceDropdown data retrieval).</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.56.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-callJsCustomAssembly">callJsCustomAssembly</a></span></span><span class="code" data-ice="signature">(assemblyName: <span>String</span>): <span>undefined</span> | <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is invoked whenever Runtime makes a call to JavaScript custom assembly.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.77.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-callLogger">callLogger</a></span></span><span class="code" data-ice="signature">(log: <span>*</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is invoked whenever Runtime attempts to log something</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.73.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-callServerProcedure">callServerProcedure</a></span></span><span class="code" data-ice="signature">(procedureName: <span>String</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Specific iGo method which is invoked whenever Runtime makes a call to server procedure.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.73.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-changeCreditCard">changeCreditCard</a></span></span><span class="code" data-ice="signature">(creditCardControlName: <span>String</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is used to erase previously entered credit card data.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.65.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          <span data-ice="async">async</span>
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-checkParamedSchedulerStatus">checkParamedSchedulerStatus</a></span></span><span class="code" data-ice="signature">(controlName: <span>string</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is invoked whenever Runtime makes a call to check status of scheduling.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.85.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-createAISCase">createAISCase</a></span></span><span class="code" data-ice="signature">(controlName: <span>*</span>): <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-declineEsign">declineEsign</a></span></span><span class="code" data-ice="signature">(): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Specific iGo method to decline e-signature</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.73.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-exportFormFromIGO">exportFormFromIGO</a></span></span><span class="code" data-ice="signature">()</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is @deprecated and will be removed in nearest time.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          <span data-ice="async">async</span>
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-getGooglePlacesDetails">getGooglePlacesDetails</a></span></span><span class="code" data-ice="signature">(value: <span>String</span>): <span>Object</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is invoked whenever Runtime attempts to receive Google Places Address Details</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.91.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          <span data-ice="async">async</span>
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-getGooglePlacesPredictions">getGooglePlacesPredictions</a></span></span><span class="code" data-ice="signature">(value: <span>String</span>): <span>Array</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is invoked whenever Runtime attempts to receive Google Places Address Predictions</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.91.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          <span data-ice="async">async</span>
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-getSmartyStreetsDetails">getSmartyStreetsDetails</a></span></span><span class="code" data-ice="signature">(value: <span>String</span>): <span>Object</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is invoked whenever Runtime attempts to receive Smarty Streets Address Details</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.91.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          <span data-ice="async">async</span>
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-getSmartyStreetsPredictions">getSmartyStreetsPredictions</a></span></span><span class="code" data-ice="signature">(value: <span>String</span>): <span>Array</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is invoked whenever Runtime attempts to receive Smarty Streets Address Predictions</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.91.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-getSourceDropdownData">getSourceDropdownData</a></span></span><span class="code" data-ice="signature">(assemblyName: <span>String</span>): <span>String</span> | <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is invoked each time when Runtime attempts to retrieve data for a SourceDropdown.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.56.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-getSourceGridData">getSourceGridData</a></span></span><span class="code" data-ice="signature">(assemblyName: <span>String</span>): <span>String</span> | <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is invoked whenever Runtime attempts to retrieve data for a SourceGrid.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.56.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-initialLoadData">initialLoadData</a></span></span><span class="code" data-ice="signature">(data: <span>Object</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span> | <span>undefined</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is invoked whenever Runtime attempts to initialize with external data.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.80.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-loadData">loadData</a></span></span><span class="code" data-ice="signature">(data: <span>Object</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span> | <span>undefined</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is invoked whenever Runtime attempts to load data.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.70.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-openAISCase">openAISCase</a></span></span><span class="code" data-ice="signature">(controlName: <span>*</span>): <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          <span data-ice="async">async</span>
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-retrieveParamedSchedulerUrl">retrieveParamedSchedulerUrl</a></span></span><span class="code" data-ice="signature">(controlName: <span>string</span>, service: <span>string</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is invoked whenever Runtime makes a call to receive url to scheduler for selected paramed service.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.85.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-saveData">saveData</a></span></span><span class="code" data-ice="signature">(): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is invoked whenever Runtime attempts to save data.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.56.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-sendEmail">sendEmail</a></span></span><span class="code" data-ice="signature">(roleId: <span>*</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Specific iGo method to trigger sending email to clickwrap users</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.73.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-showAttachments">showAttachments</a></span></span><span class="code" data-ice="signature">()</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is invoked whenever Runtime attempts to show attachments</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-underwriteAISCase">underwriteAISCase</a></span></span><span class="code" data-ice="signature">(controlName: <span>*</span>, underwriteToken: <span>*</span>): <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          <span data-ice="async">async</span>
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-uploadFile">uploadFile</a></span></span><span class="code" data-ice="signature">(defaultFileName: <span>*</span>)</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is invoked whenever Runtime attempts to upload file</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-validateCreditCard">validateCreditCard</a></span></span><span class="code" data-ice="signature">(creditCardData: <span>Object</span>, creditCardControlName: <span>String</span>, cardType: <span>String</span>, ftniRequestOptions: <span>Object</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Invoked to validate credit card data via specific services.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.65.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-verifyEmail">verifyEmail</a></span></span><span class="code" data-ice="signature">(email: <span>String</span>, verificationService: <span>String</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is invoked whenever email control makes a call to validate email.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.67.*</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          <span data-ice="async">async</span>
+          
+          <span class="code" data-ice="name"><span><a href="class/sdk/IGoSpecificGlobalEventHandlers.js~IGoSpecificGlobalEventHandlers.html#instance-method-viewPDF">viewPDF</a></span></span><span class="code" data-ice="signature">(): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Specific iGo method to prepare data before showing pdf</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since v0.73.*</span>
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+
+
+<div data-ice="memberDetails"><h2 data-ice="title">Public Members</h2>
+
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-member-coreApi">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">coreApi</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber35">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Reference to SDK API functions.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.saveData = function() {
+    const clientData = this.coreApi.getRuntimeData();
+    //...
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-member-superclass">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">superclass</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber44">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Superclass definition to provide access to implementation of base methods from SDK.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.callCustomAssembly = function(assemblyName) {
+    return this.superclass.callCustomAssembly(assemblyName);
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+</div>
+<div data-ice="methodDetails"><h2 data-ice="title">Public Methods</h2>
+
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-activateFormPackage">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">activateFormPackage</span><span class="code" data-ice="signature">(name: <span>*</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.73.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber202">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Specific iGo method to activate form package</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">name</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</td>
+          <td class="return-desc" data-ice="returnDescription"><p>A Promise of operation completion if implementation contains any asynchronous operations and/or call to superclass.activateFormPackage (superclass.activateFormPackage returns a Promise). If implementation is synchronous you may return either resolved Promise or undefined.</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.activateFormPackage = function(name) {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+
+    // ... your code here
+
+    // return result of base method execution if you are extending the default implementation:
+    return superclass.activateFormPackage(name);
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-applyEsign">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">applyEsign</span><span class="code" data-ice="signature">(): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.73.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber148">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Specific iGo method to apply e-signature</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</td>
+          <td class="return-desc" data-ice="returnDescription"><p>A Promise of operation completion if implementation contains any asynchronous operations and/or call to superclass.applyEsign (superclass.applyEsign returns a Promise). If implementation is synchronous you may return either resolved Promise or undefined.</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.applyEsign = function() {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+
+    // ... your code here
+
+    // return result of base method execution if you are extending the default implementation:
+    return superclass.applyEsign();
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-callCustomAssembly">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">callCustomAssembly</span><span class="code" data-ice="signature">(assemblyName: <span>String</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.56.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber66">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This method is invoked whenever Runtime makes a call to custom assembly (excluding custom assemblies for SourceGrid and SourceDropdown data retrieval).</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">assemblyName</td>
+      <td data-ice="type" class="code"><span>String</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>name of custom assembly to call</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>A Promise of operation completion if implementation contains any asynchronous operations and/or call to superclass.callCustomAssembly (superclass.callCustomAssembly returns a Promise). If implementation is synchronous you may return either resolved Promise or undefined.</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.callCustomAssembly = function(assemblyName) {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+    switch(assemblyName) {
+        case: &apos;CustomAssembly1&apos;:
+            // update runtime data
+            break;
+        // handle calls to other custom assemblies
+    }
+    // return result of base method execution if you are extending the default implementation:
+    return superclass.callCustomAssembly(assemblyName);
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-callJsCustomAssembly">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">callJsCustomAssembly</span><span class="code" data-ice="signature">(assemblyName: <span>String</span>): <span>undefined</span> | <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.77.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber90">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This method is invoked whenever Runtime makes a call to JavaScript custom assembly. Invocation occurs synchronously for Rule and Event action. It is allowed to return Promise and execute asynchronous code ONLY for Event action.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">assemblyName</td>
+      <td data-ice="type" class="code"><span>String</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>name of JavaScript custom assembly to call</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>undefined</span> | <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>If implementation is synchronous you may return either undefined or resolved Promise. Return Promise of operation completion if implementation contains any asynchronous operations only valid for Event action.</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.callJsCustomAssembly = function(assemblyName) {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+    switch(assemblyName) {
+        case: &apos;JavaScriptCustomAssembly1&apos;:
+            // update runtime data
+            break;
+        // handle calls to other JS custom assemblies
+    }
+    // return result of base method execution if you are extending the default implementation:
+    return superclass.callJsCustomAssembly(assemblyName);
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-callLogger">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">callLogger</span><span class="code" data-ice="signature">(log: <span>*</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.73.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber791">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This method is invoked whenever Runtime attempts to log something</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">log</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</td>
+          <td class="return-desc" data-ice="returnDescription"><p>A Promise of operation completion if implementation contains any asynchronous operations and/or call to superclass.callLogger (superclass.callLogger returns a Promise). If implementation is synchronous you may return either resolved Promise or undefined.</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.callLogger = function(log) {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+
+    // ... your code here
+
+    // return result of base method execution if you are extending the default implementation:
+    return superclass.callLogger(log);
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-callServerProcedure">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">callServerProcedure</span><span class="code" data-ice="signature">(procedureName: <span>String</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.73.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber121">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Specific iGo method which is invoked whenever Runtime makes a call to server procedure.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">procedureName</td>
+      <td data-ice="type" class="code"><span>String</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>name of server procedure to call</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>A Promise of operation completion if implementation contains any asynchronous operations and/or call to superclass.callServerProcedure (superclass.callServerProcedure returns a Promise). If implementation is synchronous you may return either resolved Promise or undefined.</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.callServerProcedure = function(procedureName) {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+    switch(procedureName) {
+        case: &apos;Procedure1&apos;:
+            // update runtime data
+            break;
+        // handle calls to other procedures
+    }
+    // return result of base method execution if you are extending the default implementation:
+    return superclass.callServerProcedure(procedureName);
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-changeCreditCard">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">changeCreditCard</span><span class="code" data-ice="signature">(creditCardControlName: <span>String</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.65.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber419">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This method is used to erase previously entered credit card data.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">creditCardControlName</td>
+      <td data-ice="type" class="code"><span>String</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>name of credit card control to be erased</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>Promise of the changeCreditCard operation completion. No data need to be resolved</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.changeCreditCard = function(creditCardControlName) {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+
+    // ... your code here
+
+    // return result of base method execution if you are extending the default implementation:
+    return superclass.changeCreditCard(creditCardControlName);
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-checkParamedSchedulerStatus">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    <span data-ice="async">async</span>
+    
+    <span class="code" data-ice="name">checkParamedSchedulerStatus</span><span class="code" data-ice="signature">(controlName: <span>string</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.85.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber763">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This method is invoked whenever Runtime makes a call to check status of scheduling.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">controlName</td>
+      <td data-ice="type" class="code"><span>string</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>name of paramed control;</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</td>
+          <td class="return-desc" data-ice="returnDescription"><p>Promise of operation completion which should resolve to an object;</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties"><div data-ice="properties">
+  <h4 data-ice="title">Return Properties:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">Object.schedulingDone</td>
+      <td data-ice="type" class="code"><span>boolean</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Required. Boolean flag that inform about finishing scheduling;</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-createAISCase">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">createAISCase</span><span class="code" data-ice="signature">(controlName: <span>*</span>): <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber449">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">controlName</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-declineEsign">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">declineEsign</span><span class="code" data-ice="signature">(): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.73.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber175">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Specific iGo method to decline e-signature</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</td>
+          <td class="return-desc" data-ice="returnDescription"><p>A Promise of operation completion if implementation contains any asynchronous operations and/or call to superclass.declineEsign (superclass.declineEsign returns a Promise). If implementation is synchronous you may return either resolved Promise or undefined.</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.declineEsign = function() {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+
+    // ... your code here
+
+    // return result of base method execution if you are extending the default implementation:
+    return superclass.declineEsign();
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-exportFormFromIGO">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">exportFormFromIGO</span><span class="code" data-ice="signature">()</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber288">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This method is @deprecated and will be removed in nearest time. Use viewPDF() instead.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getGooglePlacesDetails">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    <span data-ice="async">async</span>
+    
+    <span class="code" data-ice="name">getGooglePlacesDetails</span><span class="code" data-ice="signature">(value: <span>String</span>): <span>Object</span></span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.91.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber614">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This method is invoked whenever Runtime attempts to receive Google Places Address Details</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">value</td>
+      <td data-ice="type" class="code"><span>String</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>according to this value address details will be received</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>Object</span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>Google Places address details</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties"><div data-ice="properties">
+  <h4 data-ice="title">Return Properties:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">country</td>
+      <td data-ice="type" class="code"><span>string</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>country</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">city</td>
+      <td data-ice="type" class="code"><span>string</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>city</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">state</td>
+      <td data-ice="type" class="code"><span>string</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>state</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">address</td>
+      <td data-ice="type" class="code"><span>string</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>address</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">zip</td>
+      <td data-ice="type" class="code"><span>string</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>zip code
+Example of output data:
+{
+   address: &quot;1085-1087 Boylston Street&quot;,
+   city: &quot;Boston&quot;,
+   country: &quot;USA&quot;,
+   state: &quot;MA&quot;,
+   zip: &quot;02215&quot;
+}</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.getGooglePlacesDetails = function(value) {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+
+    // ...your code here
+
+    // return result of base method execution if you are extending the default implementation:
+    return superclass.getGooglePlacesDetails(value);
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getGooglePlacesPredictions">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    <span data-ice="async">async</span>
+    
+    <span class="code" data-ice="name">getGooglePlacesPredictions</span><span class="code" data-ice="signature">(value: <span>String</span>): <span>Array</span></span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.91.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber540">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This method is invoked whenever Runtime attempts to receive Google Places Address Predictions</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">value</td>
+      <td data-ice="type" class="code"><span>String</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>according to this value address predictions will be suggested</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>Array</span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>Google Places address predictions
+Example of output data:
+[
+  {
+    name: &apos;150 West 34th Street, New York, NY, USA&apos;,
+    id: &apos;150 West 34th Street, New York, NY, USA&apos;,
+    data: {
+         placeId: &apos;ChIJ9SwqvK5ZwokRjbiilW_p2rs&apos;
+    }
+  },
+  {
+    name: &apos;1085-1087 Boylston Street, Boston, MA, USA&apos;,
+    id: &apos;1085-1087 Boylston Street, Boston, MA, USA&apos;,
+    data: {
+         placeId: &apos;ChIJjcKMJBt644kRVXqk_329y6o&apos;
+    }
+  }
+]</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.getGooglePlacesPredictions = function(value) {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+
+    // ...your code here
+
+    // return result of base method execution if you are extending the default implementation:
+    return superclass.getGooglePlacesPredictions(value);
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getSmartyStreetsDetails">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    <span data-ice="async">async</span>
+    
+    <span class="code" data-ice="name">getSmartyStreetsDetails</span><span class="code" data-ice="signature">(value: <span>String</span>): <span>Object</span></span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.91.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber577">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This method is invoked whenever Runtime attempts to receive Smarty Streets Address Details</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">value</td>
+      <td data-ice="type" class="code"><span>String</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>according to this value address details will be received</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>Object</span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>Smarty Streets address details</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties"><div data-ice="properties">
+  <h4 data-ice="title">Return Properties:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">country</td>
+      <td data-ice="type" class="code"><span>string</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>country</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">city</td>
+      <td data-ice="type" class="code"><span>string</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>city</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">state</td>
+      <td data-ice="type" class="code"><span>string</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>state</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">address</td>
+      <td data-ice="type" class="code"><span>string</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>address</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">zip</td>
+      <td data-ice="type" class="code"><span>string</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>zip code
+Example of output data:
+{
+   address: &quot;222 Vellenorth Rd&quot;,
+   city: &quot;Blue Ridge&quot;,
+   country: &quot;US&quot;,
+   state: &quot;GA&quot;,
+   zip: &quot;30513-2813&quot;
+}</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.getSmartyStreetsDetails = function(value) {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+
+    // ...your code here
+
+    // return result of base method execution if you are extending the default implementation:
+    return superclass.getSmartyStreetsDetails(value);
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getSmartyStreetsPredictions">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    <span data-ice="async">async</span>
+    
+    <span class="code" data-ice="name">getSmartyStreetsPredictions</span><span class="code" data-ice="signature">(value: <span>String</span>): <span>Array</span></span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.91.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber499">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This method is invoked whenever Runtime attempts to receive Smarty Streets Address Predictions</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">value</td>
+      <td data-ice="type" class="code"><span>String</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>according to this value address predictions will be suggested</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>Array</span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>Smarty Streets address predictions
+Example of output data:
+[
+  {
+    name: &apos;22 Antelope Rd, Seneca MO&apos;,
+    id: &apos;22 Antelope Rd, Seneca MO&apos;,
+    data: {
+         street: &apos;22 Antelope Rd&apos;,
+         city: &apos;Seneca&apos;,
+         state: &apos;MO&apos;
+    }
+  },
+  {
+    name: &apos;333 Avenue B, Coudersport PA&apos;,
+    id: &apos;333 Avenue B, Coudersport PA&apos;,
+    data: {
+         street: &apos;333 Avenue B&apos;,
+         city: &apos;Coudersport&apos;,
+         state: &apos;PA&apos;
+    }
+  }
+]</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.getSmartyStreetsPredictions = function(value) {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+
+    // ...your code here
+
+    // return result of base method execution if you are extending the default implementation:
+    return superclass.getSmartyStreetsPredictions(value);
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getSourceDropdownData">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">getSourceDropdownData</span><span class="code" data-ice="signature">(assemblyName: <span>String</span>): <span>String</span> | <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.56.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber351">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This method is invoked each time when Runtime attempts to retrieve data for a SourceDropdown. The default implementation tries to execute javascript custom assembly first.If it&apos;s missing it sends request to the server.
+NOTE: its implementation should call services in background (don&apos;t use load progress indicator)
+to avoid source dropdown list being closed after the data is loaded.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">assemblyName</td>
+      <td data-ice="type" class="code"><span>String</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>name of custom assembly which returns Source Dropdown data, could be either JS or Server side custom assembly</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>String</span> | <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>stringified JSON Object or a Promise of such object which contains data for Source Dropdown. You must return a Promise if implementation contains any asynchronous operations and/or call to superclass.getSourceDropdownData (superclass.getSourceDropdownData returns a Promise that resolves to requested data). If implementation is synchronous you may return either Promise resolved to stringified JSON Object or just stringified JSON Object with data.</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties"><div data-ice="properties">
+  <h4 data-ice="title">Return Properties:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">JSON_Object.records[]</td>
+      <td data-ice="type" class="code"><span><span>Object</span><span>[]</span></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>array of records, each representing single data item for Source Dropdown</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="2">
+      <td data-ice="name" class="code" data-depth="2">JSON_Object.records[].name</td>
+      <td data-ice="type" class="code"><span>String</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Required. Item name (will be displayed in dropdown control)</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="2">
+      <td data-ice="name" class="code" data-depth="2">JSON_Object.records[].value</td>
+      <td data-ice="type" class="code"><span>String</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Required. Item value (internal data value)</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="2">
+      <td data-ice="name" class="code" data-depth="2">JSON_Object.records[].*</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Optional. Any other supplementary data for a record</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.getSourceDropdownData = function(assemblyName) {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+
+    // ... your code here
+
+    // return result of base method execution if you are extending the default implementation:
+    return superclass.getSourceDropdownData(assemblyName);
+    // returned data example: &apos;{&quot;records&quot;: [{&quot;name&quot;: &quot;Belarus&quot;,&quot;value&quot;: &quot;Minsk&quot;,&quot;option1&quot;: &quot;qwe&quot;,&quot;option2&quot;: &quot;asd&quot;},{&quot;name&quot;: &quot;USA&quot;,&quot;value&quot;: &quot;Washington&quot;,&quot;option1&quot;: &quot;zxc&quot;,&quot;option2&quot;: &quot;rty&quot;}]}&apos;
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getSourceGridData">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">getSourceGridData</span><span class="code" data-ice="signature">(assemblyName: <span>String</span>): <span>String</span> | <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.56.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber311">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This method is invoked whenever Runtime attempts to retrieve data for a SourceGrid. The default implementation tries to execute javascript custom assembly first and if it&apos;s missing sends request to the server.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">assemblyName</td>
+      <td data-ice="type" class="code"><span>String</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>name of custom assembly which returns Source Grid data, could be either JS or Server side custom assembly</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>String</span> | <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>stringified JSON Array or Promise of such Array which contains data for Source Grid. You must return a Promise if implementation contains any asynchronous operations and/or call to superclass.getSourceGridData (superclass.getSourceGridData returns a Promise that resolves to requested data). If implementation is synchronous you may return either Promise resolved to stringified JSON Array or just stringified JSON Array with data.</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties"><div data-ice="properties">
+  <h4 data-ice="title">Return Properties:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">JSON_Array[]</td>
+      <td data-ice="type" class="code"><span>Object</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>data object specifying data for single Source Grid row</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">JSON_Array[].row-id</td>
+      <td data-ice="type" class="code"><span>String</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>unique row id</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">JSON_Array[].&lt;column_name&gt;</td>
+      <td data-ice="type" class="code"><span>String</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>value for specified &lt;column_name&gt; in current row</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.getSourceGridData = function(assemblyName) {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+
+    // ... your code here
+
+    // return result of base method execution if you are extending the default implementation:
+    return superclass.getSourceGridData(assemblyName);
+    // returned data example: &apos;[{\&quot;row-id\&quot;: \&quot;1\&quot;,\&quot;Name\&quot;: \&quot;John\&quot;,\&quot;DOB\&quot;: \&quot;2016-10-10T00:00:00+00:00\&quot;},{\&quot;row-id\&quot;: \&quot;2\&quot;,\&quot;Name\&quot;: \&quot;Bob\&quot;,\&quot;DOB\&quot;: \&quot;2010-02-13T00:00:00+00:00\&quot;}]&apos;
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-initialLoadData">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">initialLoadData</span><span class="code" data-ice="signature">(data: <span>Object</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span> | <span>undefined</span></span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.80.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber668">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This method is invoked whenever Runtime attempts to initialize with external data. Data could be loaded either synchronously or asynchronously.
+To load data synchronously pass it as a parameter. To load data asynchronously call the method without any parameters</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">data</td>
+      <td data-ice="type" class="code"><span>Object</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>data to be loaded into runtime</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span> | <span>undefined</span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>Promise of the load operation completion if implementation contains any asynchronous operations and/or call to superclass.loadData (superclass.loadData returns a Promise).
+If implementation is synchronous you may return either resolved Promise or undefined. Note that this action is not expected to provide any data to runtime upon return.
+If you need to modify runtime data inside this action handler, use coreApi.updateRuntimeData().</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.initialLoadData = function() {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+
+    // ... perform your runtime data initialization operations or whatever else
+
+    // return Promise of base method execution if you are extending the default implementation:
+    return superclass.initialLoadData();
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-loadData">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">loadData</span><span class="code" data-ice="signature">(data: <span>Object</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span> | <span>undefined</span></span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.70.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber694">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This method is invoked whenever Runtime attempts to load data. Data could be loaded either synchronously or asynchronously.
+To load data synchronously pass it as a parameter. To load data asynchronously call the method without any parameters</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">data</td>
+      <td data-ice="type" class="code"><span>Object</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>data to be loaded into runtime</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span> | <span>undefined</span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>Promise of the load operation completion if implementation contains any asynchronous operations and/or call to superclass.loadData (superclass.loadData returns a Promise).
+If implementation is synchronous you may return either resolved Promise or undefined. Note that this action is not expected to provide any data to runtime upon return.
+If you need to modify runtime data inside this action handler, use coreApi.updateRuntimeData().</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.loadData = function() {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+
+    // ... perform your loading operations or whatever else
+
+    // return Promise of base method execution if you are extending the default implementation:
+    return superclass.loadData();
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-openAISCase">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">openAISCase</span><span class="code" data-ice="signature">(controlName: <span>*</span>): <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber453">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">controlName</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-retrieveParamedSchedulerUrl">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    <span data-ice="async">async</span>
+    
+    <span class="code" data-ice="name">retrieveParamedSchedulerUrl</span><span class="code" data-ice="signature">(controlName: <span>string</span>, service: <span>string</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.85.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber737">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This method is invoked whenever Runtime makes a call to receive url to scheduler for selected paramed service.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">controlName</td>
+      <td data-ice="type" class="code"><span>string</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>name of paramed control;</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">service</td>
+      <td data-ice="type" class="code"><span>string</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>selected paramed service;</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</td>
+          <td class="return-desc" data-ice="returnDescription"><p>Promise of operation completion which should resolve to an object;</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties"><div data-ice="properties">
+  <h4 data-ice="title">Return Properties:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">Object.url</td>
+      <td data-ice="type" class="code"><span>string</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Required. Url to scheduler service;</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-saveData">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">saveData</span><span class="code" data-ice="signature">(): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.56.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber639">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This method is invoked whenever Runtime attempts to save data.
+All runtime data is available via API.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>Promise of the save operation completion if implementation contains any asynchronous operations and/or call to superclass.saveData (superclass.saveData returns a Promise). If implementation is synchronous you may return either resolved Promise or undefined. Note that this action is not expected to provide any data to runtime upon return. If you need to modify runtime data inside this action handler, use coreApi.updateRuntimeData().</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.saveData = function() {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+    var runtimeData = coreApi.getRuntimeData();
+
+    // ... perform your saving operations or whatever else
+
+    // return Promise of base method execution if you are extending the default implementation:
+    return superclass.saveData();
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-sendEmail">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">sendEmail</span><span class="code" data-ice="signature">(roleId: <span>*</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.73.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber720">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Specific iGo method to trigger sending email to clickwrap users</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">roleId</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</td>
+          <td class="return-desc" data-ice="returnDescription"><p>A Promise of operation completion if implementation contains any asynchronous operations and/or call to superclass.sendEmail (superclass.sendEmail returns a Promise). If implementation is synchronous you may return either resolved Promise or undefined.</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.sendEmail = function(roleId) {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+
+    // ... your code here
+
+    // return result of base method execution if you are extending the default implementation:
+    return superclass.sendEmail(roleId);
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-showAttachments">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">showAttachments</span><span class="code" data-ice="signature">()</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber811">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This method is invoked whenever Runtime attempts to show attachments</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-underwriteAISCase">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">underwriteAISCase</span><span class="code" data-ice="signature">(controlName: <span>*</span>, underwriteToken: <span>*</span>): <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber457">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">controlName</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">underwriteToken</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-uploadFile">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    <span data-ice="async">async</span>
+    
+    <span class="code" data-ice="name">uploadFile</span><span class="code" data-ice="signature">(defaultFileName: <span>*</span>)</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber799">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This method is invoked whenever Runtime attempts to upload file</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">defaultFileName</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-validateCreditCard">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">validateCreditCard</span><span class="code" data-ice="signature">(creditCardData: <span>Object</span>, creditCardControlName: <span>String</span>, cardType: <span>String</span>, ftniRequestOptions: <span>Object</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.65.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber388">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Invoked to validate credit card data via specific services.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">creditCardData</td>
+      <td data-ice="type" class="code"><span>Object</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>filled in credit card data. Also contains extra parameters from client data. See <code>Credit card control data</code> at <a href="https://kb.epam.com/display/IPLNSCRD/iGo+%3C%3D%3E+SD+data+interchange+format">https://kb.epam.com/display/IPLNSCRD/iGo+%3C%3D%3E+SD+data+interchange+format</a></p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">creditCardControlName</td>
+      <td data-ice="type" class="code"><span>String</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">cardType</td>
+      <td data-ice="type" class="code"><span>String</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Visa, AmEx, MasterCard, etc...</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">ftniRequestOptions</td>
+      <td data-ice="type" class="code"><span>Object</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Request options to be sent to FTNI service (defaultStatus, doNotUpdateCustomer, doNotUseCustomerName, doNotUseCustomerAddress)</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</td>
+          <td class="return-desc" data-ice="returnDescription"><p>Promise of the validateCreditCard operation completion. Resolving data format is the same as for @{creditCardData} param</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.validateCreditCard = function(creditCardData, creditCardControlName, cardType) {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+
+    // ... your code here
+
+    // return result of base method execution if you are extending the default implementation:
+    return superclass.validateCreditCard(creditCardData, creditCardControlName, cardType);
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-verifyEmail">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">verifyEmail</span><span class="code" data-ice="signature">(email: <span>String</span>, verificationService: <span>String</span>): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.67.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber445">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This method is invoked whenever email control makes a call to validate email.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">email</td>
+      <td data-ice="type" class="code"><span>String</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>email to validate</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">verificationService</td>
+      <td data-ice="type" class="code"><span>String</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>verification service provider. One of [&apos;kickbox&apos;]</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</td>
+          <td class="return-desc" data-ice="returnDescription"><p>Promise of operation completion which should resolve an object</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties"><div data-ice="properties">
+  <h4 data-ice="title">Return Properties:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">Object.status</td>
+      <td data-ice="type" class="code"><span>String</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Required. Status of validation operation. One of [&apos;valid&apos;, &apos;invalid&apos;, &apos;error&apos;, &apos;unverified&apos;]</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">Object.message</td>
+      <td data-ice="type" class="code"><span>String</span></td>
+      <td data-ice="appendix"><ul><li>optional</li></ul></td>
+      <td data-ice="description"><p>Optional message about validation execution on service</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.verifyEmail = function(email, verificationService) {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+
+    // ...your code here
+
+    // return result of base method execution if you are extending the default implementation:
+    return superclass.verifyEmail(email, verificationService);
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-viewPDF">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    <span data-ice="async">async</span>
+    
+    <span class="code" data-ice="name">viewPDF</span><span class="code" data-ice="signature">(): <span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since v0.73.*</span>
+      <span data-ice="source"><span><a href="file/sdk/IGoSpecificGlobalEventHandlers.js.html#lineNumber247">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Specific iGo method to prepare data before showing pdf</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html#instance-member-Promise">Promise</a></span>&lt;<span>Object</span>&gt;</td>
+          <td class="return-desc" data-ice="returnDescription"><p>A Promise of operation completion if implementation contains any asynchronous operations and/or call to superclass.viewPDF (superclass.viewPDF returns a Promise). If implementation is synchronous you may return either resolved Promise or undefined.</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">ExtensionClass.prototype.viewPDF = function() {
+    // consider saving references to coreApi and superclass to avoid using &quot;this&quot; in nested functions:
+    var coreApi = this.coreApi;
+    var superclass = this.superclass;
+
+    // ... your code here
+
+    // return result of base method execution if you are extending the default implementation:
+    return superclass.viewPDF();
+}</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

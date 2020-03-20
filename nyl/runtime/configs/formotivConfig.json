@@ -1,0 +1,1 @@
+{"userId":"{{formotivUserId}}","passthru1":"{{formotivPassthru1}}","passthru2":"{{formotivPassthru2}}","endpoint":"https://api.formotiv.com/v1","consolehost":"https://app.formotiv.com","apihost":"https://api.formotiv.com","formotiv_url":"https://app.formotiv.com/static/js/formotiv-v1.9-min.js","formotiv_bootstrap_url":"https://api.formotiv.com/js/formatic-bootstrap-v1.0-min.js"}

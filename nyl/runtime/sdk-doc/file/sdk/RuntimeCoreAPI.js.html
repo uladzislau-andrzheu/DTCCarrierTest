@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">sdk/RuntimeCoreAPI.js | Screen designer SDK</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="ipln-scrd"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Screen designer SDK"><meta property="twitter:description" content="ipln-scrd"><link rel="stylesheet" href="./inject/css/0-customization.css"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/ipipeline/ngen_screen_designer"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sdk/ESigEventHandlers.js~ESigEventHandlers.html">ESigEventHandlers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sdk/GlobalEventHandlers.js~GlobalEventHandlers.html">GlobalEventHandlers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sdk/RuntimeCoreAPI.js~RuntimeCoreAPI.html">RuntimeCoreAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/sdk/SharedGlobalEventHandlers.js~SharedGlobalEventHandlers.html">SharedGlobalEventHandlers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-runtimeCoreApiInstance">runtimeCoreApiInstance</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_ACCEPT_CONSENT">ESIGUI_ACCEPT_CONSENT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_ACCEPT_DISCLOSURE">ESIGUI_ACCEPT_DISCLOSURE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_CAPTURE_EVENT">ESIGUI_CAPTURE_EVENT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_COPY_NESTED_DATA">ESIGUI_COPY_NESTED_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_DECLINE_CONSENT">ESIGUI_DECLINE_CONSENT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_DECLINE_DISCLOSURE">ESIGUI_DECLINE_DISCLOSURE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_FINISH_SIGNING">ESIGUI_FINISH_SIGNING</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_FLUSH_AUDITTRAIL">ESIGUI_FLUSH_AUDITTRAIL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_GET_SIGNING_STATUS">ESIGUI_GET_SIGNING_STATUS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_GET_VENDOR_URL">ESIGUI_GET_VENDOR_URL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ESIGUI_VIEW_PDF">ESIGUI_VIEW_PDF</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ACTIVATE_FORM_PACKAGE">ACTIVATE_FORM_PACKAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-APPLY_ESIGN">APPLY_ESIGN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CALL_CUSTOM_ASSEMBLY">CALL_CUSTOM_ASSEMBLY</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CALL_JS_CUSTOM_ASSEMBLY">CALL_JS_CUSTOM_ASSEMBLY</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CALL_LOGGER">CALL_LOGGER</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CALL_SERVER_PROCEDURE">CALL_SERVER_PROCEDURE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CHANGE_CREDIT_CARD">CHANGE_CREDIT_CARD</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CHECK_PARAMED_SCHEDULER_STATUS">CHECK_PARAMED_SCHEDULER_STATUS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CREATE_AIS_CASE">CREATE_AIS_CASE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DECLINE_ESIGN">DECLINE_ESIGN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-EXPORT_FORM_FROM_IGO">EXPORT_FORM_FROM_IGO</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_GOOGLE_PLACES_DETAILS">GET_GOOGLE_PLACES_DETAILS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_GOOGLE_PLACES_PREDICTIONS">GET_GOOGLE_PLACES_PREDICTIONS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_SMARTY_STREETS_DETAILS">GET_SMARTY_STREETS_DETAILS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_SMARTY_STREETS_PREDICTIONS">GET_SMARTY_STREETS_PREDICTIONS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_SOURCEDROPDOWN_DATA">GET_SOURCEDROPDOWN_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GET_SOURCEGRID_DATA">GET_SOURCEGRID_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-INITIAL_LOAD_DATA">INITIAL_LOAD_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-LOAD_DATA">LOAD_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ON_DYNAMIC_TABLE_EVENT">ON_DYNAMIC_TABLE_EVENT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ON_FIELD_VALIDATE">ON_FIELD_VALIDATE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-OPEN_AIS_CASE">OPEN_AIS_CASE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RETRIEVE_PARAMED_SCHEDULER_URL">RETRIEVE_PARAMED_SCHEDULER_URL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SAVE_DATA">SAVE_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SEND_EMAIL">SEND_EMAIL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SHOW_ATTACHMENTS">SHOW_ATTACHMENTS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UNDERWRITE_AIS_CASE">UNDERWRITE_AIS_CASE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPLOAD_FILE">UPLOAD_FILE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-VALIDATE_CREDIT_CARD">VALIDATE_CREDIT_CARD</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-VERIFY_EMAIL">VERIFY_EMAIL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-VIEW_PDF">VIEW_PDF</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ValidationResult">ValidationResult</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ValidationType">ValidationType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Validations">Validations</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">sdk/RuntimeCoreAPI.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import _ from &apos;lodash&apos;;
+import React from &apos;react&apos;;
+import { Modal } from &apos;react-bootstrap&apos;;
+import { produce } from &apos;immer&apos;;
+import logger from &apos;runtime/../../logger&apos;;
+import RuntimeStore from &apos;runtime/stores/RuntimeStore/RuntimeStore&apos;;
+import RuntimeProductPropertiesStore from &apos;runtime/stores/RuntimeProductPropertiesStore&apos;;
+import RuntimeActions from &apos;runtime/actions/RuntimeActionCreators&apos;;
+import { hide, show } from &apos;utils/loader&apos;;
+import {
+    convertGooglePlacesPredictionsToOptions,
+    convertSmartyStreetsPredictionsToOptions
+} from &apos;utils/addressUtils/convertPredictionsToOptions&apos;;
+import parseSmartyStreetsAddress from &apos;utils/addressUtils/parseSmartyStreetsAddress&apos;;
+import parseGooglePlacesAddress from &apos;utils/addressUtils/parseGooglePlacesAddress&apos;;
+import DirtyDataAdapter from &apos;runtime/utils/DataAdapter/DirtyData/CaseAdapter&apos;;
+import FullDataAdapter from &apos;runtime/utils/DataAdapter/FullData/CaseAdapter&apos;;
+import serviceRequestProvider from &apos;runtime/utils/serviceRequests&apos;;
+import * as runtimeStateItems from &apos;runtime/constants/RuntimeStateItemNames&apos;;
+import * as sdkEventHandlerNames from &apos;runtime/sdk/SDKEventHandlerNames&apos;;
+import { getAPIMethod } from &apos;runtime/utils/apiConfig&apos;;
+import buildNestedAppIndex from &apos;runtime/nested/utils/buildNestedAppIndex&apos;;
+import buildAssetPathToNestedVersion from &apos;runtime/nested/utils/buildAssetPathToNestedVersion&apos;;
+import { ATTACHMENT_ID_PREFIX } from &apos;runtime/constants/ClientDataFieldNames&apos;;
+import UploadFileModal from &apos;runtime/sdk/components/UploadFileModal/UploadFileModal.react&apos;;
+import ShowAttachmentsModal from &apos;runtime/sdk/components/UploadFileModal/ShowAttachmentsModal.react&apos;;
+import EventManager from &apos;runtime/engine/events/EventManager&apos;;
+import { OPEN_SCREEN, SCREEN_HAS_BEEN_SWITCHED, SCREEN_IS_GOING_TO_BE_SWITCHED } from &apos;shared/constants/EventNames&apos;;
+import gotoScreen from &apos;runtime/engine/events/actionComponents/other_screen&apos;;
+import gotoFirstIncompleteScreen from &apos;runtime/engine/events/actionComponents/first_incomplete_screen&apos;;
+
+/**
+ * SDK API class.
+ * Provides implementations to use in SDK
+ */
+
+const DEFAULT_API_LOADER_ID = &apos;runtimeApiLoader&apos;;
+
+function _externalFullDataProcessor(rawData) {
+    return FullDataAdapter.transformLoadedData(rawData);
+}
+
+function _externalDirtyDataProcessor(rawData) {
+    return DirtyDataAdapter.transformLoadedData(rawData);
+}
+
+/**
+ * Runtime Core API
+ */
+export default class RuntimeCoreAPI {
+    /**
+     * Provides access to existing data adapters
+     * @property {Object} iGo - data adapter for iGo
+     * @property {Function} iGo.transformDataToSave - function to transform data from runtime to server format, to use before saving on server
+     * @property {Function} iGo.transformLoadedData - function to transform data loaded from server into runtime format, to adapt data loaded from server
+     * @property {Object} iGoDirtyData - dirty data adapter for iGo
+     * @property {Function} iGoDirtyData.transformDataToSave - function to transform dirty data from runtime to server format, to use before saving on server
+     * @property {Function} iGoDirtyData.transformLoadedData - function to transform dirty data loaded from server into runtime format, to adapt data loaded from server
+     * @example
+     * const clientData = this.api.getRuntimeData();
+     * const transformedClientData = this.api.clientDataAdapter.iGo.transformDataToSave(clientData);
+     */
+    clientDataAdapter = {
+        /**
+         * So far there&apos;s the only predefined data adapter to work with iGo
+         */
+        iGo: {
+            /**
+             * Transforms client data into format suitable for saving on server side
+             * @param {Object} data - form values data
+             * @return {Object} transformed data object for saving
+             */
+            transformDataToSave(data) {
+                return FullDataAdapter.transformDataToSave(data);
+            },
+            /**
+             * Transforms server-side data object into format suitable for updating runtime
+             * @param {Object} clientData - form values data
+             * @return {Object} transformed data object which can be directly fed into updateRuntimeData() api function
+             */
+            transformLoadedData: data =&gt; _externalFullDataProcessor(data)
+        },
+        iGoDirtyData: {
+            /**
+             * Transforms client dirty data into format suitable for saving on server side
+             * @param {Object} dirtyData - dirty form values data
+             * @return {Object} transformed data object for saving
+             */
+            transformDataToSave(dirtyData) {
+                return DirtyDataAdapter.transformDataToSave(dirtyData);
+            },
+            /**
+             * Transforms server-side data object into format suitable for updating runtime
+             * @param {Object} clientData - form values data
+             * @return {Object} transformed data object which can be used to update runtime data
+             */
+            transformLoadedData: data =&gt; _externalDirtyDataProcessor(data)
+        }
+    };
+
+    /**
+     * Object that contains methods for making pre-configured external calls
+     * @example
+     * const result = this.coreApi.serviceRequestProvider.callService(assemblyName, transformedClientData, runtimeState, shouldCallInBackground)
+     */
+    serviceRequestProvider = serviceRequestProvider;
+
+    /** Definition of SDK event handlers&apos; names. To be used when overriding implementations of SDK event handlers.
+     * @since v0.82.*
+     * @type {Object}
+     * @example
+     * var saveDataHandlerName = this.coreApi.sdkEventHandlerNames.SAVE_DATA;
+     */
+    sdkEventHandlerNames = sdkEventHandlerNames;
+
+    /**
+     * Cross-browser implementation of JS Promise. To use wherever SDK expects params of Promise type.
+     * @example
+     * return this.coreApi.Promise.resolve(data);
+     */
+    Promise = Promise;
+
+    /**
+     * Gets form values client data
+     * @deprecated Use getRuntimeState(runtimeStateItems.CLIENT_DATA) instead
+     * @return {Object} - data with field names as keys
+     * @example
+     * const clientData = this.coreApi.getRuntimeData();
+     * // returned data example:
+     * // clientData = {
+     * //   myDropdown: {
+     * //     value&quot;: &quot;Washington&quot;,
+     * //     formattedValue&quot;: &quot;USA&quot;,
+     * //   },
+     * //   someTextbox&quot;: {
+     * //     value&quot;: &quot;some text&quot;,
+     * //     formattedValue: &quot;some text&quot;
+     * //   },
+     * //   cossFORMS_FORMS_LastHiddenScreens: {
+     * //     value: &quot;[\&quot;Screen 1\&quot;]&quot;
+     * //   }
+     * // }
+     */
+    getRuntimeData() {
+        return RuntimeStore.getPlainFormValues();
+    }
+
+    /**
+     * Gets &quot;dirty&quot; form values client data. The data is considered &quot;dirty&quot; if it was modified since last execution of &quot;resetDirtyData&quot; API method. Note: &quot;resetDirtyData&quot; is implicitly executed upon loading data from iGo in &quot;saveData&quot;, &quot;callCustomAssembly&quot; and other similar methods.
+     * @return {Object} - data with field names as keys
+     * @since v0.83.*
+     * @example
+     * const clientData = this.coreApi.getRuntimeDirtyData();
+     * // returned data example:
+     * // clientData = {
+     * //   myDropdown: {
+     * //     value&quot;: &quot;Washington&quot;,
+     * //     formattedValue&quot;: &quot;USA&quot;,
+     * //   },
+     * //   someTextbox&quot;: {
+     * //     value&quot;: &quot;some text&quot;,
+     * //     formattedValue: &quot;some text&quot;
+     * //   },
+     * //   cossFORMS_FORMS_LastHiddenScreens: {
+     * //     value: &quot;[\&quot;Screen 1\&quot;]&quot;
+     * //   }
+     * // }
+     */
+    getRuntimeDirtyData() {
+        const dirtyFormValues = RuntimeStore.getDirtyFormValues();
+        return _.isFunction(dirtyFormValues.toJS) ? dirtyFormValues.toJS() : dirtyFormValues;
+    }
+
+    /**
+     * Resets &quot;dirty&quot; state of client data. See description of &quot;getRuntimeDirtyData&quot; API method.
+     * @example
+     * this.coreApi.resetDirtyData();
+     */
+    resetDirtyData() {
+        RuntimeActions.resetDirtyDataNoEmit();
+    }
+
+    /**
+     * Updates runtime state
+     * @deprecated Use updateRuntimeState() instead
+     * @param {Object} data - runtime state data to set
+     * @param {Object[]|Object} data.caseData - form values data array or object
+     * @param {Object} data.metaData - metadata object
+     * @param {Boolean} data.shouldReplaceSavedData - set &quot;true&quot; if provided data should entirely replace existing runtime data, set &quot;false&quot; if only provided values should be replaced in existing runtime data
+     * @param {Boolean} data.hasAttachment - set &quot;true&quot; if Attachment controls should be displayed in Navigation panel
+     * @param {Immutable.Map[]} data.eliminatedAndEmptyFields - array of controls for which their default values need to be restored
+     * @example &lt;caption&gt;Legacy caseData format&lt;/caption&gt;
+     * this.coreApi.updateRuntimeData({
+     *     caseData: [{
+     *         name: &apos;PI_FirstName&apos;,
+     *         value: &apos;Andrew&apos;,
+     *         formattedValue: &apos;Andrew&apos;
+     *     }],
+     *     metaData: {
+     *         cossFORMS_FORMS_LastHiddenScreens: [],
+     *         cossFORMS_FORMS_LastScreenName: &quot;Screen1&quot;
+     *     },
+     *     shouldReplaceSavedData: false
+     * });
+     * @example &lt;caption&gt;caseData format used in &quot;getRuntimeData&quot; API method&lt;/caption&gt;
+     * this.coreApi.updateRuntimeData({
+     *     caseData: {
+     *         PI_FirstName: {
+     *             value: &apos;Andrew&apos;,
+     *             formattedValue: &apos;Andrew&apos;
+     *         }
+     *     },
+     *     metaData: {
+     *         cossFORMS_FORMS_LastHiddenScreens: [],
+     *         cossFORMS_FORMS_LastScreenName: &quot;Screen1&quot;
+     *     },
+     *     shouldReplaceSavedData: false
+     * });
+     */
+    updateRuntimeData(data) {
+        RuntimeActions.updateRuntimeFromExtenalSourceNoEmit(data);
+    }
+
+    /**
+     * Restores default values (if any) for specified fields. Won&apos;t restore in the following cases:
+     * - field is hidden
+     * - field is not a screen item
+     * - field already has a value
+     * - screen containing a field was visited
+     * @since v0.83.*
+     * @param {String[]} fieldNames - array of field names to attempt restoring default values for
+     * @example
+     * this.coreApi.restoreDefaultValues([&apos;address1&apos;, &apos;amount_of_something&apos;]);
+     */
+    // TODO: make conditions for restoring default values configurable via SDK (see conditionsWhenUnableToRestoreDefaultValueForItem)
+    restoreDefaultValues(fieldNames) {
+        RuntimeActions.restoreDefaultValuesNoEmit(fieldNames);
+    }
+
+    /**
+     * Updates runtime UI according to runtime state
+     * @since v0.70.*
+     * @param {Boolean} forceRunRules - normally rules should run without this flag but under certain circumstances rules wouldn&apos;t run.
+     * If you still need to run rules under certain circumstances pass `true`.
+     * WARNING: don&apos;t pass `true` until you really need it. This could affect performance.
+     * `false` by default
+     * @example
+     * this.coreApi.refreshUI(true); // force running rules
+     * this.coreApi.refreshUI(); // rules would be run according to internal logic of runtime core
+     */
+    refreshUI(forceRunRules = false) {
+        RuntimeActions.refreshRuntime({ forceRunRules });
+    }
+
+    /**
+     * Definition of runtime state object items&apos; names. To be used in in updateRuntimeState() and getRuntimeState() methods.
+     * @since v0.82.*
+     * @type {Object}
+     * @property {String} runtimeStateItems.CLIENT_DATA - key for runtime form values client data
+     * @property {String} runtimeStateItems.USER_DATA - key for user data
+     * @property {String} runtimeStateItems.PREVIOUS_SCREEN - key for a screen that had been active before event handler was called
+     * @property {String} runtimeStateItems.CURRENT_SCREEN - key for a currently active screen
+     * @property {String} runtimeStateItems.SCREENS_VISIBILITY - key for hidden screens&apos; names array
+     * @property {String} runtimeStateItems.SCREENS_VALIDITY - key for the object which contains screens&apos; validity statuses
+     * @property {String} runtimeStateItems.SOFT_LOCK_STATUS - key for the soft lock status
+     * @property {String} runtimeStateItems.HARD_LOCK_STATUS - key for the hard lock status
+     * @example
+     * var clientDataKey = this.coreApi.runtimeStateItems.CLIENT_DATA;
+     * var clientData = getRuntimeState(clientDataKey);
+     */
+    runtimeStateItems = runtimeStateItems;
+
+    /**
+     * Gets either all or specified runtime state items. Specified items&apos; keys should match the ones defined in runtimeStateItems. Note: the list of acceptable/returned items corresponds to runtimeStateItems, which might be extended in future.
+     * @param {String|String[]|undefined} [itemNames] - name (or array of names) of runtime state item(s) to retrieve. If not specified, all available items will be returned.
+     * @returns {Object} runtime state data
+     * @property {Object} [data[runtimeStateItems.CLIENT_DATA]] - form values client data items
+     * @property {Object} [data[runtimeStateItems.USER_DATA]] - user data items (read only)
+     * @property {String} [data[runtimeStateItems.PREVIOUS_SCREEN]] - name of screen which was active before SDK action was invoked
+     * @property {String} [data[runtimeStateItems.CURRENT_SCREEN]] - name of current screen
+     * @property {Object} [data[runtimeStateItems.SCREENS_VISIBILITY]] - all screens&apos; visibility statuses (true = visible, false = hidden)
+     * @property {Object} [data[runtimeStateItems.SCREENS_VALIDITY]] - all screens&apos; validity statuses
+     * @property {Object} [data[runtimeStateItems.SOFT_LOCK_STATUS]] - statuses of all softlock categories
+     * @property {Boolean} [data[runtimeStateItems.HARD_LOCK_STATUS]] - true if the case is hard-locked
+     * @example
+     * const runtimeState = this.coreApi.getRuntimeState();
+     */
+    getRuntimeState(itemNames = _.values(this.runtimeStateItems)) {
+        if (_.isString(itemNames)) itemNames = [itemNames];
+
+        if (!_.isArray(itemNames)) return {};
+
+        const retrievalFunctionNames = {
+            // don&apos;t use RuntimeStore.getXXX.name instead of a string name &apos;getXXX&apos; below, because
+            // in minified code .name will return &quot;value&quot; instead of a function name
+            [this.runtimeStateItems.CLIENT_DATA]: &apos;getPlainFormValues&apos;,
+            [this.runtimeStateItems.USER_DATA]: &apos;getPlainUserData&apos;,
+            [this.runtimeStateItems.PREVIOUS_SCREEN]: &apos;getPreviousScreenName&apos;,
+            [this.runtimeStateItems.CURRENT_SCREEN]: &apos;getCurrentScreenName&apos;,
+            [this.runtimeStateItems.SCREENS_VISIBILITY]: &apos;getScreensVisibility&apos;,
+            [this.runtimeStateItems.SCREENS_VALIDITY]: &apos;getScreensValidity&apos;,
+            [this.runtimeStateItems.SOFT_LOCK_STATUS]: &apos;getSoftLockStatus&apos;,
+            [this.runtimeStateItems.HARD_LOCK_STATUS]: &apos;getHardLockStatus&apos;
+        };
+
+        const requestedItems = _.intersection(_.values(this.runtimeStateItems), itemNames);
+
+        return _.transform(
+            requestedItems,
+            (result, itemName) =&gt; {
+                const functionName = retrievalFunctionNames[itemName];
+                if (_.isFunction(RuntimeStore[functionName])) {
+                    result[itemName] = RuntimeStore[functionName]();
+                }
+            },
+            {}
+        );
+    }
+
+    // TODO: fix documentation or code, because the description below isn&apos;t true: restoreRuntimeState now uses
+    //  RuntimeStore&apos;s onUpdateFieldValues method which respects all logical data interconnections,
+    //  which makes the restoreRuntimeState behave the same as updateRuntimeState (!)
+    /**
+     * Restores runtime state items (removes existing and applies the supplied data). Disregards internal logical data interconnections (e.g. will restore client data disregarding whether corresponding screen items are locked). Note: the list of acceptable items corresponds to runtimeStateItems, which might be extended in future.
+     * @since v0.82.*
+     * @param {Object} data - data to set into runtime. Object keys should match the ones defined in runtimeStateItems.
+     * @param {Object} [data[runtimeStateItems.CLIENT_DATA]] - form values client data items
+     * @param {String} [data[runtimeStateItems.CURRENT_SCREEN]] - name of screen to set as current
+     * @param {Object} [data[runtimeStateItems.SCREENS_VISIBILITY]] - visibility statuses of screens (true = visible, false = hidden)
+     * @param {Object} [data[runtimeStateItems.SCREENS_VALIDITY]] - validity statuses of screens (possible values: &apos;pristine&apos;, &apos;valid&apos;, &apos;invalid&apos;)
+     * @param {Object} [data[runtimeStateItems.SOFT_LOCK_STATUS]] - object with key: softlock category value: true/false (e.g. { Default: true } will lock screens with Default softlock category)
+     * @param {Boolean} [data[runtimeStateItems.HARD_LOCK_STATUS]] - true to apply hard lock to all screens
+     * @returns undefined
+     */
+    restoreRuntimeState(data) {
+        if (!_.isPlainObject(data)) return;
+
+        const restoreActions = {
+            [this.runtimeStateItems.CLIENT_DATA]: RuntimeActions.restoreFieldValuesNoEmit,
+            [this.runtimeStateItems.CURRENT_SCREEN]: RuntimeActions.restoreCurrentScreenNoEmit,
+            [this.runtimeStateItems.SCREENS_VISIBILITY]: RuntimeActions.restoreScreensVisibilityNoEmit,
+            [this.runtimeStateItems.SCREENS_VALIDITY]: RuntimeActions.restoreScreensValidityNoEmit,
+            [this.runtimeStateItems.SOFT_LOCK_STATUS]: RuntimeActions.restoreSoftLockStatusNoEmit,
+            [this.runtimeStateItems.HARD_LOCK_STATUS]: RuntimeActions.restoreHardLockStatusNoEmit
+        };
+
+        _.forOwn(data, (dataItem, dataItemName) =&gt; {
+            const action = restoreActions[dataItemName];
+            if (_.isFunction(action)) {
+                action(dataItem);
+            }
+        });
+    }
+
+    /**
+     * Updates runtime state items. Accounts for internal logical data interconnections (e.g. will not restore client data items if corresponding screen items are locked), so if you are updating several state items in one updateRuntimeState call (e.g. both locks and client data) some of the values may not apply due to logical data contradictions. It might make sense to split the single update operation into several updates, e.g.: updateRuntimeState(clientData) and updateRuntimeState(lockStatuses). Note: the list of acceptable items corresponds to runtimeStateItems, which might be extended in future.
+     * @since v0.82.*
+     * @param {Object} data - data to set into runtime. Object keys should match the ones defined in runtimeStateItems.
+     * @param {Object} [data[runtimeStateItems.CLIENT_DATA]] - form values client data items
+     * @param {String} [data[runtimeStateItems.CURRENT_SCREEN]] - name of screen to set as current
+     * @param {Object} [data[runtimeStateItems.SCREENS_VISIBILITY]] - visibility statuses of screens
+     * @param {Object} [data[runtimeStateItems.SCREENS_VALIDITY]] - validity statuses of screens
+     * @param {Object} [data[runtimeStateItems.SOFT_LOCK_STATUS]] - object with key: softlock category value: true/false (e.g. { Default: true } will lock screens with Default softlock category)
+     * @param {Boolean} [data[runtimeStateItems.HARD_LOCK_STATUS]] - true to apply hard lock to all screens
+     * @returns undefined
+     */
+    updateRuntimeState(data) {
+        if (!_.isPlainObject(data)) return;
+
+        const updateActions = {
+            [this.runtimeStateItems.CLIENT_DATA]: RuntimeActions.updateFieldValuesNoEmit,
+            [this.runtimeStateItems.CURRENT_SCREEN]: RuntimeActions.updateCurrentScreenNoEmit,
+            [this.runtimeStateItems.SCREENS_VISIBILITY]: RuntimeActions.updateScreensVisibilityNoEmit,
+            [this.runtimeStateItems.SCREENS_VALIDITY]: RuntimeActions.updateScreensValidityNoEmit,
+            [this.runtimeStateItems.SOFT_LOCK_STATUS]: RuntimeActions.updateSoftLockStatusNoEmit,
+            [this.runtimeStateItems.HARD_LOCK_STATUS]: RuntimeActions.updateHardLockStatusNoEmit
+        };
+
+        _.forOwn(data, (dataItem, dataItemName) =&gt; {
+            const action = updateActions[dataItemName];
+            if (_.isFunction(action)) {
+                action(dataItem);
+            }
+        });
+    }
+
+    /**
+     * Resets values of runtime state items. Note: the list of acceptable items corresponds to runtimeStateItems, which might be extended in future.
+     * @since v0.82.*
+     * @param {String|String[]|undefined} [itemNames] - name (or array of names) of runtime state item(s) to reset. If not specified, all available items will be reset.
+     * @param {String} [runtimeStateItems.CLIENT_DATA] - removes all form values client data items
+     * @param {String} [runtimeStateItems.CURRENT_SCREEN] - resets current screen to first available
+     * @param {String} [runtimeStateItems.SCREENS_VISIBILITY] - makes all screens visible
+     * @param {String} [runtimeStateItems.SCREENS_VALIDITY] - resets validity statuses of screens to &quot;pristine&quot;
+     * @param {String} [runtimeStateItems.SOFT_LOCK_STATUS] - removes soft lock for all softlock categories
+     * @param {String} [runtimeStateItems.HARD_LOCK_STATUS] - removes hard lock
+     * @returns undefined
+     */
+    resetRuntimeState(itemNames = _.values(this.runtimeStateItems)) {
+        if (_.isString(itemNames)) itemNames = [itemNames];
+
+        if (!_.isArray(itemNames)) return {};
+
+        const resetActions = {
+            [this.runtimeStateItems.CLIENT_DATA]: RuntimeActions.resetFieldValuesNoEmit,
+            [this.runtimeStateItems.CURRENT_SCREEN]: RuntimeActions.resetCurrentScreenNoEmit,
+            [this.runtimeStateItems.SCREENS_VISIBILITY]: RuntimeActions.resetScreensVisibilityNoEmit,
+            [this.runtimeStateItems.SCREENS_VALIDITY]: RuntimeActions.resetScreensValidityNoEmit,
+            [this.runtimeStateItems.SOFT_LOCK_STATUS]: RuntimeActions.resetSoftLockStatusNoEmit,
+            [this.runtimeStateItems.HARD_LOCK_STATUS]: RuntimeActions.resetHardLockStatusNoEmit
+        };
+        const requestedItems = _.intersection(_.values(this.runtimeStateItems), itemNames);
+
+        _.forEach(requestedItems, itemName =&gt; {
+            const action = resetActions[itemName];
+            if (_.isFunction(action)) {
+                action();
+            }
+        });
+    }
+
+    /**
+     * Retrieves all properties of the field with specified name. This is how you can get the item type, default value and other properties.
+     * @since v0.82.*
+     * @param {String} name - name of the client data item to retrieve
+     * @returns {Object | null} found item or null
+     * @example
+     * this.coreApi.getFieldByName(&apos;myTextBox&apos;);
+     */
+    getFieldByName(name) {
+        return _.cloneDeep(RuntimeStore.getItemByName(name));
+    }
+
+    /**
+     * Retrieves user data item type by its name.
+     * @since v0.85.*
+     * @param {String} name - name of the user data item to retrieve
+     * @returns {String | undefined} found data item type or undefined
+     * @example
+     * this.coreApi.getUserDataTypeByName(&apos;CompanyID&apos;);
+     */
+    getUserDataTypeByName(name) {
+        return RuntimeStore.getUserDataType(name);
+    }
+
+    /**
+     * Retrieves product property value by its name.
+     * @since v0.91.*
+     * @param {String} name - name of the product property to retrieve
+     * @returns {String | undefined} product property value or defaul value from ProductPropertiesConfig (if property was found). Otherwise - undefined.
+     * @example
+     * this.coreApi.getStringProductPropertyByName(&apos;CA_for_ViewPDF&apos;);
+     */
+    getStringProductPropertyByName(name) {
+        return RuntimeProductPropertiesStore.getStringPropertyByName(name);
+    }
+
+    /**
+     * Shows splash screen with spinner. Practical for time-consuming operations.
+     * @since v0.91.*
+     * @param {String} loaderId - sometimes you need to show loaders for different purposes
+     *          simultaneously and hide the loading spinner only after all of the loaders were hidden by calling `hideLoader`.
+     *          This `loaderId` helps to queue loading operations
+     *
+     * @param {String} message - if not empty shows message under the spinner. Message would not be preserved for next loader (hide -&gt; show)
+     * @example
+     * this.coreApi.showLoader();
+     * setTimeout(this.coreApi.hideLoader, 1000);
+     *
+     *
+     * @example
+     * this.coreApi.showLoader(&apos;myLoader1&apos;);
+     * setTimeout(this.coreApi.hideLoader, 500);
+     *
+     * this.coreApi.showLoader(&apos;myLoader2&apos;);
+     * setTimeout(this.coreApi.hideLoader, 1200);
+     *
+     * // Outcomes: loader will be shown as soon as 1st `showLoader` is called
+     * // and will be hidden (without blinking) after 1200ms (after latest `hideLoader` is called)
+     *
+     */
+    showLoader(loaderId = DEFAULT_API_LOADER_ID, message = &apos;&apos;) {
+        show(loaderId, false, message);
+    }
+
+    /**
+     * Hides splash screen with spinner.
+     * NOTE: number of hideLoader calls should equal the number of previous showLoader calls to actually hide a progress screen.
+     * @since v0.91.*
+     * @param {String} loaderId - sometimes you need to show loaders for different purposes
+     *          simultaneously and hide the loading spinner only after all of the loaders were hidden by calling `hideLoader`.
+     *          This `loaderId` helps to queue loading operations
+     * @example
+     * this.coreApi.showLoader();
+     * setTimeout(this.coreApi.hideLoader, 1000);
+     */
+    hideLoader(loaderId = DEFAULT_API_LOADER_ID) {
+        hide(loaderId);
+    }
+
+    /**
+     * Show modal window on the screen.
+     * @param {React.Component | string} modalWindowComponent - React Component or modal window body as html string
+     * @example
+     *
+     * // NOTE: When you use plain string with html to show modal window,
+     * // then this string should contain only a content of the window body.
+     * // It will be wrapped by ReactBootstrap.Modal component and appear on the screen via react&apos;s `dangerouslySetInnerHTML` attribute.
+     * // This mean that you should care about xss by yourself.
+     * var modalContent = &apos;&apos;+
+     *      &apos;&lt;div class=&quot;modal-content&quot; role=&quot;document&quot;&gt;&apos; +
+     *           &apos;&lt;div class=&quot;modal-header&quot;&gt;&apos; +
+     *              &apos;&lt;button type=&quot;button&quot; class=&quot;close&quot; aria-label=&quot;Close&quot; onclick=&quot;global.App.runtimeCoreApi.hideModal()&quot;&gt;&apos; +
+     *                  &apos;&lt;span aria-hidden=&quot;true&quot;&gt;&#xD7;&lt;/span&gt;&apos; +
+     *              &apos;&lt;/button&gt;&apos; +
+     *              &apos;&lt;h4 class=&quot;modal-title&quot;&gt;View PDF in the iframe&lt;/h4&gt;&apos; +
+     *          &apos;&lt;/div&gt;&apos; +
+     *          &apos;&lt;div class=&quot;modal-body&quot;&gt;&apos; +
+     *              &apos;&lt;iframe src=&quot;http://eloquentjavascript.net/Eloquent_JavaScript.pdf&quot; style=&quot;border: none; width: 100%; height: 570px;&quot;&gt;&lt;/iframe&gt;&apos; +
+     *          &apos;&lt;/div&gt;&apos; +
+     *          &apos;&lt;div class=&quot;modal-footer&quot;&gt;&apos; +
+     *              &apos;&lt;button type=&quot;button&quot; class=&quot;view-pdf-modal__footer-button btn btn-default&quot;&gt;&apos; +
+     *                  &apos;Close&apos; +
+     *              &apos;&lt;/button&gt;&apos; +
+     *              &apos;&lt;button type=&quot;button&quot; class=&quot;view-pdf-modal__footer-button btn btn-default&quot;&gt;&apos; +
+     *                  &apos;Open in new window&apos; +
+     *              &apos;&lt;/button&gt;&apos; +
+     *              &apos;&lt;a href=&quot;http://eloquentjavascript.net/Eloquent_JavaScript.pdf&quot; download=&quot;&quot; class=&quot;view-pdf-modal__footer-button btn btn-primary&quot;&gt;&apos; +
+     *                  &apos;Save/Download as PDF&apos; +
+     *              &apos;&lt;/a&gt;&apos; +
+     *          &apos;&lt;/div&gt;&apos; +
+     *      &apos;&lt;/div&gt;&apos; +
+     * &apos;&apos;;
+     * this.coreApi.showModal(modalContent);
+     *
+     * // or
+     * var coreApi = this;
+     * var modalWindowComponent = React.createClass({
+     *      render: function() {
+     *         return React.createElement(
+     *              ReactBootstrap.Modal,
+     *              { animation: false, show: true, onHide: coreApi.hideModal },
+     *              [
+     *                  React.createElement(
+     *                      ReactBootstrap.ModalHeader,
+     *                      { closeButton: true, key: &apos;view-pdf-header&apos; },
+     *                      React.createElement(ReactBootstrap.ModalTitle, null, &apos;View as PDF&apos;)
+     *                  ),
+     *                  React.createElement(
+     *                      ReactBootstrap.ModalBody,
+     *                      { key: &apos;view-pdf-body&apos; },
+     *                      React.createElement(&apos;iframe&apos;, {
+     *                          src: &apos;http://eloquentjavascript.net/Eloquent_JavaScript.pdf&apos;,
+     *                          style: { border: &apos;none&apos;, width: &apos;100%&apos;, height: &apos;570px&apos; }
+     *                      })
+     *                  ),
+     *                  React.createElement(ReactBootstrap.ModalFooter, { key: &apos;view-pdf-footer&apos; }, [
+     *                      React.createElement(
+     *                          ReactBootstrap.Button,
+     *                          { onClick: coreApi.hideModal, key: &apos;view-pdf-btn-close&apos;, className: &apos;view-pdf-modal__footer-button&apos; },
+     *                          &apos;Close&apos;
+     *                      ),
+     *                      React.createElement(
+     *                          Button,
+     *                          {
+     *                              key: &apos;view-pdf-btn-new-window&apos;,
+     *                              onClick: () =&gt; { window.open(pdfUrl, &apos;_blank&apos;, &apos;width=620,height=600&apos;); },
+     *                              className: &apos;view-pdf-modal__footer-button&apos;
+     *                          },
+     *                          &apos;Open in new window&apos;
+     *                      ),
+     *                      React.createElement(
+     *                          ReactBootstrap.Button,
+     *                          {
+     *                              href: &apos;http://eloquentjavascript.net/Eloquent_JavaScript.pdf&apos;,
+     *                              download: true,
+     *                              bsStyle: &apos;primary&apos;,
+     *                              key: &apos;view-pdf-btn-save&apos;,
+     *                              className: &apos;view-pdf-modal__footer-button&apos;
+     *                          },
+     *                          &apos;Save/Download as PDF&apos;
+     *                      )
+     *                  ])
+     *              ]
+     *          );
+     *     }
+     * });
+     * this.coreApi.showModal(modalWindowComponent);
+     */
+    showModal(modalWindowComponent) {
+        if (_.isFunction(modalWindowComponent)) {
+            return RuntimeActions.showModalWindow(modalWindowComponent);
+        }
+
+        if (_.isString(modalWindowComponent)) {
+            const coreApi = this;
+            class WrappedModalWindowComponent extends React.Component {
+                shouldComponentUpdate() {
+                    return false;
+                }
+
+                render() {
+                    return React.createElement(
+                        Modal,
+                        { animation: false, show: true, onHide: coreApi.hideModal },
+                        React.createElement(&apos;div&apos;, {
+                            dangerouslySetInnerHTML: { __html: modalWindowComponent }
+                        })
+                    );
+                }
+            }
+            RuntimeActions.showModalWindow(WrappedModalWindowComponent);
+        }
+    }
+
+    /**
+     * Hide modal window on the screen.
+     * @example
+     * this.coreApi.hideModal();
+     */
+    hideModal() {
+        RuntimeActions.hideModalWindow();
+    }
+
+    /**
+     * Removes runtime field states/values by field names
+     * @param {String[]} fieldNames - names of fields to remove from client data
+     */
+    removeFieldValues(fieldNames) {
+        RuntimeActions.removeFieldValuesNoEmit(fieldNames);
+    }
+
+    /**
+     * Removes empty rows from all grids in runtime state
+     */
+    compactGridRows() {
+        RuntimeActions.compactGridRowsNoEmit();
+    }
+
+    /**
+     * Returns upload file container component.
+     * @since v0.87.*
+     * @param {Object} props  - properties for component
+     * @param {String} props.defaultFileName - default file name from event action
+     * @param {String} props.maxFileSize - max files size in bytes, default 1000000000
+     * @param {String} props.allowedFileTypes - array of allowed file types, default [&apos;pdf&apos;, &apos;docx&apos;]
+     * @param {String} props.maxFileNameLength - max filename input length
+     * @param {String} props.maxDescriptionLength - max description input length
+     * @example
+     * // example of the response on call getFilesListCallback
+     * {
+     *  &quot;files&quot;: [{
+     *      name: &apos;filename&apos;,
+     *      id: 1, // id will be used in deleteFileCallback and downloadFileCallback
+     *      description: &apos;description&apos;,
+     *      size: 123123,
+     *      url: &apos;path to file&apos; // url will be used for file preview
+     *      }]
+     * }
+     * @returns react component
+     */
+    renderUploadFileComponent(props) {
+        const { defaultFileName } = props;
+        const getFilesListCallback = serviceRequestProvider.getFilesList;
+        const deleteFileCallback = serviceRequestProvider.deleteFile;
+        const downloadFileCallback = serviceRequestProvider.downloadFile;
+        const { hideModal } = this;
+
+        // receive endpoint for upload file
+        const uploadFileEndpoint = this.getApiEndpoint(&apos;upload_form_upload_file_endpoint&apos;);
+        const setCustomVariableOnUploadSuccess = () =&gt; {
+            this.updateRuntimeState({
+                clientData: { [`${ATTACHMENT_ID_PREFIX}${defaultFileName}`]: { value: &apos;OK&apos; } }
+            });
+        };
+
+        return (
+            &lt;UploadFileModal
+                {...props}
+                getFilesListCallback={getFilesListCallback}
+                deleteFileCallback={deleteFileCallback}
+                downloadFileCallback={downloadFileCallback}
+                previewFileCallback={url =&gt; {
+                    window.open(url, &apos;_blank&apos;);
+                }}
+                hideModal={hideModal}
+                uploadFileEndpoint={uploadFileEndpoint}
+                setCustomVariableOnUploadSuccess={setCustomVariableOnUploadSuccess}
+            /&gt;
+        );
+    }
+
+    /**
+     * Returns show attachments component.
+     * @since v0.87.*
+     * @returns react component
+     */
+    renderShowAttachmentsComponent() {
+        const { hideModal } = this;
+
+        const getFilesListCallback = serviceRequestProvider.getFilesList;
+        const deleteFileCallback = serviceRequestProvider.deleteFile;
+        const downloadFileCallback = serviceRequestProvider.downloadFile;
+
+        return (
+            &lt;ShowAttachmentsModal
+                hideModal={hideModal}
+                getFilesListCallback={getFilesListCallback}
+                deleteFileCallback={deleteFileCallback}
+                downloadFileCallback={downloadFileCallback}
+                previewFileCallback={url =&gt; {
+                    window.open(url, &apos;_blank&apos;);
+                }}
+                showOnlyAttachments={true}
+            /&gt;
+        );
+    }
+
+    /**
+     * Returns api endpoint by api method name
+     * @param {String} apiMethodName
+     * @since v0.87.*
+     * @returns {String} - apiEndpoint
+     */
+    getApiEndpoint(apiMethodName) {
+        const { error, apiMethod: apiEndpoint } = getAPIMethod(apiMethodName);
+        if (error) {
+            logger.runtime.coreApi.error(error);
+        }
+        return apiEndpoint;
+    }
+
+    /**
+     * Prepare index html for the nested application.
+     * @param  {string} versionRef - version id of nested application;
+     * @param  {string} appStaticPath - root path of host application;
+     * @param  {object} configs - object with following application configs: `appConfig`, `apiConfig`, `queryVariables`, `uiConfig`;
+     * @param  {string} [nestedAppScript=&apos;&apos;] - customization script that can be provided to do some work when nested app is loaded;
+     * @return {Promise&lt;string&gt;} - a promise of the index html to be built.
+     */
+    async generateIndexHtmlForNested(versionRef, appStaticPath, configs, nestedAppScript = &apos;&apos;) {
+        const destiny = this.getDestiny();
+        const assetPath = buildAssetPathToNestedVersion(versionRef, appStaticPath, destiny);
+
+        const templates = await this.serviceRequestProvider.getNestedAppTemplates(assetPath);
+
+        const indexHtml = buildNestedAppIndex({
+            templates,
+            configs,
+            assetPath,
+            nestedAppScript
+        });
+
+        return indexHtml;
+    }
+
+    /**
+     * Converts Smarty Streets predictions.
+     * @since v0.91.*
+     * @param {Object} predictions - Smarty Streets predictions (https://smartystreets.com/docs/cloud/us-autocomplete-api)
+     * @returns {Array} - converted Smarty Streets predictions
+     * Example of output data:
+     * [
+     *   {
+     *     name: &apos;1 S 865 E, Sandy UT&apos;,
+     *     id: &apos;1 S 865 E, Sandy UT&apos;,
+     *     data: {
+     *          street: &apos;1 S 865 E&apos;,
+     *          city: &apos;Sandy&apos;,
+     *          state: &apos;UT&apos;
+     *     }
+     *   },
+     *   {
+     *     name: &apos;1 N 9th St, Munson PA&apos;,
+     *     id: &apos;1 N 9th St, Munson PA&apos;,
+     *     data: {
+     *          street: &apos;1 N 9th St&apos;,
+     *          city: &apos;Munson&apos;,
+     *          state: &apos;PA&apos;
+     *     }
+     *   }
+     * ]
+     * @example
+     * this.coreApi.convertSmartyStreetsPredictions({
+     *      suggestions: [
+     *          {
+     *              city: &apos;Sandy&apos;,
+     *              state: &apos;UT&apos;,
+     *              street_line: &apos;1 S 865 E&apos;,
+     *              text: &apos;1 S 865 E, Sandy UT&apos;
+     *          },
+     *          {
+     *              city: &apos;Munson&apos;,
+     *              state: &apos;PA&apos;,
+     *              street_line: &apos;1 N 9th St&apos;,
+     *              text: &apos;1 N 9th St, Munson PA&apos;
+     *          }
+     *      ]
+     * });
+     */
+    convertSmartyStreetsPredictions(predictions) {
+        return convertSmartyStreetsPredictionsToOptions(predictions);
+    }
+
+    /**
+     * Converts Google Places predictions.
+     * @since v0.91.*
+     * @param {Array} predictions - Google Places predictions (https://developers.google.com/places/web-service/autocomplete#place_autocomplete_results)
+     * @returns {Array} - converted Google Places predictions
+     * Example of output data:
+     * [
+     *   {
+     *     name: &apos;Santa Fe 1212, Rosario, Santa Fe Province, Argentina&apos;,
+     *     id: &apos;Santa Fe 1212, Rosario, Santa Fe Province, Argentina&apos;,
+     *     data: {
+     *          placeId: &apos;ChIJp_CTIhirt5URQA_cG8AtSbM&apos;
+     *     }
+     *   },
+     *   {
+     *     name: &apos;1085-1087 Boylston Street, Boston, MA, USA&apos;,
+     *     id: &apos;1085-1087 Boylston Street, Boston, MA, USA&apos;,
+     *     data: {
+     *          placeId: &apos;ChIJjcKMJBt644kRVXqk_329y6o&apos;
+     *     }
+     *   }
+     * ]
+     * @example
+     * this.coreApi.convertGooglePlacesPredictions([
+     *     {
+     *         description: &apos;Santa Fe 1212, Rosario, Santa Fe Province, Argentina&apos;,
+     *         id: &apos;39ea0fe03f10e0a6f6191ba6019e798e5afb6d7f&apos;,
+     *         place_id: &apos;ChIJp_CTIhirt5URQA_cG8AtSbM&apos;,
+     *         ...
+     *     },
+     *     {
+     *         description: &apos;1085-1087 Boylston Street, Boston, MA, USA&apos;,
+     *         id: &apos;1ae260ae026bc6f447136e7b98a30bc68fb99fbc&apos;,
+     *         place_id: &apos;ChIJjcKMJBt644kRVXqk_329y6o&apos;,
+     *         ...
+     *     }
+     * ]);
+     */
+    convertGooglePlacesPredictions(predictions) {
+        return convertGooglePlacesPredictionsToOptions(predictions);
+    }
+
+    /**
+     * Parses Smarty Streets address details.
+     * @since v0.91.*
+     * @param {Array} addressDetails - Smarty Streets address details (https://smartystreets.com/docs/cloud/us-street-api)
+     * @returns {Object} - parsed Smarty Streets address details
+     * @property {string} country - country
+     * @property {string} city - city
+     * @property {string} state - state
+     * @property {string} address - address
+     * @property {string} zip - zip code
+     * Example of output data:
+     * {
+     *    address: &quot;222 Vellenorth Rd&quot;,
+     *    city: &quot;Blue Ridge&quot;,
+     *    country: &quot;US&quot;,
+     *    state: &quot;GA&quot;,
+     *    zip: &quot;30513-2813&quot;
+     * }
+     * @example
+     * this.coreApi.parseSmartyStreetsAddress([
+     *      {
+     *          components: {
+     *              city_name: &apos;Blue Ridge&apos;
+     *              street_name: &apos;Vellenorth&apos;,
+     *              zipcode: &apos;30513&apos;,
+     *              plus4_code: &apos;2813&apos;,
+     *              ...
+     *          },
+     *          ...
+     *      }
+     * ]);
+     */
+    parseSmartyStreetsAddress(addressDetails) {
+        return parseSmartyStreetsAddress(addressDetails);
+    }
+
+    /**
+     * Parses Google Places address details.
+     * @since v0.91.*
+     * @param {Object} addressDetails - Google Places address details (https://developers.google.com/places/web-service/details#PlaceDetailsResults)
+     * @returns {Object} - parsed Google Places address details
+     * @property {string} country - country
+     * @property {string} city - city
+     * @property {string} state - state
+     * @property {string} address - address
+     * @property {string} zip - zip code
+     * Example of output data:
+     * {
+     *    address: &quot;1085-1087 Boylston Street&quot;,
+     *    city: &quot;Boston&quot;,
+     *    country: &quot;USA&quot;,
+     *    state: &quot;MA&quot;,
+     *    zip: &quot;02215&quot;
+     * }
+     * @example
+     * this.coreApi.parseGooglePlacesAddress({
+     *      address_components: [
+     *          {
+     *              long_name: &apos;1085-1087&apos;,
+     *              short_name: &apos;1085-1087&apos;,
+     *              types: [ &apos;street_number&apos; ]
+     *          },
+     *          {
+     *              long_name: &apos;Boylston Street&apos;,
+     *              short_name: &apos;Boylston St&apos;,
+     *              types: [ &apos;route&apos; ]
+     *          },
+     *          ...
+     *      ],
+     *      ...
+     * });
+     */
+    parseGooglePlacesAddress(addressDetails) {
+        return parseGooglePlacesAddress(addressDetails);
+    }
+
+    /**
+     * Get application destiny
+     * @return {string|null} application destiny value `application`, `clickwrap` or null;
+     */
+    getDestiny() {
+        return RuntimeStore.getState().destiny;
+    }
+
+    /**
+     * Finds next visible screen, opens it and then waits asynchronously until it&apos;s open,
+     * as changing screen triggers events which could have asynchronous effects (beforeloadscreen, beforeleavescreen, etc...).
+     * A screen is considered open when it&apos;s fully rendered and waits for user interaction.
+     * In other words after screen is rendered nothing should be changed by application itself (for example field validation change) until user interacts with the screen.
+     * @since v0.106.*
+     * @returns {Promise&lt;boolean&gt;} - true, in case of next visible screen found and opened,
+     *  false - in case of current screen is last visible or next visible screen wasn&apos;t opened
+     */
+    async openNextVisibleScreen() {
+        const screenName = RuntimeStore.getScreenNameByIndex(RuntimeStore.findNextPage());
+        if (!screenName) return false; // current screen is last visible
+
+        return await this.openScreenByName(screenName);
+    }
+
+    /**
+     * Opens screen and waits asynchronously until it&apos;s open,
+     * as changing screen triggers events which could have asynchronous effects (beforeloadscreen, beforeleavescreen, etc...).
+     * A screen is considered open when it&apos;s fully rendered and waits for user interaction.
+     * In other words after screen is rendered nothing should be changed by application itself (for example field validation change) until user interacts with the screen.
+     * @since v0.106.*
+     * @param {string} screenName - name of screen to open
+     * @returns {Promise&lt;boolean&gt;} - true, in case of screen found and opened,
+     *  false - in case of screen wasn&apos;t opened
+     */
+    async openScreenByName(screenName) {
+        try {
+            await switchToScreenAndWaitWhileItWaitsForUserInput(async () =&gt; {
+                const eventName = `${OPEN_SCREEN}:${screenName}`;
+                EventManager.bindOnce(eventName, [gotoScreen.bind(undefined, screenName)]);
+                await EventManager.emit(eventName);
+            });
+        } catch (e) {
+            logger.runtime.coreApi.error(e);
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * Opens first incomplete screen and waits asynchronously until it&apos;s open,
+     * as changing screen triggers events which could have asynchronous effects (beforeloadscreen, beforeleavescreen, etc...).
+     * A screen is considered open when it&apos;s fully rendered and waits for user interaction.
+     * In other words after screen is rendered nothing should be changed by application itself (for example field validation change) until user interacts with the screen.
+     * @since v0.106.*
+     * @returns {Promise&lt;boolean&gt;} - true, in case of first incomplete screen found and opened,
+     *  false - in case of current screen is first incomplete screen wasn&apos;t opened
+     */
+    async openFirstIncompleteScreen() {
+        try {
+            await switchToScreenAndWaitWhileItWaitsForUserInput(async () =&gt; {
+                const eventName = `${OPEN_SCREEN}:firstIncomplete`;
+                EventManager.bindOnce(eventName, [gotoFirstIncompleteScreen]);
+                await EventManager.emit(eventName);
+            });
+        } catch (e) {
+            logger.runtime.coreApi.error(e);
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * Updates field state by it&apos;s name in immutable way
+     *
+     * @param {string} fieldName - name of a field which state needs to be updated
+     * @param {function} updater - updater function which takes control&apos;s state to which you need to perform changes.
+     * The `updater` function has 1 argument: control&apos;s state (usually it&apos;s an object with `value`,`formattedValue`,`data` properties).
+     * See https://immerjs.github.io/immer/docs/produce (immer.produce) for details of how `updater` works.
+     *
+     * NOTE: Currently, it&apos;s impossible to work with `data` property in immutable way as it&apos;s being cloned on every update in runtime core
+     *
+     * @since v0.131.*
+     * @returns {undefined}
+     * @example
+     *
+     *  coreAPI.updateFieldStateImmutably(&apos;FieldName&apos;, fieldState =&gt; {
+     *     fieldState.value.a[0].c = 1; // the same value
+     *     return fieldState;
+     *  });
+     */
+    updateFieldStateImmutably(fieldName, updater) {
+        const formValues = RuntimeStore.getPlainFormValues(false);
+        const updatedFieldState = produce(_.get(formValues, fieldName), updater);
+
+        this.updateRuntimeState({
+            [this.runtimeStateItems.CLIENT_DATA]: { [fieldName]: updatedFieldState }
+        });
+    }
+}
+
+export const runtimeCoreApiInstance = new RuntimeCoreAPI();
+
+const switchToScreenAndWaitWhileItWaitsForUserInput = async screenOpenerFn =&gt; {
+    // TODO: need to be sure, that event queue is empty so for and if it isn&apos;t - wait.
+    //  Otherwise it could potentially call `SCREEN_HAS_BEEN_SWITCHED` in other events in current queue.
+
+    let screenHasBeenSwitched;
+    let screenHasNotBeenSwitched;
+    const mainPromise = new Promise((resolve, reject) =&gt; {
+        screenHasBeenSwitched = resolve;
+        screenHasNotBeenSwitched = reject;
+    });
+
+    // Wait for React view to emit that screen has been changed
+    const hasBeenSwitchedBindId = EventManager.bindOnce(SCREEN_HAS_BEEN_SWITCHED, [screenHasBeenSwitched]);
+
+    let shouldListenForReRender = false;
+    EventManager.bindOnce(SCREEN_IS_GOING_TO_BE_SWITCHED, [
+        () =&gt; {
+            shouldListenForReRender = true;
+        }
+    ]);
+
+    await screenOpenerFn();
+
+    // if during `screenOpenerFn` event `SCREEN_IS_GOING_TO_BE_SWITCHED` hasn&apos;t happened then screen won&apos;t be changed and re-rendered
+    // -&gt; resolve awaiting promise and remove rendering listener `SCREEN_HAS_BEEN_SWITCHED`
+    await new Promise(r =&gt; setTimeout(r, 0));
+
+    if (!shouldListenForReRender) {
+        EventManager.removeListenerByEventNameAndHandlersId(SCREEN_HAS_BEEN_SWITCHED, hasBeenSwitchedBindId);
+        screenHasNotBeenSwitched();
+    }
+
+    await mainPromise;
+};
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

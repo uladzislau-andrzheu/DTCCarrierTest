@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../">
+  <title data-ice="title">Manual | Screen designer SDK</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="ipln-scrd"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Screen designer SDK"><meta property="twitter:description" content="ipln-scrd"><link rel="stylesheet" href="./inject/css/0-customization.css"></head>
+<body class="layout-container manual-root" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/ipipeline/ngen_screen_designer"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html" data-ice="link">Changelog</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-unreleased-" data-ice="link">[Unreleased]</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-132---" data-ice="link">[0.132.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-131---" data-ice="link">[0.131.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-111---" data-ice="link">[0.111.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-108---" data-ice="link">[0.108.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-106---" data-ice="link">[0.106.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-102---" data-ice="link">[0.102.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-97---" data-ice="link">[0.97.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-96---" data-ice="link">[0.96.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-93---" data-ice="link">[0.93.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-92-2-" data-ice="link">[0.92.2]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-92---" data-ice="link">[0.92.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-91---" data-ice="link">[0.91.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-90---" data-ice="link">[0.90.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-89---" data-ice="link">[0.89.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-87---" data-ice="link">[0.87.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-85---" data-ice="link">[0.85.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-84---" data-ice="link">[0.84.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-83---" data-ice="link">[0.83.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-82---" data-ice="link">[0.82.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-79---" data-ice="link">[0.79.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-77---" data-ice="link">[0.77.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-75---" data-ice="link">[0.75.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-74---" data-ice="link">[0.74.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-74---" data-ice="link">[0.74.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-73---" data-ice="link">[0.73.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-72---" data-ice="link">[0.72.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-71---" data-ice="link">[0.71.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-0-70---" data-ice="link">[0.70.*]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#-example-" data-ice="link">[Example]</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#added" data-ice="link">Added</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#changed" data-ice="link">Changed</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#removed" data-ice="link">Removed</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#deprecated" data-ice="link">Deprecated</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#fixed" data-ice="link">Fixed</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/CHANGELOG.html"><a href="manual/CHANGELOG.html#security" data-ice="link">Security</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/data format.html"><a href="manual/data format.html" data-ice="link">Data interchange format between Server and Runtime (how data is stored inside runtime core)</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-fields-data-" data-ice="link">SD Runtime fields data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-fields-data-" data-ice="link">Corresponding Server fields data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-sourcedropdown-control-data-" data-ice="link">SD Runtime SourceDropdown control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-sourcedropdown-control-data-" data-ice="link">Corresponding Server SourceDropdown control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-grid-control-data-" data-ice="link">SD Runtime Grid control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-grid-control-data-" data-ice="link">Corresponding Server Grid control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-sourcegrid-control-data-" data-ice="link">SD Runtime SourceGrid control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-sourcegrid-control-data-" data-ice="link">Corresponding Server SourceGrid control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-mask-control-data-" data-ice="link">SD Runtime Mask control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-mask-control-data-" data-ice="link">Corresponding Server Mask control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-softlocked-data-" data-ice="link">SD Runtime SoftLocked data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-softlocked-data-" data-ice="link">Corresponding Server SoftLocked data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-email-control-data" data-ice="link">SD Runtime Email control data</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-email-control-data-" data-ice="link">Corresponding Server Email control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#sd-runtime-creditcard-control-data" data-ice="link">SD Runtime CreditCard control data</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-creditcard-control-data-" data-ice="link">Corresponding Server CreditCard control data:</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#-a-name--dynamictable----a-sd-runtime-dynamictable-control-data" data-ice="link">SD Runtime DynamicTable control data</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/data format.html"><a href="manual/data format.html#corresponding-server-dynamictable-control-data-" data-ice="link">Corresponding Server DynamicTable control data:</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/css namespacing.html"><a href="manual/css namespacing.html" data-ice="link">CSS namespacing</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/dynamic table.html"><a href="manual/dynamic table.html" data-ice="link">Dynamic table configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/dynamic table.html"><a href="manual/dynamic table.html#table-options" data-ice="link">Table options</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/dynamic table.html"><a href="manual/dynamic table.html#column-options" data-ice="link">Column Options</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/dynamic table.html"><a href="manual/dynamic table.html#row-options" data-ice="link">Row Options</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/dynamic table.html"><a href="manual/dynamic table.html#cell-options" data-ice="link">Cell Options</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/dynamic table.html"><a href="manual/dynamic table.html#full-example" data-ice="link">Full example</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="dynamic-table-configuration">Dynamic table configuration</h1><p>This file describes configuration and behavior of dynamic table control.</p>
+<h3 id="table-options">Table options</h3><ul>
+<li><code>columns: Array&lt;Column&gt;</code><ul>
+<li>Required</li>
+<li>The core columns configuration object for the entire table.</li>
+<li>Supports nested <code>columns</code> arrays via the column&apos;s <code>columns</code> key, eg. <code>[{ title: &apos;My Group&apos;, columns: [...] }]</code></li>
+</ul>
+</li>
+<li><code>data: Array&lt;Row&gt;</code><ul>
+<li>Required</li>
+<li>The data array that you want to display on the table.</li>
+</ul>
+</li>
+<li><code>defaultColumn: Partial&lt;Column&gt;</code><ul>
+<li>Optional</li>
+<li>Default options for all columns</li>
+<li><code>options</code> (see <code>Column Options</code> for description):<ul>
+<li>width</li>
+<li>minWidth</li>
+<li>maxWidth</li>
+<li>cssClass</li>
+<li>show</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>sortBy: Array&lt;Object&lt;name: column.name, desc: Bool&gt;&gt;</code></p>
+<ul>
+<li>Optional</li>
+<li>An array of sorting objects. If there is more than one object in the array, multi-sorting will be enabled.
+Each sorting object should contain an name key with the corresponding column name to sort by. An optional desc key may be set to true or false to indicated ascending or descending sorting for that column.</li>
+</ul>
+</li>
+<li><p><code>pagination: Object&lt;page: Number, itemsPerPage: Number&gt;</code></p>
+<ul>
+<li>Optional</li>
+<li>In case when this option is presented table control will draw pagination controls controlled by <code>page</code> and <code>itemsPerPage</code> passed in option object.</li>
+</ul>
+</li>
+<li><p><code>disabled: Boolean</code></p>
+<ul>
+<li>Optional</li>
+<li>Disable table functionality and all editors inside it</li>
+</ul>
+</li>
+</ul>
+<h3 id="column-options">Column Options</h3><p>The following options are supported on any column object you can pass to <code>columns</code>.</p>
+<ul>
+<li><code>name: String</code><ul>
+<li><strong>Required</strong> (but optional for grouping columns)</li>
+<li>This string is used to build the data model for your column.</li>
+<li>The data returned by an accessor should be <strong>primitive</strong> and sortable.</li>
+<li>The column&apos;s value will be looked up on the original row via that key, eg. If your column&apos;s <code>name</code> is <code>firstName</code> then its value would be read from <code>row[&lt;rowIndex&gt;][&apos;data&apos;][&apos;firstName&apos;]</code>.</li>
+</ul>
+</li>
+<li><code>columns: Array&lt;Column&gt;</code><ul>
+<li>Optional</li>
+<li>A nested array of columns.</li>
+<li>If defined, the column will act as a header group. Columns can be recursively nested as much as needed.</li>
+</ul>
+</li>
+<li><code>title: String</code><ul>
+<li>Optional</li>
+<li>The name to render in the column header</li>
+</ul>
+</li>
+<li><code>show: Bool</code><ul>
+<li>Optional</li>
+<li>Defaults to <code>undefined</code></li>
+<li>If set to <code>true</code>, will force this column to be visible at all times.</li>
+<li>If set to <code>false</code> will force this column to be hidden at all times.</li>
+</ul>
+</li>
+<li><code>width: Int</code><ul>
+<li>Optional</li>
+<li>Defaults to <code>150</code></li>
+<li>Specifies the width for the column</li>
+</ul>
+</li>
+<li><code>minWidth: Int</code><ul>
+<li>Optional</li>
+<li>Defaults to <code>0</code></li>
+<li>Specifies the minimum width for the column</li>
+</ul>
+</li>
+<li><code>maxWidth: Int</code><ul>
+<li>Optional</li>
+<li>Defaults to <code>0</code></li>
+<li>Specifies the maximum width for the column</li>
+</ul>
+</li>
+<li><code>cssClass: String</code><ul>
+<li>Optional</li>
+<li>Adds css class to a header cell</li>
+</ul>
+</li>
+</ul>
+<h3 id="row-options">Row Options</h3><p>The following options are supported on any row object you can pass to <code>data</code>.</p>
+<ul>
+<li><code>rowId: String</code><ul>
+<li><strong>Required</strong></li>
+<li>Row identifier. It will be passed within event arguments to identify cell</li>
+</ul>
+</li>
+<li><code>cssClass: String</code><ul>
+<li>Optional</li>
+<li>Adds css class for entire row</li>
+</ul>
+</li>
+<li><code>data: Object&lt;[columnName]: Cell&gt;</code><ul>
+<li>Optional</li>
+<li>Describes cell values and their metadata&apos;s</li>
+<li>Hash map where key is column name (must match to <code>name</code> property of the column) and value is cell options object</li>
+</ul>
+</li>
+</ul>
+<h3 id="cell-options">Cell Options</h3><p>The following options are supported on any cell object you can pass to <code>Row</code>.</p>
+<ul>
+<li><code>cssClass: String</code><ul>
+<li>Optional</li>
+<li>Adds css class for entire row</li>
+</ul>
+</li>
+<li><code>type: &lt;text|textedit|checkbox|radio&gt;</code><ul>
+<li>Optional, if not provided then it&apos;s <code>text</code> by default</li>
+<li>Defines how the cell must be rendered. It might be just a text or an editor</li>
+</ul>
+</li>
+<li><p><code>data: &lt;{ value: any}&gt;</code></p>
+<ul>
+<li>Optional</li>
+<li>Object with data which needs to be presented in a cell or cell editor</li>
+<li>Value types (of <code>data.value</code>) by cell type:<ul>
+<li>text<ul>
+<li>string</li>
+</ul>
+</li>
+<li>textedit<ul>
+<li>string</li>
+</ul>
+</li>
+<li>checkbox<ul>
+<li>boolean</li>
+</ul>
+</li>
+<li>radio<ul>
+<li>boolean</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>editorOptions: &lt;object&gt;</code></p>
+<ul>
+<li><code>isRequired &lt;Boolean&gt;</code><ul>
+<li>Optional</li>
+<li>Draws required mark for the editor</li>
+</ul>
+</li>
+<li><code>isDisabled &lt;Boolean&gt;</code><ul>
+<li>Optional<ul>
+<li>Forces editor to be in disabled state</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="full-example">Full example</h2><pre><code class="lang-js"><code class="source-code prettyprint">const tableConfig = {
+    defaultColumn: {
+        width: 150
+    },
+    sortBy: [{ name: &apos;firstName&apos;, desc: true }],
+    pagination: { page: 1, itemsPerPage: 20 },
+    columns: [
+        {
+            name: &apos;firstName&apos;,
+            title: &apos;First name&apos;,
+            cssClass: &apos;dt-first-name-header&apos;
+        },
+        {
+            title: &apos;Address&apos;,
+            columns: [
+                {
+                    name: &apos;city&apos;,
+                    title: &apos;City&apos;
+                },
+                {
+                    name: &apos;street&apos;,
+                    title: &apos;Street&apos;,
+                    maxWidth: 200
+                },
+                {
+                    name: &apos;isLeavingThere&apos;,
+                    title: &apos;Leaving there?&apos;,
+                    show: false
+                }
+            ]
+        }
+    ],
+    data: [
+        {
+            rowId: &apos;1&apos;,
+            cssClass: &apos;dt-even-row&apos;,
+            data: {
+                &apos;firstName&apos;: {
+                    type: &apos;text&apos;,
+                    data: {
+                        value: &apos;Aliaksei&apos;
+                    }
+                },
+                &apos;city&apos;: {
+                    type: &apos;textedit&apos;,
+                    data: {
+                        value: &apos;Minsk&apos;
+                    },
+                    editorOptions: {
+                        isRequired: true
+                    }
+                },
+                &apos;street&apos;: {
+                    type: &apos;textedit&apos;,
+                    data: {
+                        value: &apos;Gaya&apos;
+                    }
+                },
+                &apos;isLeavingThere&apos;: {
+                    type: &apos;checkbox&apos;,
+                    data: {
+                        value: true
+                    }
+                }
+            }
+        }
+    ]
+}</code>
+</code></pre>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
