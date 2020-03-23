@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>NYL TIDE Mockup</title>
+    <link href=".\fontawesome\css\all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="ngsd-style-overrides.css">
+
+    <script src="./ngsd-overrides.js"></script>
+    <script src="./assets/ngsd-header/load-headers.js"></script>
+  </head>
+  <body>
+    <nav id="header" class="navbar navbar-light">
+      <a class="navbar-brand" href="#">
+        <img src="images/NYL.jpg" width="65" height="65" class="d-inline-block align-top" alt="NYL">
+      </a>
+      <div id="navbarNav">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Products<i class="fas fa-angle-down"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Profile<i class="fas fa-angle-down"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact | Help<i class="fas fa-angle-down"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div id="user-info">
+        David Stone
+        <p id="separator" style="display: none"> | </p>
+        <br />
+        <a href="#">Sign Out</a>
+      </div>
+    </nav>
+    <script src="/assets/progress-bar/load-progress-bar.js"></script>
+    <div class="content">
+      <script data-name="CesLib" src="http://127.0.0.1:53854/dist/CesLib.Classic.js"></script>
+        <script>
+          var CesPlatform = getCesPlatform({
+            OrganizationId: "IPIPELINE",
+            CompanyId: "IPIPELINE",
+            SubCompanyId: "7616",
+            CodeSubCompanyId: "7616",
+            State: "AL",
+            ProductId: "6539",
+            ScreenPackage: "TELEAPP",
+            FormsPackageName: "NYLTeleApp",
+            Name: "NYL",
+            ElementId: "dtc",
+            Env: "",
+            Nav: true,
+            UserId: "6edef344-09a4-4a14-9429-2f74c27c7570",
+            CaseId: "e0f094a6-a14d-49e5-a0ac-8d6a5bb990b8"
+          }, function(result) {
+            console.info('Loaded: ' + result.toString());
+            
+            $(document).trigger('screen-loaded');
+          })
+        </script>
+        <div id="dtc">
+        </div><!-- Eliminate whitespace
+ --><div id="sidebar">
+      <p>Just a reminder, we are asking for information about the person this insurance is to cover.</p>
+      <p>Please answer to the best of your knowledge.</p>
+
+      <div id="help-text">
+        <p><b>Get Help</b></p>
+        <p>Help Link 1</p>
+        <p>Help Link 2</p>
+        <p>Help Link 3</p>
+        <p>Help Link 4</p>
+      </div>
+    </div>
+
+    <footer class="footer-NYL">
+      <div class="footer-NYL-content">
+          <div class="footer-row">
+            <p>Disclosure Statement</p>
+            <p>Privacy Policy</p>
+            <p>Business Continuity</p>
+          </div>
+          <div class="footer-row">
+            <p>Legal Notice</p>
+            <p>Glossary</p>
+            <p>Feedback</p>
+          </div>
+      </div>
+      <div class="section-divider"></div>
+      <div class="footer-NYL-copyright">
+        <p>© 2020 New York Life Insurance Company. New York, NY.</p>
+        <p>ALL RIGHTS RESERVED.</p>
+      </div>
+    </footer>
+
+  </body>
+  </html>
