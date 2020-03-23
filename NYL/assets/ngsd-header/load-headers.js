@@ -55,7 +55,10 @@ function handleHeaders() {
   $('.navpanel__item').each(function() {
     $(this).addClass('navpanel__item_pending');
   });
-  $('.navpanel__item:contains(HEADER_)').each(function() {
+$('.navpanel__item:contains(HEADER_)').each(function () {
+    if (!$(this).text().includes("HEADER_"))
+        return;
+
     var text = $(this).text();
     $(this).attr("id", text);
 

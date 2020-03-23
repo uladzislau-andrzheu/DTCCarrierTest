@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>NYL TIDE Mockup</title>
+    <title>NYL TIDE PoC</title>
 
-    <script src="./assets/bootstrap-3.3.7.min.js"></script>
     <script src="./assets/jquery-3.3.1.min.js"></script>
+    <script src="./assets/bootstrap-3.3.7.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./assets/runtime-bootstrap-theme.css" />
     <link rel="stylesheet" type="text/css" href="./assets/runtime-bootstrap-overrides.css" />
 
@@ -38,7 +38,7 @@
             </ul>
         </div>
         <div id="user-info">
-            David Stone
+            First Last
             <p id="separator" style="display: none"> | </p>
             <br />
             <a href="#">Sign Out</a>
@@ -54,7 +54,7 @@
                 var results = regex.exec(location.search);
                 return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
             };
-
+            
             var CesPlatform = getCesPlatform({
                 OrganizationId: "IPIPELINE",
                 CompanyId: "IPIPELINE",
@@ -72,9 +72,14 @@
                 Nav: true
             }, function (result) {
                 console.info('Loaded: ' + result.toString());
+                $('#sidebar').show();
+                $('.loader').hide();
             })
         </script>
         <div id="dtc">
+            <div class="loader">
+                <div id="loader"></div>
+            </div>
         </div><!-- Eliminate whitespace
      --><div id="sidebar">
             <p>Just a reminder, we are asking for information about the person this insurance is to cover.</p>

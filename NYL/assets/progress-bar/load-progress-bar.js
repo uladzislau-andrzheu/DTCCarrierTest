@@ -4,7 +4,7 @@ var html = $('script[src*="load-progress-bar.js"]').attr('src').replace('load-pr
 
 $('#progress-bar').load(html);
 
-var steps = [];
+var steps = ["Welcome","Your History","Your Health","Success!"];
 
 window.onload = function() {
 
@@ -13,11 +13,6 @@ window.onload = function() {
     console.log("Error loading progress-bar. Ensure load-progress-bar.js and progress-bar.html are in the same directory.");
     return;
   }
-  $('#dtc .navpanel .navpanel__item').each(function() {
-    if (isHeader($(this))) {
-      steps.push($(this).text().replace("HEADER_", ""));
-    }
-  });
   steps.forEach(function(step) {
     $('#progress-bar .steps .steps-text').append('<p class="steps-not-complete">' + step + '</p>');
   });
@@ -64,14 +59,15 @@ function loadProgress(current) {
 
   if (current.text() != "")
     count += (isHeader(current) ? 1 : 0);
+
   current.prevAll("a").each(function() {
-    if (isHeader($(this)))
-      count++;
+    if (isHeader($(this))) 
+        count++;
   });
   count = (count == 0 ? 1 : count);
 
   $('#progress-bar .steps .steps-text p').eq(count - 1).addClass("steps-active");
-
+  
   $('#progress-bar .steps .steps-text p').eq(count - 1).prevAll("p").each(function() {
     $(this).removeClass("steps-active");
     $(this).removeClass("steps-not-complete");
@@ -82,7 +78,6 @@ function loadProgress(current) {
     $(this).removeClass("steps-complete");
     $(this).addClass("steps-not-complete");
   });
-
   var percent = (count/steps.length * 100) + "%";
   $('.progress-bar').css("width", percent)
 }
