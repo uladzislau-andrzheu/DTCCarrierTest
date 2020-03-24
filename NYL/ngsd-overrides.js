@@ -12,9 +12,11 @@ $(window).on('load', function () {
     var sideHeight = $('#sidebar').css('height');
     var sdkHeight = $('#dtc .runtime-container__screen').css('height');
     if (parseInt(sdkHeight) < 715) {
-      $('#sidebar').css('height', '715px');
+        $('#sidebar').css('height', '715px');
+        $('.runtime-container__screen').css('height', '715px');
     } else {
-      $('#sidebar').css('height', sdkHeight);
+        $('.runtime-container__screen').css('height', '100%');
+        $('#sidebar').css('height', sdkHeight);
     }
     //fixHeaders();
   });

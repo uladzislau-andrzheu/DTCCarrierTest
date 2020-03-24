@@ -52,6 +52,10 @@
   padding-bottom: 0 !important;
   padding-top: 10px !important;
 }
+.runtime-group__header, .runtime-group__header > div > p {
+    font-weight: 700 !important;
+    font-size: 14pt !important;
+}
 div[data-type="button"] {
   display: inline-block !important;
 }
@@ -89,6 +93,7 @@ div[data-type="button"] {
 }
 .runtime-item {
   font-family: "Effra";
+  font-size: 13pt;
 }
 .runtime-item[data-type="text"] {
   background-color: var(--NYL-PageBackground);
@@ -110,7 +115,6 @@ div[data-type="button"] {
   display: block;
   font-family: "Effra";
   font-size: 13pt;
-  padding-top: 20px;
 }
 
 div[data-type="radio"]>div>.field-label {
@@ -121,7 +125,7 @@ div[data-type="radio"]>div>.field-label {
   font-weight: 400 !important;
 }
 .rich-editor-content.dangerous-html.not-inherit-size>* {
-  font-size: 12pt !important;
+  font-size: 12pt;
   font-weight: bolder;
   padding-left: 10px;
 }
@@ -206,6 +210,7 @@ div[data-name="Welcome_Card"] h3 {
   border: 0 !important;
   padding: 0 !important;
   margin-top: 0 !important;
+  font-weight: 400 !important;
 }
 div[data-name="Welcome_Card"] p {
   padding: 0 !important;
@@ -269,6 +274,9 @@ input[type="checkbox"] {
 #HEADER_Welcome {
   font-weight: 700;
 }
+.runtime-item[data-name="P2MEDHIS_lblSearchInfo"] {
+  background-color: transparent !important;
+}
 .navpanel__item {
   background-color: var(--NYL-PageBackground) !important;
   box-shadow: none !important;
@@ -276,7 +284,7 @@ input[type="checkbox"] {
 }
 .navpanel__item.active {
   background-color: #0079C220 !important;
-  color: black;
+  color: black !important;
 }
 .list-group-item.navpanel__header {
   border: 1px solid #ddd !important;
@@ -381,10 +389,13 @@ input[type="checkbox"] {
     color: var(--NYL-Blue) !important;
     font-size: 12pt;
   }
-  runtime-item[data-type="select"] {
+  .runtime-item[data-type="select"] {
       width: 100%;
   }
-  runtime-item[data-type="checkbox"] {
+  .runtime-item[data-type="checkbox"] {
+      width: 100%;
+  }
+  .runtime-item[data-type="button"] {
       width: 100%;
   }
   .navpanel {
