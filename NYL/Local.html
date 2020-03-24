@@ -1,95 +1,123 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title>Example Insurance Carrier</title>
-  <!-- Bootstrap core CSS -->
-  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    .modal-dialog {
-      max-width: 100%;
-    }
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>NYL TIDE PoC</title>
+
+    <script src="./assets/jquery-3.3.1.min.js"></script>
+    <script src="./assets/bootstrap-3.3.7.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/runtime-bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/runtime-bootstrap-overrides.css" />
+
+    <link href=".\fontawesome\css\all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="ngsd-style-overrides.css">
+
+    <script src="./ngsd-overrides.js"></script>
+    <script src="./assets/ngsd-header/load-headers.js"></script>
 </head>
+
 <body>
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Example Insurance Carrier</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Page Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <!-- CLASSIC EXAMPLE (LOCAL) -->
- 
+    <nav id="header" class="navbar navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="images/NYL.jpg" width="65" height="65" class="d-inline-block align-top" alt="NYL">
+        </a>
+        <div id="navbarNav">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My Products<i class="fas fa-angle-down"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My Profile<i class="fas fa-angle-down"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact | Help<i class="fas fa-angle-down"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div id="user-info">
+            First Last
+            <p id="separator" style="display: none"> | </p>
+            <br />
+            <a href="#">Sign Out</a>
+        </div>
+    </nav>
+    <script src="./assets/progress-bar/load-progress-bar.js"></script>
+    <div class="content">
         <script data-name="CesLib" src="http://127.0.0.1:53854/dist/CesLib.Classic.js"></script>
         <script>
-          // http://127.0.0.1:8080/index.html?UserId=71c99fc5-9906-44f8-9f44-892de18a9eb3&CaseId=cf768209-b211-4547-93aa-78bd78caa217
-          function getUrlParameter(name) {
-                    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-                    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-                    var results = regex.exec(location.search);
-                    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-                  };
+            // http://127.0.0.1:8080/index.html?UserId=71c99fc5-9906-44f8-9f44-892de18a9eb3&CaseId=cf768209-b211-4547-93aa-78bd78caa217
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            };
 
-          var CesPlatform = getCesPlatform({
-            OrganizationId: "IPIPELINE",
-            CompanyId: "IPIPELINE",
-            SubCompanyId: "7616",
-            CodeSubCompanyId: "7616",
-            State: "AL",
-            ProductId: "6539",
-            ScreenPackage: "TELEAPP",
-            FormsPackageName: "NYLTeleApp",
-            Name: "NYL",
-            ElementId: "dtc",
-            Env: "",
-            UserId: getUrlParameter("UserId"), //"71c99fc5-9906-44f8-9f44-892de18a9eb3",
-            CaseId: getUrlParameter("CaseId"), //"cf768209-b211-4547-93aa-78bd78caa217",
-            Nav: true
-          }, function(result) {
-            console.info('Loaded: ' + result.toString());
-          })
+            var CesPlatform = getCesPlatform({
+                OrganizationId: "IPIPELINE",
+                CompanyId: "IPIPELINE",
+                SubCompanyId: "7616",
+                CodeSubCompanyId: "7616",
+                State: "AL",
+                ProductId: "6539",
+                ScreenPackage: "TELEAPP",
+                FormsPackageName: "NYLTeleApp",
+                Name: "NYL",
+                ElementId: "dtc",
+                Env: "",
+                UserId: getUrlParameter("UserId"), //"71c99fc5-9906-44f8-9f44-892de18a9eb3",
+                CaseId: getUrlParameter("CaseId"), //"cf768209-b211-4547-93aa-78bd78caa217",
+                Nav: true
+            }, function (result) {
+                console.info('Loaded: ' + result.toString());
+                $('#sidebar').show();
+                $('.loader').hide();
+                    $("#dtc").bind("DOMNodeInserted", function () {
+                        handleHeaders();
+                    });
+            })
         </script>
-        <div id="dtc"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-      </div>
-      Here is the footer with some information...
-    </div>
-  </div>
-</body>
+        <div id="dtc">
+            <div class="loader">
+                <div id="loader"></div>
+            </div>
+        </div><!-- Eliminate whitespace
+     --><div id="sidebar">
+            <script>$('#sidebar').hide();</script>
+            <p>Just a reminder, we are asking for information about the person this insurance is to cover.</p>
+            <p>Please answer to the best of your knowledge.</p>
 
+            <div id="help-text">
+                <p><b>Get Help</b></p>
+                <p>Help Link 1</p>
+                <p>Help Link 2</p>
+                <p>Help Link 3</p>
+                <p>Help Link 4</p>
+            </div>
+        </div>
+
+        <footer class="footer-NYL">
+            <div class="footer-NYL-content">
+                <div class="footer-row">
+                    <p>Disclosure Statement</p>
+                    <p>Privacy Policy</p>
+                    <p>Business Continuity</p>
+                </div>
+                <div class="footer-row">
+                    <p>Legal Notice</p>
+                    <p>Glossary</p>
+                    <p>Feedback</p>
+                </div>
+            </div>
+            <div class="section-divider"></div>
+            <div class="footer-NYL-copyright">
+                <p>© 2020 New York Life Insurance Company. New York, NY.</p>
+                <p>ALL RIGHTS RESERVED.</p>
+            </div>
+        </footer>
+
+</body>
 </html>
