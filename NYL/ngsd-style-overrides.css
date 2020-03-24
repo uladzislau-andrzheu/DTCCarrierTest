@@ -17,11 +17,15 @@
 }
 
 #dtc {
-    min-height: 60vh;
+    min-height: 715px !important;
     display: inline-block;
     vertical-align: top;
     width: 85%;
 }
+.runtime-container__screen {
+    min-height: 715px !important;
+}
+
 .col-md-2 {
     width: 16.66667% !important;
 }
@@ -54,7 +58,7 @@
 }
 .runtime-group__header, .runtime-group__header > div > p {
     font-weight: 700 !important;
-    font-size: 14pt !important;
+    font-size: 13pt !important;
 }
 div[data-type="button"] {
   display: inline-block !important;
@@ -129,7 +133,7 @@ div[data-type="radio"]>div>.field-label {
   font-weight: bolder;
   padding-left: 10px;
 }
-.field-textedit, .field-numberedit, .field-main-container_datetime>div>input {
+.field-textedit, .field-numberedit, .field-main-container_datetime input {
     background-color: var(--NYL-PageBackground) !important;
     border: 0px !important;
     border-bottom: 3px solid var(--NYL-LightRain) !important;
@@ -138,7 +142,7 @@ div[data-type="radio"]>div>.field-label {
     padding: 5px 10px !important;
 }
 .field-group__border-none {
-  margin: 0 !important;
+    margin: 0 !important;
 }
 .field-main-container_button {
   padding: 20px 0 !important;

@@ -63,7 +63,13 @@ function loadProgress(current) {
   if (current.text() != "")
     count += (isHeader(current) ? 1 : 0);
 
+  
+  current.nextAll("a").each(function () {
+    $(this).addClass('navpanel__item_pending');
+  });
+
   current.prevAll("a").each(function() {
+    $(this).removeClass('navpanel__item_pending');
     if (isHeader($(this))) 
         count++;
   });

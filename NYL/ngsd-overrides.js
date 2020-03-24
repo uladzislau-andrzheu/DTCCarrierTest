@@ -8,29 +8,12 @@ $(window).on('load', function () {
 
   //fixHeaders();
 
-  $(document).on('DOMSubtreeModified', '#dtc', function() {
-    var sideHeight = $('#sidebar').css('height');
-    var sdkHeight = $('#dtc .runtime-container__screen').css('height');
-    if (parseInt(sdkHeight) < 715) {
-        $('#sidebar').css('height', '715px');
-        $('.runtime-container__screen').css('height', '715px');
-    } else {
-        $('.runtime-container__screen').css('height', '100%');
-        $('#sidebar').css('height', sdkHeight);
-    }
-    //fixHeaders();
-  });
+  
 });
 
 
 $(window).resize(function() {
   //fixHeaders();
-});
-
-
-
-$(document).on('submit', '#dtc > div > div > main > div > div > form', function() {
-  alert('tree');
 });
 
 //function fixHeaders() {

@@ -7,12 +7,6 @@ $(window).on('load', function() {
   $('.screen-label').text($('.screen-label').text().replace("HEADER_", ""));
 });
 
-$(document).on('DOMSubtreeModified', '.navpanel', function() {
-  handleHeaders();
-  displayHeaderAsScreenLabel();
-  $('.screen-label').text($('.screen-label').text().replace("HEADER_", ""));
-});
-
 $(document).on('click', '#progress-bar .steps .steps-text p', function() {
   displayHeaderAsScreenLabel();
 });
@@ -52,9 +46,6 @@ function displayHeaderAsScreenLabel() {
 }
 
 function handleHeaders() {
-  $('.navpanel__item').each(function() {
-    $(this).addClass('navpanel__item_pending');
-  });
 $('.navpanel__item:contains(HEADER_)').each(function () {
     if (!$(this).text().includes("HEADER_"))
         return;
