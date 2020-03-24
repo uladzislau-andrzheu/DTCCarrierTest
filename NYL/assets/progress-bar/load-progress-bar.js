@@ -47,6 +47,9 @@ $(document).on('click', '#dtc .field-button', function() {
 
 
 function isHeader(step) {
+  if (step[0] == undefined) {
+    return false;
+  }
   if (step[0].hasAttribute("id") && step.attr("id").includes("HEADER_") || step.text().includes("HEADER_"))
     return true;
   return false;
