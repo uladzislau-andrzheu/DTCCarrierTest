@@ -31,16 +31,10 @@ $(document).on('click', '#progress-bar .steps .steps-text p', function() {
 $(document).on('click', '#dtc .navpanel .navpanel__item', function() {
   loadProgress($(this));
 });
-$(document).on('click', '#dtc .field-button', function() {
-  count = 0;
-  $(document).on('DOMSubtreeModified', '#dtc', function() {
-    if (count < 1) {
-      count = 1;
-      var active = '#dtc .navpanel .navpanel__aligntop > div > a.navpanel__item.list-group-item.active';
-      $(active)[0].click();
-    }
-    count = 1;
-  });
+$(document).on('click', '#dtc .field-button', function () {
+    var step = getCookie("screen");
+    var active = '#dtc .navpanel .navpanel__item:contains(' + step + ')';
+    loadProgress($(active));
 })
 
 
@@ -58,21 +52,19 @@ function isHeader(step) {
 
 
 function loadProgress(current) {
-  var count = 0;
+    var count = 0;
+    if (current.text() != "")
+        count += (isHeader(current) ? 1 : 0);
 
-  if (current.text() != "")
-    count += (isHeader(current) ? 1 : 0);
-
-  
-  current.nextAll("a").each(function () {
-    $(this).addClass('navpanel__item_pending');
-  });
-
-  current.prevAll("a").each(function() {
-    $(this).removeClass('navpanel__item_pending');
-    if (isHeader($(this))) 
-        count++;
-  });
+    current.nextAll("a").each(function () {
+        $(this).removeClass('active');
+        $(this).addClass('navpanel__item_pending');
+    });
+    current.prevAll("a").each(function () {
+        $(this).removeClass('navpanel__item_pending');
+        if (isHeader($(this))) 
+            count++;
+    });
   count = (count == 0 ? 1 : count);
 
   $('#progress-bar .steps .steps-text p').eq(count - 1).addClass("steps-active");

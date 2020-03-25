@@ -115,7 +115,6 @@ div[data-type="button"] {
   padding-bottom: 20px;
 }
 .runtime-item[data-type="select"] {
-  clear: both;
   display: block;
   font-family: "Effra";
   font-size: 13pt;
@@ -278,8 +277,7 @@ input[type="checkbox"] {
 #HEADER_Welcome {
   font-weight: 700;
 }
-.runtime-item[data-name="P2MEDHIS_lblSearchInfo"] {
-  background-color: transparent !important;
+div[data-name="P2MEDHIS_lblSearchInfo"].runtime-item, div[data-name="P2MEDHIS_AddMeds"].runtime-item, div[data-name="P2MEDHIS_AddMeds_DMED_lblPrescriptionCount"].runtime-item, div[data-name="ThankYouMsg"] { background-color: transparent !important;
 }
 .navpanel__item {
   background-color: var(--NYL-PageBackground) !important;
@@ -348,7 +346,6 @@ input[type="checkbox"] {
     color: var(--NYL-Blue) !important;
 }
 
-
 @media screen and (max-width: 1000px) {
   .runtime-item[data-type="checkbox"] {
     width: 33% !important;
@@ -394,13 +391,19 @@ input[type="checkbox"] {
     font-size: 12pt;
   }
   .runtime-item[data-type="select"] {
-      width: 100%;
+      width: 100% !important;
   }
   .runtime-item[data-type="checkbox"] {
-      width: 100%;
+      width: 100% !important;
   }
   .runtime-item[data-type="button"] {
       width: 100%;
+  }
+  .runtime-item[data-type="textedit"] {
+      width: 100% !important;
+  }
+  .runtime-item[data-type="grid"] {
+      width: 100% !important;
   }
   .navpanel {
     background-color: var(--NYL-PageBackground) !important;
