@@ -38,10 +38,6 @@
             </ul>
         </div>
         <div id="user-info">
-            First Last
-            <p id="separator" style="display: none"> | </p>
-            <br />
-            <a href="#">Sign Out</a>
         </div>
     </nav>
     <script src="./assets/progress-bar/load-progress-bar.js"></script>
@@ -75,6 +71,8 @@
                 $('.loader').hide();
                 $("#dtc").bind("DOMNodeInserted", function () {
                     handleHeaders();
+                    var fullName = global.App.runtimeCoreApi.getRuntimeData()["PIFirstName"].value + " " + global.App.runtimeCoreApi.getRuntimeData()["PILastName"].value;
+                    $('#user-info').html(fullName + '<p id="separator" style="display: none"> | </p><br /><a href="#">Sign Out</a>');
                 });
             })
         </script>

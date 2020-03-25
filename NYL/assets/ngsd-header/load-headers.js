@@ -16,7 +16,7 @@ $(document).on('click', '#dtc .navpanel .navpanel__item', function () {
   displayHeaderAsScreenLabel();
 });
 $(document).on('click', '#dtc .field-button', function () {
-  document.cookie = "screen=" + $('#dtc > div.runtime-root-wrapper > div > nav > div > div.navpanel__aligntop > div > a.navpanel__item.list-group-item.active + a').text();
+  document.cookie = "screen=" + $('#dtc div.navpanel > div.navpanel__aligntop > div > a.navpanel__item.list-group-item.active + a').text();
     displayHeaderAsScreenLabel();
 });
 /*$(window).resize(function() {
@@ -26,17 +26,16 @@ $(document).on('click', '#dtc .field-button', function () {
 
 
 function displayHeaderAsScreenLabel() {
-  var count = 0;
+  var count = 0;    
   $(document).on('DOMSubtreeModified', '#dtc', function() {
     if (count < 1) {
       count++;
       var screen = getCookie("screen");
         var header = '';
-        if (isHeader($('#dtc > div.runtime-root-wrapper > div > nav > div > div.navpanel__aligntop > div > a.navpanel__item.list-group-item:contains(' + screen + ')'))) {
-            header = $('#dtc > div.runtime-root-wrapper > div > nav > div > div.navpanel__aligntop > div > a.navpanel__item.list-group-item:contains(' + screen + ')').text();
+        if (isHeader($('#dtc div.navpanel > div.navpanel__aligntop > div > a.navpanel__item.list-group-item:contains(' + screen + ')'))) {
+            header = $('#dtc div.navpanel > div.navpanel__aligntop > div > a.navpanel__item.list-group-item:contains(' + screen + ')').text();
         } else {
-            $('#dtc > div.runtime-root-wrapper > div > nav > div > div.navpanel__aligntop > div > a.navpanel__item.list-group-item:contains(' + screen + ')').prevAll().each(function () {
-                console.log("aaa");
+            $('#dtc div.navpanel > div.navpanel__aligntop > div > a.navpanel__item.list-group-item:contains(' + screen + ')').prevAll().each(function () {
                 if (isHeader($(this))) {
                     header = $(this).text();
                     return false;

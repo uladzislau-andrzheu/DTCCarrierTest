@@ -394,7 +394,9 @@ label {
   margin-left: 10px
 }
 
-
+div[data-name="NetWorth_Calc_Assets"] {
+    margin-right: 20px;
+}
 
 
 @media screen and (max-width: 1200px) {
@@ -413,17 +415,8 @@ label {
   .navbar-brand {
     padding: 12px !important;
   }
-  .runtime-container__navwrapper {
-    opacity: 0;
-    position: absolute !important;
-    z-index: -1;
-    height: 0 !important;
-  }
   .footer-NYL {
     padding: 1%;
-  }
-  .rich-editor-content.dangerous-html.not-inherit-size>* {
-    padding-left: 0 !important;
   }
   #sidebar {
     font-size: 10pt;
@@ -462,7 +455,7 @@ label {
     display: none;
   }
   #user-info #separator {
-    display: inline-block !important;
+    display: inline !important;
   }
   .footer-NYL-content {
     display: block;
@@ -476,7 +469,9 @@ label {
   .footer-row p {
     padding: 0 !important;
   }
-
+  div[data-name="NetWorth_Calc_Assets"] {
+    margin-right: 0px;
+  }
 }
 .loader {
     background-color: #80808080;
