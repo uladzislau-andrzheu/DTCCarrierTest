@@ -278,7 +278,8 @@ input[type="checkbox"] {
 #HEADER_Welcome {
   font-weight: 700;
 }
-div[data-name="P2MEDHIS_lblSearchInfo"].runtime-item, div[data-name="P2MEDHIS_AddMeds"].runtime-item, div[data-name="P2MEDHIS_AddMeds_DMED_lblPrescriptionCount"].runtime-item, div[data-name="ThankYouMsg"] { background-color: transparent !important;
+div[data-name="P2MEDHIS_lblSearchInfo"].runtime-item, div[data-name="P2MEDHIS_AddMeds"].runtime-item, div[data-name="P2MEDHIS_AddMeds_DMED_lblPrescriptionCount"].runtime-item, div[data-name="ThankYouMsg"] div[data-name="HBP1_PHY_PHYS_lblDoctorCount"].runtime-item { 
+    background-color: transparent !important;
 }
 .navpanel__item {
   background-color: var(--NYL-PageBackground) !important;
