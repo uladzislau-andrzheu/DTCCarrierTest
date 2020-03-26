@@ -60,6 +60,7 @@ function isHeader(step) {
 
 
 function loadProgress(current) {
+
     var count = 0;
     if (current.text() != "")
         count += (isHeader(current) ? 1 : 0);

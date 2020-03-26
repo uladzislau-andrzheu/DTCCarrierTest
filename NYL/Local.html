@@ -72,6 +72,7 @@
                 $('.loader').hide();
                 $("#dtc").bind("DOMNodeInserted", function () {
                     handleHeaders();
+                    loadProgress($('#dtc div.navpanel a.navpanel__item.active'));
                     if (global.App.runtimeCoreApi.getRuntimeData()["PIFirstName"] == undefined || global.App.runtimeCoreApi.getRuntimeData()["PILastName"].value == undefined) {
                         console.log('Failed to load name from case data.')
                     } else {
