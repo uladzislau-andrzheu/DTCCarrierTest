@@ -399,9 +399,15 @@ div[data-name="P2MEDHIS_lblSearchInfo"].runtime-item, div[data-name="P2MEDHIS_Ad
     }
 }
 
+@media screen and (max-width: 750px) {
+    .runtime-container .bm-burger-button {
+        right: -85vw !important;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .runtime-container .bm-burger-button {
-        right: -80vw;
+        right: -80vw !important;
     }
   .col-md-offset-8 {
     margin-left: 0 !important;
