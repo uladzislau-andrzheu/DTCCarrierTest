@@ -60,31 +60,32 @@
     font-weight: 700 !important;
     font-size: 13pt !important;
 }
+
+div[data-type="group"].runtime-item > div > div > div[data-type="group"].runtime-item:first-child h3, form > div[data-type="group"].runtime-item > div > div > h3 {
+    border-top: none !important;
+    margin-top: 10px !important;
+}
+
 div[data-type="button"] {
   display: inline-block !important;
 }
-.btn-default {
-  background-color: #cdcdcd !important;
-  border: 0 !important;
-  color: black !important;
-  font-size: 14pt !important;
-  font-family: "Effra";
+.btn-default, .btn-danger {
+    background-color: #cdcdcd !important;
+    border: 0 !important;
+    color: black !important;
+    font-size: 14pt !important;
+    font-family: "Effra";
 }
 .btn-primary {
-  background-color: var(--NYL-Blue) !important;
-  border: 0 !important;
-  color: white !important;
-  font-size: 14pt !important;
-  font-family: "Effra";
+    background-color: var(--NYL-Blue) !important;
+    border: 0 !important;
+    color: white !important;
+    font-size: 14pt !important;
+    font-family: "Effra";
 }
-.btn-danger {
-  background-color: #bd0000 !important;
-  border: 0 !important;
-  color: white !important;
-  font-size: 14pt !important;
-  font-family: "Effra";
+.btn-sm {
+    font-size: 12pt !important;
 }
-
 .field-button:before {
   display: none;
 }
@@ -278,7 +279,7 @@ input[type="checkbox"] {
 #HEADER_Welcome {
   font-weight: 700;
 }
-div[data-name="P2MEDHIS_lblSearchInfo"].runtime-item, div[data-name="P2MEDHIS_AddMeds"].runtime-item, div[data-name="P2MEDHIS_AddMeds_DMED_lblPrescriptionCount"].runtime-item, div[data-name="ThankYouMsg"] div[data-name="HBP1_PHY_PHYS_lblDoctorCount"].runtime-item, div[data-name="ErrorEntry"].runtime-item {
+div[data-name="P2MEDHIS_lblSearchInfo"].runtime-item, div[data-name="P2MEDHIS_AddMeds"].runtime-item, div[data-name="P2MEDHIS_AddMeds_DMED_lblPrescriptionCount"].runtime-item, div[data-name="ThankYouMsg"].runtime-item, div[data-name="HBP1_PHY_PHYS_lblDoctorCount"].runtime-item, div[data-name="ErrorEntry"].runtime-item, div[data-name="HBP1_MaxNumberMeds"].runtime-item { 
     background-color: transparent !important;
 }
 div[data-name="P2MEDHIS_DoctorGrp"] h3>div {
@@ -373,6 +374,42 @@ div[data-name="P2MEDHIS_DoctorGrp"] h3>div {
     border-radius: 0 !important;
     background-color: #F4D0C9 !important;
     border-bottom: 3px solid #E35F55 !important;
+}
+
+.fixed-table-container {
+    border: none !important;
+}
+.runtime-item[data-type="grid"] {
+    border-top: 1px #ddd !important;
+    margin-bottom: 20px;
+}
+.runtime-item[data-type="grid"] th, .runtime-item[data-type="grid"] td {
+    border: none !important;
+    border-left: 1px #ddd solid !important;
+    border-right: 1px #ddd solid !important;border-top: 1px #ddd solid;
+}
+div.runtime-item[data-type="grid"] table > thead > tr {
+    border-top: 1px #ddd solid !important;
+}
+.runtime-item[data-type="grid"] button {
+    width: 100%;
+}
+.runtime-item[data-type="grid"] td, .runtime-item[data-type="grid"] div.th-inner {
+    text-align: left !important;
+}
+
+.ring-spinner {
+    border: 16px solid var(--NYL-Blue) !important;
+    border-radius: 50% !important;
+    border-top: 16px solid var(--NYL-LightRain) !important;
+    width: 120px !important;
+    height: 120px !important;
+    -webkit-animation: spin s linear infinite !important; /* Safari */
+    animation: spin 2s linear infinite !important;
+}
+
+.ring-spinner::after {
+    display: none !important;
 }
 
 @media screen and (max-width: 1200px) {
