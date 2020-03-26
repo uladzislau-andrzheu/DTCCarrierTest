@@ -278,7 +278,7 @@ input[type="checkbox"] {
 #HEADER_Welcome {
   font-weight: 700;
 }
-div[data-name="P2MEDHIS_lblSearchInfo"].runtime-item, div[data-name="P2MEDHIS_AddMeds"].runtime-item, div[data-name="P2MEDHIS_AddMeds_DMED_lblPrescriptionCount"].runtime-item, div[data-name="ThankYouMsg"] div[data-name="HBP1_PHY_PHYS_lblDoctorCount"].runtime-item { 
+div[data-name="P2MEDHIS_lblSearchInfo"].runtime-item, div[data-name="P2MEDHIS_AddMeds"].runtime-item, div[data-name="P2MEDHIS_AddMeds_DMED_lblPrescriptionCount"].runtime-item, div[data-name="ThankYouMsg"] div[data-name="HBP1_PHY_PHYS_lblDoctorCount"].runtime-item, div[data-name="ErrorEntry"].runtime-item {
     background-color: transparent !important;
 }
 div[data-name="P2MEDHIS_DoctorGrp"] h3>div {
@@ -349,6 +349,30 @@ div[data-name="P2MEDHIS_DoctorGrp"] h3>div {
     top: 0 !important;
     right: 0 !important;
     color: var(--NYL-Blue) !important;
+}
+
+.alert-info {
+    border: 0 !important;
+    border-radius: 0 !important;
+    border-bottom: 3px solid #1fa0c1 !important;
+}
+.alert-warning {
+    border: 0 !important;
+    border-radius: 0 !important;
+    background-color: #f6e6d5 !important;
+    border-bottom: 3px solid #e09d61 !important;
+}
+.alert-success {
+    border: 0 !important;
+    border-radius: 0 !important;
+    background-color: #D3EECE !important;
+    border-bottom: 3px solid #7E987A !important;
+}
+.alert-danger {
+    border: 0 !important;
+    border-radius: 0 !important;
+    background-color: #F4D0C9 !important;
+    border-bottom: 3px solid #E35F55 !important;
 }
 
 @media screen and (max-width: 1200px) {
