@@ -104,6 +104,7 @@ div[data-type="button"] {
   font-family: "Effra";
   font-size: 15pt;
   padding: 20px 20px;
+  margin-bottom: 10px;
 }
 .runtime-item[data-type="text"][data-name^="NetWorth_Calc"] {
   background-color: transparent !important;
