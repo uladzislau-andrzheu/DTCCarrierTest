@@ -354,6 +354,16 @@ div[data-name="P2MEDHIS_lblSearchInfo"].runtime-item, div[data-name="P2MEDHIS_Ad
 }
 
 @media screen and (max-width: 1000px) {
+    #user-info {
+        float: left;
+    }
+    .navbar-nav {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+    .runtime-container .bm-burger-button {
+        right: -90vw !important;
+    }
     .bm {
         opacity: 1;
         height: 100vw;
@@ -372,9 +382,26 @@ div[data-name="P2MEDHIS_lblSearchInfo"].runtime-item, div[data-name="P2MEDHIS_Ad
   .runtime-item[data-type="select"] {
     width: 50% !important;
   }
+    .list-group {
+        border-top: 1px solid #80808080 !important;
+    }
+
+    .list-group-item {
+        border: 0 !important;
+    }
+
+    .navpanel__item {
+        background-color: var(--NYL-PageBackground) !important;
+        box-shadow: none !important;
+        color: var(--NYL-Blue) !important;
+        font-size: 12pt;
+    }
 }
 
 @media screen and (max-width: 500px) {
+    .runtime-container .bm-burger-button {
+        right: -80vw;
+    }
   .col-md-offset-8 {
     margin-left: 0 !important;
   }
@@ -384,18 +411,6 @@ div[data-name="P2MEDHIS_lblSearchInfo"].runtime-item, div[data-name="P2MEDHIS_Ad
   .runtime-item[data-type="checkbox"] {
     width: 50% !important;
   }
-  .list-group {
-    border-top: 1px solid #80808080 !important;
-  }
-  .list-group-item {
-    border: 0 !important;
-  }
-  .navpanel__item {
-    background-color: var(--NYL-PageBackground) !important;
-    box-shadow: none !important;
-    color: var(--NYL-Blue) !important;
-    font-size: 12pt;
-  }
   .runtime-item[data-type="select"] {
       width: 100% !important;
   }
@@ -403,7 +418,7 @@ div[data-name="P2MEDHIS_lblSearchInfo"].runtime-item, div[data-name="P2MEDHIS_Ad
       width: 100% !important;
   }
   .runtime-item[data-type="button"] {
-      width: 100%;
+      width: 100% !important;
   }
   .runtime-item[data-type="textedit"] {
       width: 100% !important;
