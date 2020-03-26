@@ -66,6 +66,10 @@
   text-align: right;
   padding: 10px;
 }
+#help-text p a {
+    color: white !important;
+    cursor: pointer !important;
+}
 
 #title-box p {
   margin: 0;
