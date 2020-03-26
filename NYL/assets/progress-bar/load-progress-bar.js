@@ -32,9 +32,17 @@ $(document).on('click', '#dtc .navpanel .navpanel__item', function() {
   loadProgress($(this));
 });
 $(document).on('click', '#dtc .field-button', function () {
-    var step = getCookie("screen");
+    var step = $('#dtc div.navpanel a.navpanel__item.active').text();
     var active = '#dtc .navpanel .navpanel__item:contains(' + step + ')';
-    loadProgress($(active));
+    if ($(this).text().toLowerCase().trim() == "next") {
+        loadProgress($(active).next());
+    } else if ($(this).text().toLowerCase().trim() == "back") {
+        if ($(active).prev().hasClass('navpanel__header')) {
+            loadProgress($(active).prev().prev());
+        } else {
+            loadProgress($(active).prev());
+        }
+    }
 })
 
 
