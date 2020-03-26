@@ -281,6 +281,9 @@ input[type="checkbox"] {
 div[data-name="P2MEDHIS_lblSearchInfo"].runtime-item, div[data-name="P2MEDHIS_AddMeds"].runtime-item, div[data-name="P2MEDHIS_AddMeds_DMED_lblPrescriptionCount"].runtime-item, div[data-name="ThankYouMsg"] div[data-name="HBP1_PHY_PHYS_lblDoctorCount"].runtime-item { 
     background-color: transparent !important;
 }
+div[data-name="P2MEDHIS_DoctorGrp"] h3>div {
+    display: none !important;
+}
 .navpanel__item {
   background-color: var(--NYL-PageBackground) !important;
   box-shadow: none !important;
@@ -435,6 +438,7 @@ div[data-name="P2MEDHIS_lblSearchInfo"].runtime-item, div[data-name="P2MEDHIS_Ad
   }
   .navpanel {
     background-color: var(--NYL-PageBackground) !important;
+    box-shadow: none !important;
   }
   div[data-type="datetime"] {
       width: 100% !important;
