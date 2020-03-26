@@ -39,6 +39,9 @@
   font-family: "Effra";
   font-size: 14pt;
 }
+#navbarNav .nav-item .nav-link:hover {
+    text-decoration: underline;
+}
 #navbarNav .nav-item .nav-link i {
   padding: 5px;
 }
