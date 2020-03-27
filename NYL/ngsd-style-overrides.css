@@ -412,6 +412,16 @@ div.runtime-item[data-type="grid"] table > thead > tr {
     display: none !important;
 }
 
+.modal-dialog {
+    width: 900px !important;
+}
+.modal-header {
+    background-color: var(--NYL-Blue) !important;
+}
+.modal-footer .btn-sm {
+    font-size: 14pt !important;
+}
+
 @media screen and (max-width: 1200px) {
     .rich-editor-content.dangerous-html.not-inherit-size > * {
         padding-left: 0 !important;
