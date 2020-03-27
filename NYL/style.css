@@ -272,7 +272,7 @@ label {
   left: 0;
   height: 30px;
   width: 30px;
-  background-color: #white;
+  background-color: white;
   border: .5px solid #ccc;
   border-radius: 50%;
 }
@@ -456,7 +456,7 @@ div[data-name="NetWorth_Calc_Assets"] {
     float: left;
     position: relative;
     top: 75px;
-    left: -133px;
+    left: -80px;
   }
   #user-info br {
     display: none;
