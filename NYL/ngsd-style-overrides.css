@@ -343,7 +343,7 @@ div[data-name="P2MEDHIS_DoctorGrp"] h3>div {
 }
 
 .bm.is-open > div.bm-menu-wrap > div > div > div.navpanel__aligntop > div:first-child {
-    margin-top: 100px;
+    margin-top: 45px;
 }
 
 .bm-cross-button {
@@ -412,14 +412,18 @@ div.runtime-item[data-type="grid"] table > thead > tr {
     display: none !important;
 }
 
-.modal-dialog {
-    width: 900px !important;
-}
+
 .modal-header {
     background-color: var(--NYL-Blue) !important;
 }
 .modal-footer .btn-sm {
     font-size: 14pt !important;
+}
+
+@media screen and (min-width: 900px) {
+    .modal-dialog {
+        width: 900px !important;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -435,6 +439,9 @@ div.runtime-item[data-type="grid"] table > thead > tr {
     .navbar-nav {
         margin-right: 0 !important;
         margin-left: 0 !important;
+    }
+    .navbar-brand {
+        margin-right: 0 !important;
     }
     .runtime-container .bm-burger-button {
         right: -90vw !important;
