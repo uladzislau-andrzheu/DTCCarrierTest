@@ -68,7 +68,21 @@
                 console.info('Loaded: ' + result.toString());
                 $('#sidebar').show();
                 $('.loader').hide();
-                $("#dtc").bind("DOMNodeInserted", function () {
+                window.addEventListener('message', function(e) {
+			        handleHeaders();
+                    loadProgress($('#dtc div.navpanel a.navpanel__item.active'));
+                    if (global.App.runtimeCoreApi.getRuntimeData()["PIFirstName"] == undefined || global.App.runtimeCoreApi.getRuntimeData()["PILastName"].value == undefined) {
+                        console.log('Failed to load name from case data.')
+                    } else {
+                        var fullName = global.App.runtimeCoreApi.getRuntimeData()["PIFirstName"].value + " " + global.App.runtimeCoreApi.getRuntimeData()["PILastName"].value;
+                        $('#user-info').html(fullName + '<p id="separator" style="display: none"> | </p><br /><a href="#">Sign Out</a>');
+                    }
+
+                    if (e.data.type === 'FINISH_SCREEN_CHANGING') {
+                        window.scrollTo(0,0);
+                    }
+                });
+                $(window).resize(function () {
                     handleHeaders();
                     loadProgress($('#dtc div.navpanel a.navpanel__item.active'));
                     if (global.App.runtimeCoreApi.getRuntimeData()["PIFirstName"] == undefined || global.App.runtimeCoreApi.getRuntimeData()["PILastName"].value == undefined) {

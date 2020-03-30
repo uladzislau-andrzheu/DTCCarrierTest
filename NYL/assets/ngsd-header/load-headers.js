@@ -1,18 +1,11 @@
 var blnHeaderIsScreenLabel = true;
 
-
 $(window).on('load', function() {
   handleHeaders();
 });
 
-/*$(window).resize(function() {
-  handleHeaders();
-  displayHeaderAsScreenLabel();
-});*/
-
-
 function handleHeaders() {
-$('.navpanel__item:contains(HEADER_)').each(function () {
+  $('.navpanel__item:contains(HEADER_)').each(function () {
     if (!$(this).text().includes("HEADER_"))
         return;
 

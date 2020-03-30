@@ -20,33 +20,11 @@ window.onload = function() {
   loadProgress($('#dtc .navpanel .navpanel__item .active'));
 
 }
-
-
-
-$(document).on('click', '#progress-bar .steps .steps-text p', function() {
-  var step = $(this).text();
-  var active = '#dtc .navpanel .navpanel__item:contains(' + step + ')';
-  $(active)[0].click();
-});
-$(document).on('click', '#dtc .navpanel .navpanel__item', function() {
-  loadProgress($(this));
-});
-$(document).on('click', '#dtc .field-button', function () {
-    var step = $('#dtc div.navpanel a.navpanel__item.active').text();
+$(document).on('click', '#progress-bar .steps .steps-text p', function () {
+    var step = $(this).text();
     var active = '#dtc .navpanel .navpanel__item:contains(' + step + ')';
-    if ($(this).text().toLowerCase().trim() == "next") {
-        loadProgress($(active).next());
-    } else if ($(this).text().toLowerCase().trim() == "back") {
-        if ($(active).prev().hasClass('navpanel__header')) {
-            loadProgress($(active).prev().prev());
-        } else {
-            loadProgress($(active).prev());
-        }
-    }
-})
-
-
-
+    $(active)[0].click();
+});
 
 function isHeader(step) {
   if (step[0] == undefined) {
