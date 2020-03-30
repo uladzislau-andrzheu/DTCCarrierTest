@@ -490,12 +490,12 @@ div[data-name="NetWorth_Calc_Assets"] {
 }
 
 #loader {
-    border: 16px solid var(--NYL-Blue);
+    border: 8px solid var(--NYL-Blue);
     border-radius: 50%;
-    border-top: 16px solid var(--NYL-LightRain);
+    border-top: 8px solid var(--NYL-LightRain);
     margin: 10%;
-    width: 120px;
-    height: 120px;
+    width: 60px;
+    height: 60px;
     -webkit-animation: spin s linear infinite; /* Safari */
     animation: spin 2s linear infinite;
 }
