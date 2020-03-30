@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\nyl"
+    "\\NYL",
+    "\\NYL\\assets",
+    "\\NYL\\assets\\ngsd-header",
+    "\\NYL\\assets\\progress-bar"
   ],
+  "SelectedNode": "\\NYL\\assets\\progress-bar\\load-progress-bar.js",
   "PreviewInSolutionExplorer": false
 }

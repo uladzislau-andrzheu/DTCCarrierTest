@@ -41,7 +41,7 @@
 }
 
 .col-md-offset-8 {
-    margin-left: 60% !important;
+    margin-left: 50% !important;
 }
 
 .screen-label {
@@ -540,6 +540,12 @@ div.runtime-item[data-type="grid"] table > thead > tr {
         box-shadow: none !important;
         color: var(--NYL-Blue) !important;
         font-size: 12pt;
+    }
+    .col-md-2 {
+        width: 50% !important;
+    }
+    .col-md-4 {
+        width: 50% !important;
     }
 }
 
