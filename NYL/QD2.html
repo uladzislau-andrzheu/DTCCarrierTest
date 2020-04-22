@@ -39,80 +39,12 @@
         <div id="user-info">
         </div>
     </nav>
-    <script src="./assets/progress-bar/load-progress-bar.js"></script>
     <div class="content">
-        <script data-name="CesLib" src="https://ngsd-dtc-qa.ipipeline.com/dist/CesLib.Classic.js"></script>
-        <script>
-            function getUrlParameter(name) {
-                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-                var results = regex.exec(location.search);
-                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-            };
-            
-            var CesPlatform = getCesPlatform({
-                OrganizationId: "IPIPELINE",
-                CompanyId: "IPIPELINE",
-                SubCompanyId: "7616",
-                CodeSubCompanyId: "7616",
-                State: "AL",
-                ProductId: "6539",
-                ScreenPackage: "TELEAPP",
-                FormsPackageName: "NYLTeleApp",
-                Name: "NYL",
-                ElementId: "dtc",
-                Env: "QD2",
-                UserId: getUrlParameter("UserId"),
-                CaseId: getUrlParameter("CaseId"),
-                Nav: true
-            }, function (result) {
-                console.info('Loaded: ' + result.toString());
-                $('#sidebar').show();
-                $('.loader').hide();
-                window.addEventListener('message', function(e) {
-			        handleHeaders();
-                    loadProgress($('#dtc div.navpanel a.navpanel__item.active'));
-                    if (global.App.runtimeCoreApi.getRuntimeData()["PIFirstName"] == undefined || global.App.runtimeCoreApi.getRuntimeData()["PILastName"].value == undefined) {
-                        console.log('Failed to load name from case data.')
-                    } else {
-                        var fullName = global.App.runtimeCoreApi.getRuntimeData()["PIFirstName"].value + " " + global.App.runtimeCoreApi.getRuntimeData()["PILastName"].value;
-                        $('#user-info').html(fullName + '<p id="separator" style="display: none"> | </p><br /><a href="#">Sign Out</a>');
-                    }
-
-                    if (e.data.type === 'FINISH_SCREEN_CHANGING') {
-                        window.scrollTo(0,0);
-                    }
-                });
-                $(window).resize(function () {
-                    handleHeaders();
-                    loadProgress($('#dtc div.navpanel a.navpanel__item.active'));
-                    if (global.App.runtimeCoreApi.getRuntimeData()["PIFirstName"] == undefined || global.App.runtimeCoreApi.getRuntimeData()["PILastName"].value == undefined) {
-                        console.log('Failed to load name from case data.')
-                    } else {
-                        var fullName = global.App.runtimeCoreApi.getRuntimeData()["PIFirstName"].value + " " + global.App.runtimeCoreApi.getRuntimeData()["PILastName"].value;
-                        $('#user-info').html(fullName + '<p id="separator" style="display: none"> | </p><br /><a href="#">Sign Out</a>');
-                    }
-                });
-            })
-        </script>
-        <div id="dtc">
-            <div class="loader">
-                <div id="loader"></div>
-            </div>
-        </div><!-- Eliminate whitespace
-     --><div id="sidebar">
-        <script>$('#sidebar').hide();</script>
-            <p>Just a reminder, we are asking for information about the person this insurance is to cover.</p>
-            <p>Please answer to the best of your knowledge.</p>
-
-            <div id="help-text">
-                <p><b>Get Help</b></p>
-                <p><a>Give us a call</a></p>
-                <p><a>Send us an email</a></p>
-                <p><a>Contact your agent</a></p>
-                <p><a>FAQS</a></p>
-            </div>
+    
+        <div style="width: 100% !important" id="dtc">
+                <h3 class="text-center">The New York Life POC has been taken offline.</h3>  
         </div>
+        
 
         <footer class="footer-NYL">
             <div class="footer-NYL-content">

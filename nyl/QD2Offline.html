@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>NYL TIDE PoC</title>
+    <link rel="icon" href="./favicon.ico"/>
+    <script src="./assets/jquery-3.3.1.min.js"></script>
+    <script src="./assets/bootstrap-3.3.7.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/runtime-bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/runtime-bootstrap-overrides.css" />
+
+    <link href=".\fontawesome\css\all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="ngsd-style-overrides.css">
+
+    <script src="./assets/ngsd-header/load-headers.js"></script>
+</head>
+
+<body>
+    <nav id="header" class="navbar navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="images/NYL.jpg" width="65" height="65" class="d-inline-block align-top" alt="NYL">
+        </a>
+        <div id="navbarNav">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My Products<i class="fas fa-angle-down"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My Profile<i class="fas fa-angle-down"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact | Help<i class="fas fa-angle-down"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div id="user-info">
+        </div>
+    </nav>
+    <script src="./assets/progress-bar/load-progress-bar.js"></script>
+    <div class="content">
+        <script data-name="CesLib" src="https://ngsd-dtc-qa.ipipeline.com/dist/CesLib.Classic.js"></script>
+        <script>
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            };
+            
+            var CesPlatform = getCesPlatform({
+                OrganizationId: "IPIPELINE",
+                CompanyId: "IPIPELINE",
+                SubCompanyId: "7616",
+                CodeSubCompanyId: "7616",
+                State: "AL",
+                ProductId: "6539",
+                ScreenPackage: "TELEAPP",
+                FormsPackageName: "NYLTeleApp",
+                Name: "NYL",
+                ElementId: "dtc",
+                Env: "QD2",
+                UserId: getUrlParameter("UserId"),
+                CaseId: getUrlParameter("CaseId"),
+                Nav: true
+            }, function (result) {
+                console.info('Loaded: ' + result.toString());
+                $('#sidebar').show();
+                $('.loader').hide();
+                window.addEventListener('message', function(e) {
+			        handleHeaders();
+                    loadProgress($('#dtc div.navpanel a.navpanel__item.active'));
+                    if (global.App.runtimeCoreApi.getRuntimeData()["PIFirstName"] == undefined || global.App.runtimeCoreApi.getRuntimeData()["PILastName"].value == undefined) {
+                        console.log('Failed to load name from case data.')
+                    } else {
+                        var fullName = global.App.runtimeCoreApi.getRuntimeData()["PIFirstName"].value + " " + global.App.runtimeCoreApi.getRuntimeData()["PILastName"].value;
+                        $('#user-info').html(fullName + '<p id="separator" style="display: none"> | </p><br /><a href="#">Sign Out</a>');
+                    }
+
+                    if (e.data.type === 'FINISH_SCREEN_CHANGING') {
+                        window.scrollTo(0,0);
+                    }
+                });
+                $(window).resize(function () {
+                    handleHeaders();
+                    loadProgress($('#dtc div.navpanel a.navpanel__item.active'));
+                    if (global.App.runtimeCoreApi.getRuntimeData()["PIFirstName"] == undefined || global.App.runtimeCoreApi.getRuntimeData()["PILastName"].value == undefined) {
+                        console.log('Failed to load name from case data.')
+                    } else {
+                        var fullName = global.App.runtimeCoreApi.getRuntimeData()["PIFirstName"].value + " " + global.App.runtimeCoreApi.getRuntimeData()["PILastName"].value;
+                        $('#user-info').html(fullName + '<p id="separator" style="display: none"> | </p><br /><a href="#">Sign Out</a>');
+                    }
+                });
+            })
+        </script>
+        <div id="dtc">
+            <div class="loader">
+                <div id="loader"></div>
+            </div>
+        </div><!-- Eliminate whitespace
+     --><div id="sidebar">
+        <script>$('#sidebar').hide();</script>
+            <p>Just a reminder, we are asking for information about the person this insurance is to cover.</p>
+            <p>Please answer to the best of your knowledge.</p>
+
+            <div id="help-text">
+                <p><b>Get Help</b></p>
+                <p><a>Give us a call</a></p>
+                <p><a>Send us an email</a></p>
+                <p><a>Contact your agent</a></p>
+                <p><a>FAQS</a></p>
+            </div>
+        </div>
+
+        <footer class="footer-NYL">
+            <div class="footer-NYL-content">
+                <div class="footer-row">
+                    <p>Disclosure Statement</p>
+                    <p>Privacy Policy</p>
+                    <p>Business Continuity</p>
+                </div>
+                <div class="footer-row">
+                    <p>Legal Notice</p>
+                    <p>Glossary</p>
+                    <p>Feedback</p>
+                </div>
+            </div>
+            <div class="section-divider"></div>
+            <div class="footer-NYL-copyright">
+                <p>© 2020 New York Life Insurance Company. New York, NY.</p>
+                <p>ALL RIGHTS RESERVED.</p>
+            </div>
+        </footer>
+
+</body>
+</html>
