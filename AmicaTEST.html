@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Example Insurance Carrier</title>
+</head>
+
+<body>
+
+  <!-- Page Content -->
+        <script data-name="CesLib" src="https://ngsd-dtc-uat.ipipeline.com/dist/CesLib.Classic.js"></script>
+        <script>
+          var CesPlatform = getCesPlatform({
+            OrganizationId: "IPIPELINE",
+            CompanyId: "IPIPELINE",
+            SubCompanyId: "7424",
+            CodeSubcompanyId: "7424",
+            State: "AL",
+            ProductId: "8803",
+            ScreenPackage: "Term",
+            FormsPackageName: "AMICA_DTC",
+            Name: "Amica",
+            ElementId: "dtc",
+            Env: "test",
+            Nav: false
+          }, function (result) {
+            console.info('Loaded: ' + result.toString());
+          })
+        </script>
+        <div id="dtc"></div>
+    <div class="row">
+      <div class="col-lg-12">
+      </div>
+      Here is the footer with some information...
+    </div>
+
+</body>
+
+</html>
