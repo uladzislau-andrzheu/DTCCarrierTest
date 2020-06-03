@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>NYL Style Changes</title>
+</head>
+
+<body>
+        <script data-name="CesLib" src="https://ngsd-dtc-qa.ipipeline.com/dist/CesLib.Classic.js"></script>
+        <script>
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            };
+            
+            var CesPlatform = getCesPlatform({
+                OrganizationId: "IPIPELINE",
+                CompanyId: "IPIPELINE",
+                SubCompanyId: "7616",
+                CodeSubCompanyId: "7616",
+                State: "AL",
+                ProductId: "6539",
+                ScreenPackage: "TELEAPP",
+                FormsPackageName: "NYLTeleApp",
+                Name: "NYL",
+                ElementId: "dtc",
+                Env: "QN3",
+                Nav: true
+            }, function (result) {});
+        </script>
+        <div id="dtc">          
+        </div>
+
+</body>
+</html>
